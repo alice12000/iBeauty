@@ -80,7 +80,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" >
-                    <Button Background="#FFDFC5CC" Width="243" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                    <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroServico_Click" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <Image Source="/Imagens/servico.png" Width="20" Height="20" Margin="0 0 -440 0"/>
                             <TextBlock Text="Cadastro de Serviço" VerticalAlignment="Center" />

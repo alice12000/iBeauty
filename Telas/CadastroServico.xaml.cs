@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,16 +17,16 @@ using System.Windows.Shapes;
 namespace IBeauty.Telas
 {
     /// <summary>
-    /// Lógica interna para CadastroCliente.xaml
+    /// Lógica interna para CadastroServico.xaml
     /// </summary>
-    public partial class CadastroCliente : Window
+    public partial class CadastroServico : Window
     {
-        private bool isAnamneseExpanded = false;
-        private bool isMenuExpanded = false;
-        public CadastroCliente()
+        public CadastroServico()
         {
             InitializeComponent();
         }
+        private bool isAnamneseExpanded = false;
+        private bool isMenuExpanded = false;
         private void BtnToggleMenu_Click(object sender, RoutedEventArgs e)
         {
             DoubleAnimation animation = new DoubleAnimation
@@ -70,6 +71,7 @@ namespace IBeauty.Telas
             isAnamneseExpanded = !isAnamneseExpanded;
             AnamneseOptions.Visibility = isAnamneseExpanded ? Visibility.Visible : Visibility.Collapsed;
         }
+
         private void BtnAnamneseCapilar_Click(object sender, RoutedEventArgs e)
         {
             CadastroAnamneseCapilar CAC = new CadastroAnamneseCapilar();
@@ -105,7 +107,9 @@ namespace IBeauty.Telas
         }
         private void BtnCadastroCliente_Click(object sender, RoutedEventArgs e)
         {
-           
+            CadastroCliente CCL = new CadastroCliente();
+            CCL.Show();
+            this.Close();
         }
         private void BtnCadastroExpediente_Click(object sender, RoutedEventArgs e)
         {
@@ -126,38 +130,11 @@ namespace IBeauty.Telas
             CFOR.Show();
             this.Close();
         }
-        private void BtnCadastroServico_Click(object sender, RoutedEventArgs e)
+        private void BtnServico_Click(object sender, RoutedEventArgs e)
         {
             CadastroServico SE = new CadastroServico();
             SE.Show();
-            this.Close();
-        }
-
-    
-
-    private void BtnLimpar_Click(object sender, RoutedEventArgs e)
-        {//limpa os dados da parte de endereço
-            try
-            {
-                rua_txt.Text = "";
-                bairro_txt.Text = "";
-                numero_txt.Text = "";
-                complemento_txt.Text = "";
-                cidade_txt.Text = "";
-                estado_txt.Text = "";
-                cep_txt.Text = "";
-                numero_telefone_txt.Text = "";
-                user_txt.Text = "";
-                senha_txt.Text = "";
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            this.Close(); 
         }
     }
 }
-
-

@@ -126,12 +126,11 @@ namespace IBeauty.Telas
             CFOR.Show();
             this.Close();
         }
-        private void BtnServico_Click(object sender, RoutedEventArgs e)
+        private void BtnCadastroServico_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            Servico SE = new Servico();
+            CadastroServico SE = new CadastroServico();
             SE.Show();
-            this.Close(); */
+            this.Close(); 
         }
 
     }

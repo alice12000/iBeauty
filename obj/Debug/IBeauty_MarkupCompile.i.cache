@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Duda\source\repos\IBeatyProjetoFinal\IBeauty\obj\Debug\
+C:\Users\alice\source\repos\iBeauty\obj\Debug\
 IBeauty
 none
 false
 DEBUG;TRACE
-C:\Users\Duda\source\repos\IBeatyProjetoFinal\IBeauty\App.xaml
-13-366775397
+C:\Users\alice\source\repos\iBeauty\App.xaml
+141430322974
 1-154422577
-181760376533
+191285420266
 13-1310406943
-Telas\CadastroAnamneseCapilar.xaml;Telas\CadastroAnamneseCorporal.xaml;Telas\CadastroAnamneseFacial.xaml;Telas\CadastroAnamneseManicurePedicure.xaml;Telas\CadastroCliente.xaml;Telas\CadastroExpediente.xaml;Telas\CadastroFornecedor.xaml;Telas\CadastroFuncionario.xaml;Telas\CadastroProduto.xaml;Telas\Login.xaml;Telas\Cadastro.xaml;Telas\TelaInicial.xaml;Telas\TelaParaTeste.xaml;
+Telas\CadastroAnamneseCapilar.xaml;Telas\CadastroAnamneseCorporal.xaml;Telas\CadastroAnamneseFacial.xaml;Telas\CadastroAnamneseManicurePedicure.xaml;Telas\CadastroCliente.xaml;Telas\CadastroExpediente.xaml;Telas\CadastroFornecedor.xaml;Telas\CadastroFuncionario.xaml;Telas\CadastroProduto.xaml;Telas\CadastroServico.xaml;Telas\Login.xaml;Telas\Cadastro.xaml;Telas\TelaInicial.xaml;Telas\TelaParaTeste.xaml;
 
-False
+True
 
