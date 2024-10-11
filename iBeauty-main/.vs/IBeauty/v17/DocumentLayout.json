@@ -1,0 +1,470 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|c:\\users\\maria\\downloads\\ibeauty\\ibeauty-main\\telas\\agenda.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\agenda.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesecapilar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesecapilar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastro.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastro.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\telaparateste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\telaparateste.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\telainicial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\telainicial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroproduto.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastrofuncionario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastrofuncionario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastrofornecedor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastrofornecedor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroexpediente.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroexpediente.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastrocliente.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastrocliente.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\telaparateste.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\telaparateste.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\telainicial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\telainicial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastro.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastro.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Duda\\AppData\\Local\\Temp\\.vsdbgsrc\\aa53fb04056dc3dbc7d65eaa7e6c4d950e08b1707400405631e08fb5644f8ebe\\ResourcePart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastrofuncionario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastrofuncionario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroproduto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroproduto.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastrofornecedor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastrofornecedor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroexpediente.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroexpediente.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastrocliente.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastrocliente.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesemanicurepedicure.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesemanicurepedicure.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesefacial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesefacial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesecorporal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesecorporal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesecapilar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesecapilar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesemanicurepedicure.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesemanicurepedicure.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesefacial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesefacial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\telas\\cadastroanamnesecorporal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B66B392C-912F-4FB0-84E4-CA7540845120}|IBeauty.csproj|solutionrelative:telas\\cadastroanamnesecorporal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Agenda.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Agenda.xaml",
+              "RelativeDocumentMoniker": "Telas\\Agenda.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Agenda.xaml",
+              "RelativeToolTip": "Telas\\Agenda.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:19:58.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastroAnamneseCapilar.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCapilar.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseCapilar.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCapilar.xaml",
+              "RelativeToolTip": "Telas\\CadastroAnamneseCapilar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:02:40.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CadastroFornecedor.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFornecedor.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroFornecedor.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFornecedor.xaml",
+              "RelativeToolTip": "Telas\\CadastroFornecedor.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CadastroFuncionario.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFuncionario.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroFuncionario.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFuncionario.xaml",
+              "RelativeToolTip": "Telas\\CadastroFuncionario.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CadastroProduto.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroProduto.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroProduto.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroProduto.xaml",
+              "RelativeToolTip": "Telas\\CadastroProduto.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Login.xaml",
+              "RelativeDocumentMoniker": "Telas\\Login.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Login.xaml",
+              "RelativeToolTip": "Telas\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TelaInicial.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaInicial.xaml",
+              "RelativeDocumentMoniker": "Telas\\TelaInicial.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaInicial.xaml",
+              "RelativeToolTip": "Telas\\TelaInicial.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TelaParaTeste.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaParaTeste.xaml",
+              "RelativeDocumentMoniker": "Telas\\TelaParaTeste.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaParaTeste.xaml",
+              "RelativeToolTip": "Telas\\TelaParaTeste.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cadastro.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Cadastro.xaml",
+              "RelativeDocumentMoniker": "Telas\\Cadastro.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Cadastro.xaml",
+              "RelativeToolTip": "Telas\\Cadastro.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CadastroExpediente.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroExpediente.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroExpediente.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroExpediente.xaml",
+              "RelativeToolTip": "Telas\\CadastroExpediente.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CadastroCliente.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroCliente.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroCliente.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroCliente.xaml",
+              "RelativeToolTip": "Telas\\CadastroCliente.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CadastroAnamneseCapilar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCapilar.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseCapilar.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCapilar.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroAnamneseCapilar.xaml.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAYwEYAAAAHAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cadastro.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Cadastro.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\Cadastro.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Cadastro.xaml.cs",
+              "RelativeToolTip": "Telas\\Cadastro.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAqwCoAAAAQAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TelaInicial.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaInicial.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\TelaInicial.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaInicial.xaml.cs",
+              "RelativeToolTip": "Telas\\TelaInicial.xaml.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAD4v1kAAAAZAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TelaParaTeste.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaParaTeste.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\TelaParaTeste.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\TelaParaTeste.xaml.cs",
+              "RelativeToolTip": "Telas\\TelaParaTeste.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T15:01:24.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\Login.xaml.cs",
+              "RelativeToolTip": "Telas\\Login.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAD4vz8AAAAcAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CadastroAnamneseManicurePedicure.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseManicurePedicure.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseManicurePedicure.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseManicurePedicure.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroAnamneseManicurePedicure.xaml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CadastroAnamneseFacial.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseFacial.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseFacial.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseFacial.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroAnamneseFacial.xaml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CadastroAnamneseCorporal.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCorporal.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseCorporal.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCorporal.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroAnamneseCorporal.xaml.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CadastroAnamneseManicurePedicure.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseManicurePedicure.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseManicurePedicure.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseManicurePedicure.xaml",
+              "RelativeToolTip": "Telas\\CadastroAnamneseManicurePedicure.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CadastroAnamneseFacial.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseFacial.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseFacial.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseFacial.xaml",
+              "RelativeToolTip": "Telas\\CadastroAnamneseFacial.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:24.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ResourcePart.cs",
+              "DocumentMoniker": "C:\\Users\\Duda\\AppData\\Local\\Temp\\.vsdbgsrc\\aa53fb04056dc3dbc7d65eaa7e6c4d950e08b1707400405631e08fb5644f8ebe\\ResourcePart.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Duda\\AppData\\Local\\Temp\\.vsdbgsrc\\aa53fb04056dc3dbc7d65eaa7e6c4d950e08b1707400405631e08fb5644f8ebe\\ResourcePart.cs",
+              "ToolTip": "C:\\Users\\Duda\\AppData\\Local\\Temp\\.vsdbgsrc\\aa53fb04056dc3dbc7d65eaa7e6c4d950e08b1707400405631e08fb5644f8ebe\\ResourcePart.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Duda\\AppData\\Local\\Temp\\.vsdbgsrc\\aa53fb04056dc3dbc7d65eaa7e6c4d950e08b1707400405631e08fb5644f8ebe\\ResourcePart.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAmwGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T04:19:41.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CadastroFuncionario.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFuncionario.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroFuncionario.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFuncionario.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroFuncionario.xaml.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CadastroProduto.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroProduto.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroProduto.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroProduto.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroProduto.xaml.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAewEMAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CadastroFornecedor.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFornecedor.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroFornecedor.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroFornecedor.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroFornecedor.xaml.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CadastroExpediente.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroExpediente.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroExpediente.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroExpediente.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroExpediente.xaml.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CadastroCliente.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroCliente.xaml.cs",
+              "RelativeDocumentMoniker": "Telas\\CadastroCliente.xaml.cs",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroCliente.xaml.cs",
+              "RelativeToolTip": "Telas\\CadastroCliente.xaml.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwEIAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH\u002BSURBVDhP7ZRPaNNQHMe/TdNma2NrW1jUFYZYN0YKHqZischAMCCjh94siEfp0buIeBZ2LYKXHvSWQ4toDkKC0F7EU93NQyEthkFnG9uuaf6YhIcusknBHTz4gR\u002B/x\u002B/7e1/ee8l7IRzhmbi3s0TTzc3zcYQpp3R3K9sk0sJQJPtscgmcSzJ4\u002BeErPvemj99\u002B6t0j0sKEcF96SsbgV\u002BOX\u002BQvxyvu9A9zaSOL2\u002BrK8Zn9R6vU66QBomkYul0OpVNJns9mLYrGoE8mHhhPaImNoI4Nboikcmjb29TkYOr6dZtPbPM\u002BTDmAwGGAymaDb7Q44jttvt9tSoVDQiOyu8AhvPqo7\u002BqHVfP5OReXGCgQ\u002BiRU2BMMwSAcgSZIfiUQC5XIZLMs\u002BSKVSYj6f/\u002B7pgTPs9CbofTPw6E4WQj6JTAyYz\u002BdE/YXjONB1HaIoQtO03el0\u002BpBIQcPrq6Ybbr64jLOMA8e2/MnHYds2RqMR3C2nG43GGVJGmGSfm1evrI8PtMqltSzoMOVPOo5MJuN/GC/6/T5UVVU6nY7saYEVyrKMVquF8Xh8oplnIgjCz/DMTdMk6m\u002BGlmX5Z3bSNhchYHga/Df8e/59Q5pkn2g0CoqioCgKGIYh1T8zHA4Ri7mXnhB4barV6jX3hjzxmryffBG8VycSibyu1WqvSOk0AX4A4Q67Z\u002BxJ14gAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T15:01:24.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CadastroAnamneseCorporal.xaml",
+              "DocumentMoniker": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCorporal.xaml",
+              "RelativeDocumentMoniker": "Telas\\CadastroAnamneseCorporal.xaml",
+              "ToolTip": "C:\\Users\\maria\\Downloads\\iBeauty\\iBeauty-main\\Telas\\CadastroAnamneseCorporal.xaml",
+              "RelativeToolTip": "Telas\\CadastroAnamneseCorporal.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-02T15:01:25Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
