@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Telas\Agenda.xaml.cs">
+      <DependentUpon>Agenda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Cadastro.xaml.cs">
       <DependentUpon>Cadastro.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
     <Compile Include="Telas\TelaParaTeste.xaml.cs">
       <DependentUpon>TelaParaTeste.xaml</DependentUpon>
     </Compile>
+    <Page Include="Telas\Agenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\CadastroAnamneseCapilar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
