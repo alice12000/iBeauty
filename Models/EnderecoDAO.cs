@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 namespace IBeauty.Models
 {
     internal class EnderecoDAO
+        
     {
+        /*
         private static Conexao _conn = new Conexao();
 
         public void Insert(Endereco obj)
@@ -117,7 +119,7 @@ namespace IBeauty.Models
                 " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
                 "WHERE id_esc = @id";
 
-                /*
+                
                 comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);
                 comando.Parameters.AddWithValue("@razao", escola.RazaoSocial);
                 comando.Parameters.AddWithValue("@cnpj", escola.Cnpj);
@@ -127,7 +129,7 @@ namespace IBeauty.Models
                 comando.Parameters.AddWithValue("@resp", escola.Responsavel);
 
                 comando.Parameters.AddWithValue("@id", escola.Id);
-                */
+                
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -142,6 +144,6 @@ namespace IBeauty.Models
                 throw ex;
             }
         }
-
+*/
     }
 }
