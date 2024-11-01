@@ -28,31 +28,31 @@ namespace IBeauty.Telas
         }
         private void BtnToggleMenu_Click(object sender, RoutedEventArgs e)
         {
-            DoubleAnimation animation = new DoubleAnimation
-            {
-                Duration = new Duration(TimeSpan.FromSeconds(0.3))
-            };
+            //DoubleAnimation animation = new DoubleAnimation
+            //{
+            //    Duration = new Duration(TimeSpan.FromSeconds(0.3))
+            //};
 
-            if (isMenuExpanded)
-            {
-                animation.From = MenuPanel.ActualWidth;
-                animation.To = 0;
+            //if (isMenuExpanded)
+            //{
+            //    animation.From = MenuPanel.ActualWidth;
+            //    animation.To = 0;
 
-                animation.Completed += (s, a) =>
-                {
-                    MenuPanel.Visibility = Visibility.Collapsed;
-                };
-            }
-            else
-            {
-                MenuPanel.Visibility = Visibility.Visible;
+            //    animation.Completed += (s, a) =>
+            //    {
+            //        MenuPanel.Visibility = Visibility.Collapsed;
+            //    };
+            //}
+            //else
+            //{
+            //    MenuPanel.Visibility = Visibility.Visible;
 
-                animation.From = 0;
-                animation.To = 250;
-            }
+            //    animation.From = 0;
+            //    animation.To = 250;
+            //}
 
-            MenuPanel.BeginAnimation(FrameworkElement.WidthProperty, animation);
-            isMenuExpanded = !isMenuExpanded;
+            //MenuPanel.BeginAnimation(FrameworkElement.WidthProperty, animation);
+            //isMenuExpanded = !isMenuExpanded;
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -62,7 +62,7 @@ namespace IBeauty.Telas
         private void BtnAnamnese_Click(object sender, RoutedEventArgs e)
         {
             isAnamneseExpanded = !isAnamneseExpanded;
-            AnamneseOptions.Visibility = isAnamneseExpanded ? Visibility.Visible : Visibility.Collapsed;
+            //AnamneseOptions.Visibility = isAnamneseExpanded ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void BtnAnamneseCapilar_Click(object sender, RoutedEventArgs e)
