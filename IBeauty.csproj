@@ -108,6 +108,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Helpers\HashHelper.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
+    <Compile Include="Helpers\UploadFileHeper.cs" />
+    <Compile Include="Models\Cadastro.cs" />
+    <Compile Include="Models\CadastroDAO.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
