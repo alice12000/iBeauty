@@ -10,14 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace IBeauty.Telas
 {
     /// <summary>
-    /// Lógica interna para Agenda.xaml
+    /// Interação lógica para Agenda.xam
     /// </summary>
-    public partial class Agenda : Window
+    public partial class Agenda : Page
     {
         public Agenda()
         {

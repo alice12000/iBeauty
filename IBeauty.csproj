@@ -107,6 +107,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controle\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controle\MenuLogin.xaml.cs">
+      <DependentUpon>MenuLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
     <Compile Include="Helpers\HashHelper.cs" />
@@ -122,11 +128,29 @@
     <Compile Include="Telas\Cadastro.xaml.cs">
       <DependentUpon>Cadastro.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\CadastroAnamneseCapilar.xaml.cs">
+      <DependentUpon>CadastroAnamneseCapilar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastroAnamneseCorporal.xaml.cs">
+      <DependentUpon>CadastroAnamneseCorporal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastroAnamneseFacial.xaml.cs">
+      <DependentUpon>CadastroAnamneseFacial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastroAnamneseManicurePedicure.xaml.cs">
+      <DependentUpon>CadastroAnamneseManicurePedicure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastroCliente.xaml.cs">
+      <DependentUpon>CadastroCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\CadastroExpediente.xaml.cs">
       <DependentUpon>CadastroExpediente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\CadastroFornecedor.xaml.cs">
       <DependentUpon>CadastroFornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastroFuncionario.xaml.cs">
+      <DependentUpon>CadastroFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\CadastroProduto.xaml.cs">
       <DependentUpon>CadastroProduto.xaml</DependentUpon>
@@ -134,13 +158,28 @@
     <Compile Include="Telas\CadastroServico.xaml.cs">
       <DependentUpon>CadastroServico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\JanelaPrincipal.xaml.cs">
+      <DependentUpon>JanelaPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaParaTeste.xaml.cs">
-      <DependentUpon>TelaParaTeste.xaml</DependentUpon>
-    </Compile>
+    <Page Include="Controle\MenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controle\MenuLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\Agenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\Cadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,7 +223,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\Login.xaml">
+    <Page Include="Telas\JanelaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,36 +231,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Telas\CadastroAnamneseCapilar.xaml.cs">
-      <DependentUpon>CadastroAnamneseCapilar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\CadastroAnamneseCorporal.xaml.cs">
-      <DependentUpon>CadastroAnamneseCorporal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\CadastroAnamneseFacial.xaml.cs">
-      <DependentUpon>CadastroAnamneseFacial.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\CadastroAnamneseManicurePedicure.xaml.cs">
-      <DependentUpon>CadastroAnamneseManicurePedicure.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\CadastroCliente.xaml.cs">
-      <DependentUpon>CadastroCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\CadastroFuncionario.xaml.cs">
-      <DependentUpon>CadastroFuncionario.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Telas\Cadastro.xaml">
+    <Page Include="Telas\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TelaInicial.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Telas\TelaParaTeste.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
