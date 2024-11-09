@@ -20,7 +20,7 @@
                                 <Ellipse Fill="White"/>
                             </Border>
 
-                            <Ellipse x:Name="CheckMark" Fill="MediumSeaGreen" Width="20" Height="20" Visibility="Collapsed"/>
+                            <Ellipse x:Name="CheckMark" Fill="#FFB6667C" Width="20" Height="20" Visibility="Collapsed"/>
 
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
@@ -37,7 +37,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Telas/fundologin.png"/>
+            <ImageBrush ImageSource="/Imagens/fundologin.png"/>
         </Grid.Background>
         <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="525" Height="450" Background="#8CB6667C">
 

@@ -5,10 +5,35 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:IBeauty.Telas"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="TelaInicial">
 
     <Grid>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/fundotelainicial.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TextBlock FontFamily="Poppins" FontSize="28" FontWeight="Bold" Foreground="#FFB6667C" VerticalAlignment="Center" Margin="15 0 0 150">Transformação, cuidado e beleza,</TextBlock>
+        <TextBlock FontFamily="Poppins" FontSize="28" FontWeight="Bold" Foreground="#FFB6667C" VerticalAlignment="Center" Margin="15 0 0 90">tudo aqui para você! Bem-vindo!</TextBlock>
+        <StackPanel  VerticalAlignment="Center" Margin="18 100 0 0" Height="130" Width="530" HorizontalAlignment="Left">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Imagens/IBeautytelainicial.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="230" Height="60" Margin="170 0 0 140" FontFamily="Poppins" FontSize="24" BorderBrush="#FFB6667C" Background="#FFB6667C" Foreground="White" >Iniciar
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="14" ShadowDepth="4" Opacity="0.5"/>
+                        </Border.Effect>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="145 0 0 100">
+            <TextBlock FontFamily="Poppins" FontSize="14" Foreground="#FFB6667C" VerticalAlignment="Center" FontWeight="Bold">Ainda não tem cadastro?</TextBlock>
+            <Button FontFamily="Poppins" FontSize="14" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB6667C" FontWeight="Bold">Clique aqui</Button>
+        </StackPanel>
     </Grid>
 </Page>

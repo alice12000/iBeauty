@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IBeauty.Telas"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1000" d:DesignWidth="1800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -18,17 +18,16 @@
 
         <Grid Grid.Row="0" Grid.Column="1" Background="#FFB6667C" >
             <Button Name="CloseButton" Click="CloseButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" BorderThickness="0">
-                <Image Source="\Imagens\cancelar.png" Width="20" Height="20" Margin="5" />
+                <Image Source="\Imagens\cancelar.png" Width="30" Height="30" Margin="5" />
             </Button>
         </Grid>
         <Grid Grid.Row="0" Background="#FFB6667C" >
-            <TextBlock FontFamily="Poppins" FontSize="12" Foreground="#FFB6667C" Margin="50,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="101">
-                <TextBlock FontSize="20">iBeauty</TextBlock>
+            <TextBlock FontFamily="Poppins" FontSize="12" Foreground="White" Margin="50,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="120">
+               <TextBlock FontSize="30">iBeauty</TextBlock>
             </TextBlock>
 
-            <Button Name="BtnToggleMenu" Click="BtnToggleMenu_Click" Background="#FFB6667C" BorderThickness="0" 
-                 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" Width="50" Height="30">
-                <Image Source="\Imagens\menu.png" Stretch="Uniform" Margin="5" />
+            <Button Name="BtnToggleMenu" Click="BtnToggleMenu_Click" Background="#FFB6667C" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" Width="50" Height="40">
+                <Image Source="\Imagens\menu.png" Stretch="Uniform" Margin="5" Width="50" Height="30"/>
             </Button>
         </Grid>
 
@@ -39,94 +38,96 @@
             </Grid.ColumnDefinitions>
 
             <Grid x:Name="MenuPanel" Background="#FFDFC5CC" Width="250" HorizontalAlignment="Left" Visibility="Collapsed" VerticalAlignment="Stretch">
-                <StackPanel Orientation="Vertical" Margin="3">
+                <Border BorderThickness="2" BorderBrush="#FFB6667C">
+                    <StackPanel Orientation="Vertical" Margin="1.5 3 0 0">
 
-                    <StackPanel Orientation="Horizontal">
-                        <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroFuncionario_Click" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C">
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/funcionario.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Funcionario" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroFuncionario_Click" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/funcionario.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Funcionario" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroCliente_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/cliente.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Cliente" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroFornecedor_Click" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/fornecedor.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Fornecedor" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroProduto_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/produto.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Produto" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" BorderThickness="2" Height="50" Click="BtnCadastrarServico_Click" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/servico.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Serviço" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroExpediente_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/expediente.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Espediente" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnAnamnese_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/anamnese.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Cadastro de Anamneses" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel x:Name="AnamneseOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnAnamneseCapilar" Click="BtnAnamneseCapilar_Click" Background="#FFF0E1E5" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
+
+                                <TextBlock Text="Anamnese Capilar" />
+
+                            </Button>
+                            <Button Name="BtnAnamneseCorporal" Click="BtnAnamneseCorporal_Click" Background="Transparent" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <TextBlock Text="Anamnese Corporal" />
+                            </Button>
+                            <Button Name="BtnAnamneseFacial" Click="BtnAnamneseFacial_Click" Background="Transparent" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <TextBlock Text="Anamnese Facial" />
+                            </Button>
+                            <Button Name="BtnAnamneseManicure" Click="BtnAnamneseManicure_Click" Background="Transparent" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <TextBlock Text="Anamnese Manicure" />
+                            </Button>
+
+                        </StackPanel>
+                        <StackPanel x:Name="AnamneseSubmenu" Visibility="Collapsed" Orientation="Vertical" Margin="0,0,0,0">
+                            <Button Content="Capilar" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
+                            <Button Content="Corporal" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
+                            <Button Content="Facial" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
+                            <Button Content="Manicure" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroCliente_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/cliente.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Cliente" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroFornecedor_Click" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/fornecedor.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Fornecedor" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroProduto_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/produto.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Produto" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Background="#FFDFC5CC" Width="243" BorderThickness="2" Height="50" Click="BtnCadastrarServico_Click" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/servico.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Serviço" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroExpediente_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/expediente.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Espediente" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" >
-                        <Button Background="#FFDFC5CC" Width="243" Click="BtnAnamnese_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                <Image Source="/Imagens/anamnese.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                <TextBlock Text="Cadastro de Anamneses" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-
-                    <StackPanel x:Name="AnamneseOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
-                        <Button Name="BtnAnamneseCapilar" Click="BtnAnamneseCapilar_Click" Background="#FFF0E1E5" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
-
-                            <TextBlock Text="Anamnese Capilar" />
-
-                        </Button>
-                        <Button Name="BtnAnamneseCorporal" Click="BtnAnamneseCorporal_Click" Background="Transparent" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
-                            <TextBlock Text="Anamnese Corporal" />
-                        </Button>
-                        <Button Name="BtnAnamneseFacial" Click="BtnAnamneseFacial_Click" Background="Transparent" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
-                            <TextBlock Text="Anamnese Facial" />
-                        </Button>
-                        <Button Name="BtnAnamneseManicure" Click="BtnAnamneseManicure_Click" Background="Transparent" BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
-                            <TextBlock Text="Anamnese Manicure" />
-                        </Button>
-
-                    </StackPanel>
-                    <StackPanel x:Name="AnamneseSubmenu" Visibility="Collapsed" Orientation="Vertical" Margin="0,0,0,0">
-                        <Button Content="Capilar" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
-                        <Button Content="Corporal" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
-                        <Button Content="Facial" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
-                        <Button Content="Manicure" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
-                    </StackPanel>
-                </StackPanel>
+                </Border>
             </Grid>
         </Grid>
     </Grid>

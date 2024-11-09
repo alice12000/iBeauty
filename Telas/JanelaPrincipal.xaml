@@ -16,7 +16,7 @@
             <CheckBox Name="cbMenuLogin" Content="Menu Login" Checked="CheckBox_Checked" Margin="15, 0, 10, 0"  FontSize="20" Foreground="#FFB6667C" Background="White" BorderBrush="#FFB6667C"/>
         </StackPanel>
 
-        <Frame x:Name="MainFrame" Margin="10,40,10,10" NavigationUIVisibility="Hidden" Panel.ZIndex="-1" Grid.Row="1"/>
+        <Frame x:Name="MainFrame" Margin="0,40,0,0" NavigationUIVisibility="Hidden" Panel.ZIndex="-1" Grid.Row="1"/>
 
         <controle:MenuLogin x:Name="menuLogin" Visibility="Visible" Grid.Row="1"/>
         <controle:MenuControl x:Name="menuControl" Visibility="Collapsed" Grid.Row="1"/>

@@ -284,7 +284,9 @@
     <Resource Include="Imagens\anamnese.png" />
     <Resource Include="Imagens\anamnesecapilar.png" />
     <Resource Include="Imagens\casa.png" />
-    <Resource Include="Imagens\inicio.jpeg" />
+    <Resource Include="Imagens\fundotelainicial.png" />
+    <Resource Include="Imagens\fundologin.png" />
+    <Resource Include="Imagens\Ibeautytelainicial.png" />
     <Content Include="Imagens\usuario.png" />
     <Resource Include="Imagens\menu.png" />
   </ItemGroup>
