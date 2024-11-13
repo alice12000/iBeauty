@@ -10,16 +10,18 @@ namespace IBeauty.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
+        public string Senha { get; set; }
         public string Genero { get; set; }
         public string Email { get; set; }
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
         public Endereco Endereco { get; set; }
-        public CadastroUsuario(int id, string nome, DateTime dataNascimento, string genero, string email, int telefone, Endereco endereco)
+        public CadastroUsuario(int id, string nome, string dataNascimento, string senha, string genero, string email, string telefone, Endereco endereco)
         {
             Id = id;
             Nome = nome;
             DataNascimento = dataNascimento;
+            Senha = senha;
             Genero = genero;
             Email = email;
             Telefone = telefone;

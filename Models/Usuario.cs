@@ -13,7 +13,7 @@ namespace IBeauty.Models
         public string Senha { get; set; }
         public Usuario(int id, string email, string senha) 
         {
-            id = Id;
+            Id = id;
             Email = email;
             Senha = senha;
         }

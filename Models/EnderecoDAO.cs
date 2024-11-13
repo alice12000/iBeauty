@@ -1,4 +1,4 @@
-﻿using IBauty.Database;
+﻿using IBeauty.Database;
 using IBeauty.Helpers;
 using MySql.Data.MySqlClient;
 using System;
@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 
 namespace IBeauty.Models
 {
-    internal class EnderecoDAO
+    public class EnderecoDAO
     {
         private static Conexao _conn = new Conexao();
 
-        public void Insert(Endereco obj)
+        public int Insert(Endereco obj)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO Endereco (id_end, rua_end, bairro_end, numero_end, complemento_end, cidade_end, estado_end, cep_end) " +
-                                      "VALUES (@id, @rua, @bairro, @numero, @complemento, @cidade, @estado, @cep)";
+                comando.CommandText = "INSERT INTO Endereco (rua_end, bairro_end, numero_end, complemento_end, cidade_end, estado_end, cep_end) " +
+                                      "VALUES (@rua, @bairro, @numero, @complemento, @cidade, @estado, @cep); SELECT LAST_INSERT_ID();";
 
-                comando.Parameters.AddWithValue("@id", obj.Id);
                 comando.Parameters.AddWithValue("@rua", obj.Rua);
                 comando.Parameters.AddWithValue("@bairro", obj.Bairro);
                 comando.Parameters.AddWithValue("@numero", obj.Numero);
@@ -31,18 +30,15 @@ namespace IBeauty.Models
                 comando.Parameters.AddWithValue("@estado", obj.Estado);
                 comando.Parameters.AddWithValue("@cep", obj.Cep);
 
-                var resultado = comando.ExecuteNonQuery();
-
-                if (resultado == 0)
-                {
-                    throw new Exception("Ocorreram erros ao salvar as informações");
-                }
+                var idEnd = comando.ExecuteScalar(); 
+                return Convert.ToInt32(idEnd);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
 
         public List<Endereco> List()
         {

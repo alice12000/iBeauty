@@ -1,4 +1,4 @@
-﻿using IBauty.Database;
+﻿using IBeauty.Database;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -7,13 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 namespace IBeauty.Models
 {
-    internal class UsuarioDAO
+    public class UsuarioDAO
     {
         private static Conexao _conn = new Conexao();
         public void Insert(Usuario usuario)
         {
             try
             {
+                if (_conn == null)
+                {
+                    throw new Exception("A conexão com o banco de dados não foi estabelecida.");
+                }
+
                 var comando = _conn.Query();
                 comando.CommandText = "INSERT INTO Usuario (email_usu, senha_usu) VALUES (@email, @senha)";
                 comando.Parameters.AddWithValue("@email", usuario.Email);
@@ -29,6 +34,7 @@ namespace IBeauty.Models
                 throw new Exception("Erro ao salvar o usuário: " + ex.Message);
             }
         }
+
         public Usuario GetByUsuario(string email)
         {
             try

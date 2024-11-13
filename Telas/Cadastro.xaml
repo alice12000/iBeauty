@@ -32,8 +32,8 @@
                                                   IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
                                         <ToggleButton.Template>
                                             <ControlTemplate TargetType="ToggleButton">
-                                                <Grid Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center">
-                                                 
+                                                <Grid Width="40" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center">
+
                                                     <Path Data="M 0 0 L 6 6 L 12 0 Z" Fill="#FFB6667C" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 10 0"/>
                                                 </Grid>
                                             </ControlTemplate>
@@ -54,30 +54,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <Style TargetType="ComboBoxItem">
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="JosefinSans"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ComboBoxItem">
-                        <Border x:Name="Border" Background="{TemplateBinding Background}">
-                            <ContentPresenter/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsHighlighted" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#FFEEE4E6"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </Page.Resources>
     <Grid >
         <Grid.Background>
@@ -90,7 +66,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
                         <TextBlock Text="Nome completo:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox x:Name="tbnome" Height="40" Width="690" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="tbnome" Height="40" Width="560" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -100,13 +76,23 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10 0 0 0">
                         <TextBlock Text="Data de nascimento:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox x:Name="tbdn" Height="40" Width="450" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="tbdn" Height="40" Width="300" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="10,0,0,0">
+                        <TextBlock Text="Senha:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
+                        <TextBox x:Name="tbsenha" Height="40" Width="270" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
@@ -130,7 +116,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="10,0,0,10" HorizontalAlignment="Left">
                         <TextBlock Text="Telefone:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox x:Name="tbtelefone" Height="40" Width="290" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                        <TextBox x:Name="tbtelefone" Height="40" Width="290" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -147,7 +133,7 @@
                     <StackPanel Orientation="Vertical" Margin="0,0,0,0" HorizontalAlignment="Left">
                         <TextBlock Text="Bairro:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
 
-                        <TextBox x:Name="tbbairro" Height="40" Width="800" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                        <TextBox x:Name="tbbairro" Height="40" Width="800" FontFamily="JosefinSans" Padding="10" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -183,7 +169,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
                         <TextBlock Text="Rua:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox x:Name="tbrua" Width="400" Height="40" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbrua" Width="400" Height="40" FontFamily="JosefinSans" Padding="10" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -193,7 +179,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
                         <TextBlock Text="CEP:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox x:Name="tbcep" Width="280" Height="40" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbcep" Width="280" Height="40" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -207,7 +193,7 @@
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                         <TextBlock Text="Estado:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <ComboBox x:Name="cbestado"  Style="{StaticResource StyledComboBox}" Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0" IsEditable="True" IsReadOnly="True">
+                        <ComboBox x:Name="cbestado" Style="{StaticResource StyledComboBox}" Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0">
                             <ComboBoxItem Content="Acre (AC)" />
                             <ComboBoxItem Content="Alagoas (AL)" />
                             <ComboBoxItem Content="Amapá (AP)" />
@@ -250,7 +236,7 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Height="40" Width="100" Content="Enviar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,40,0">
+                <Button Height="40" Width="100" Content="Enviar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,40,0" Click="Button_Click_1" Cursor="Hand">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
@@ -262,7 +248,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                    <Button Height="40" Width="100" Content="Cancelar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,0,0" Click="Button_Click">
+                    <Button Height="40" Width="100" Content="Cancelar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,0,0" Click="Button_Click" Cursor="Hand">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
