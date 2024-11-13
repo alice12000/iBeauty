@@ -22,18 +22,12 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ComboBox">
                         <Grid>
-                            <!-- Sombra ao redor do ComboBox -->
                             <Grid.Effect>
                                 <DropShadowEffect Color="Black" Opacity="0.3" BlurRadius="8" ShadowDepth="2"/>
                             </Grid.Effect>
-
-                            <!-- Borda e fundo do ComboBox -->
                             <Border Name="ComboBoxBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
                                 <DockPanel>
-                                    <!-- Conteúdo selecionado do ComboBox -->
                                     <ContentPresenter Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" Content="{TemplateBinding SelectionBoxItem}"/>
-
-                                    <!-- Botão para expandir -->
                                     <ToggleButton Name="DropDownToggle" DockPanel.Dock="Right" Focusable="False" 
                                                   IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
                                         <ToggleButton.Template>
@@ -48,7 +42,6 @@
                                 </DockPanel>
                             </Border>
 
-                            <!-- Popup do ComboBox -->
                             <Popup Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True">
                                 <Border Background="White" BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="5">
                                     <ScrollViewer Width="400">
@@ -62,7 +55,6 @@
             </Setter>
         </Style>
 
-        <!-- Estilo para os itens do ComboBox -->
         <Style TargetType="ComboBoxItem">
             <Setter Property="Padding" Value="10,5"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -91,8 +83,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/fundologin.png"/>
         </Grid.Background>
-        <Border Width="1200" Height="600" BorderBrush="#FFB6667C" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0,30, 0, 100" BorderThickness="2" CornerRadius="10"  Padding="0" Background="#88B6667C">
-            <StackPanel Width="1150" Height="550">
+        <Border Width="1200" Height="650" BorderBrush="#FFB6667C" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0,30, 0, 100" BorderThickness="2" CornerRadius="10"  Padding="0" Background="#88B6667C">
+            <StackPanel Width="1150" Height="610">
             <TextBlock Text="Cadastro" FontFamily="Poppins" FontSize="24" Foreground="White" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
@@ -205,33 +197,7 @@
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                         <TextBlock Text="Estado:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <ComboBox Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0" IsEditable="True" IsReadOnly="True">
-                            <ComboBox.Template>
-                                <ControlTemplate TargetType="ComboBox">
-                                    <Grid>
-                                        <!-- Caixa de fundo e borda do ComboBox -->
-                                        <Border x:Name="ComboBoxBorder" Background="White" BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10">
-                                            <Grid>
-                                                <!-- Área de clique em qualquer parte do ComboBox -->
-                                                <ToggleButton Name="ToggleButton" Background="Transparent" BorderThickness="0" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
-                                                <ContentPresenter Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,40,0" />
-                                            </Grid>
-                                        </Border>
-
-                                        <!-- Ícone de seta, posicionado à direita -->
-                                        <Path Data="M 0 0 L 10 10 L 20 0 Z" Fill="#FFB6667C" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" />
-
-                                        <!-- Popup personalizado para exibir itens do ComboBox -->
-                                        <Popup Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True" Focusable="False" StaysOpen="False">
-                                            <Border Background="White" BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="5" Width="{Binding ActualWidth, ElementName=ComboBoxBorder}">
-                                                <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="200">
-                                                    <StackPanel IsItemsHost="True" />
-                                                </ScrollViewer>
-                                            </Border>
-                                        </Popup>
-                                    </Grid>
-                                </ControlTemplate>
-                            </ComboBox.Template>
+                        <ComboBox  Style="{StaticResource StyledComboBox}" Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0" IsEditable="True" IsReadOnly="True">
                             <ComboBoxItem Content="Acre (AC)" />
                             <ComboBoxItem Content="Alagoas (AL)" />
                             <ComboBoxItem Content="Amapá (AP)" />
@@ -273,7 +239,32 @@
                         </TextBox>
                     </StackPanel>
                 </StackPanel>
-                <Button Content="Enviar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" HorizontalAlignment="Center" BorderThickness="0" Margin="0,20,0,0"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Height="40" Width="100" Content="Enviar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,40,0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="4" Opacity="0.3"/>
+                                </Border.Effect>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                    <Button Height="40" Width="100" Content="Enviar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,0,0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="4" Opacity="0.3"/>
+                                    </Border.Effect>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
         </StackPanel>
     </Border>
     </Grid>
