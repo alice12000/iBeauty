@@ -120,8 +120,11 @@
     <Compile Include="Helpers\UploadFileHeper.cs" />
     <Compile Include="Models\Cadastro.cs" />
     <Compile Include="Models\CadastroDAO.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Servico.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
@@ -284,7 +287,9 @@
     <Resource Include="Imagens\anamnese.png" />
     <Resource Include="Imagens\anamnesecapilar.png" />
     <Resource Include="Imagens\casa.png" />
-    <Resource Include="Imagens\inicio.jpeg" />
+    <Resource Include="Imagens\fundotelainicial.png" />
+    <Resource Include="Imagens\fundologin.png" />
+    <Resource Include="Imagens\Ibeautytelainicial.png" />
     <Content Include="Imagens\usuario.png" />
     <Resource Include="Imagens\menu.png" />
   </ItemGroup>

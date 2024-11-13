@@ -5,48 +5,133 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:IBeauty.Telas"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Login">
+    <Page.Resources>
+        <Style x:Key="RoundCheckBox" TargetType="CheckBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <Grid Width="32" Height="32">
+                            <Grid.Effect>
+                                <DropShadowEffect Color="Black" Opacity="0.3" BlurRadius="5" ShadowDepth="2"/>
+                            </Grid.Effect>
+                            <Border Width="32" Height="32" CornerRadius="30" BorderBrush="#B6667C" BorderThickness="2">
+                                <Ellipse Fill="White"/>
+                            </Border>
+
+                            <Ellipse x:Name="CheckMark" Fill="#FFB6667C" Width="20" Height="20" Visibility="Collapsed"/>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid>
-        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="400" Height="350">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/fundologin.png"/>
+        </Grid.Background>
+        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="525" Height="450" Background="#8CB6667C">
 
             <StackPanel>
-                <TextBlock Text="Login" FontFamily="Poppins" FontSize="24" Foreground="#FFB6667C" Margin="0,0,0,5" HorizontalAlignment="Center"/>
-                <TextBlock Text="E-mail:" FontFamily="Poppins" FontSize="16" Foreground="Black" Margin="0,0,0,5"/>
-                <TextBox Height="40" Width="360" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
-                    <TextBox.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="10"/>
+                <TextBlock Text="Login" FontFamily="Poppins" FontSize="24" Foreground="White" Margin="0,0,0,5" HorizontalAlignment="Center"/>
+                <TextBlock Text="E-mail:" FontFamily="Poppins" FontSize="14" Foreground="White" Margin="0,0,0,5"/>
+                <TextBox Width="480" Height="40" FontSize="14">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <Border CornerRadius="13" BorderThickness="2" BorderBrush="#B6667C" Background="White">
+                                            <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Padding" Value="10"/>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Color="#FF301313" BlurRadius="5" ShadowDepth="4" Opacity="0.4"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="BorderBrush" Value="#B6667C"/>
+                                    <Setter Property="Effect">
+                                        <Setter.Value>
+                                            <DropShadowEffect Color="#FF471515" BlurRadius="8" ShadowDepth="2" Opacity="0.3"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
                         </Style>
-                    </TextBox.Resources>
+                    </TextBox.Style>
                 </TextBox>
-
-                <TextBlock Text="Senha:" FontFamily="Poppins" FontSize="16" Foreground="Black" Margin="0,20,0,5"/>
-                <TextBox Height="40" Width="360" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
-                    <TextBox.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="10"/>
+                <TextBlock Text="Senha:" FontFamily="Poppins" FontSize="14" Foreground="White" Margin="0,30,0,5"/>
+                <TextBox Width="480" Height="40" FontSize="14">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <Border CornerRadius="13" BorderThickness="2" BorderBrush="#B6667C" Background="White">
+                                            <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Padding" Value="10"/>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect Color="#FF301313" BlurRadius="5" ShadowDepth="4" Opacity="0.4"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="BorderBrush" Value="#B6667C"/>
+                                    <Setter Property="Effect">
+                                        <Setter.Value>
+                                            <DropShadowEffect Color="#FF471515" BlurRadius="8" ShadowDepth="2" Opacity="0.3"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
                         </Style>
-                    </TextBox.Resources>
+                    </TextBox.Style>
                 </TextBox>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="Entrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="16" Margin="10" BorderThickness="0">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                    <Button Content="Cancelar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="16" Margin="10" BorderThickness="0">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
+                    <Button Content="Entrar" Width="480" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Margin="0, 40, 0, 0" BorderThickness="2">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="4" Opacity="0.3"/>
+                                    </Border.Effect>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
+                <CheckBox Style="{StaticResource RoundCheckBox}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,10,0"/>
+                    <TextBlock FontSize="14" VerticalAlignment="Bottom" Foreground="White">Lembrar informações?</TextBlock>
+                </StackPanel>
+                
+                <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Margin="0,40,0,0">
+                    <TextBlock FontSize="14" VerticalAlignment="Center" Foreground="White">Novo no IBeauty?</TextBlock>
+                    <Button Background="{x:Null}" Foreground="White" FontSize="14" BorderBrush="{x:Null}">Faça seu cadastro</Button>
+                </StackPanel>
+                
             </StackPanel>
         </Border>
     </Grid>
