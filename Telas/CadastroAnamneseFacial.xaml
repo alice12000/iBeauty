@@ -12,7 +12,6 @@
         <Border BorderBrush="#FFB6667C" Height="550" Width="1250" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" CornerRadius="10"  Padding="0">
 
             <StackPanel >
-                
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -43,7 +42,10 @@
 
                             <TextBlock  Grid.Column="0" Text="É gestante?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
 
-                            <ComboBox  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" />
+                            <ComboBox  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                                <ComboBoxItem Content="Sim"/>
+                                <ComboBoxItem Content="Não"/>
+                            </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim quantas semanas?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
                             <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
@@ -66,9 +68,13 @@
                                 <ColumnDefinition Width="262*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock  Grid.Column="0" Text="Tem problemas de queda de cabelos?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2" Margin="0,0,109,0"/>
+                            <TextBlock  Grid.Column="0" Text="Tem problemas de queda de cabelos?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="3" Margin="0,0,249,0"/>
 
-                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" />
+                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                                <ComboBoxItem Content="Sim"/>
+                                <ComboBoxItem Content="Não"/>
+                                <ComboBoxItem Content="Talvez"/>
+                            </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim qual?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
                             <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
@@ -94,7 +100,11 @@
 
                             <TextBlock  Grid.Column="0" Text="Possui alegia a henna/ cosmético / outros?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
 
-                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" />
+                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                                <ComboBoxItem Content="Sim"/>
+                                <ComboBoxItem Content="Não"/>
+                                <ComboBoxItem Content="Não sei"/>
+                            </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim qual?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
                             <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
@@ -120,7 +130,10 @@
 
                             <TextBlock  Grid.Column="0" Text="Faz uso de alguma medicação?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
 
-                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" />
+                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                                <ComboBoxItem Content="Sim"/>
+                                <ComboBoxItem Content="Não"/>
+                            </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim qual?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
                             <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
@@ -135,9 +148,10 @@
 
 
                     <!-- Lado Direito -->
-                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Margin="20">
+                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Margin="20" RenderTransformOrigin="0.506,0.479">
                         <TextBlock Text="Design de Sobrancelhas" FontSize="24" Margin="0,0,0,20" FontFamily="Poppins"/>
-                        <!--Tipo de pele:-->
+
+                        <!--Espaço entre as Sobrancelhas///Espaço entre as Glândulas-->
                         <Grid Margin="0 0 0 10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"/>
@@ -169,49 +183,124 @@
                             </TextBox>
                         </Grid>
 
-                        <!--Método(s) Utilizado(s):-->
-                        <TextBlock Text="Método(s) Utilizado(s):" FontSize="14" Margin="0,0,15,3" FontFamily="Poppins"/>
-                        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="5">
-                            <StackPanel Margin="10">
-                                <CheckBox Content="Cera Quente" Margin="0,0,0,5" FontFamily="Poppins" FontSize="14"/>
-                                <CheckBox Content="Cera Fria" Margin="0,0,0,5" FontFamily="Poppins" FontSize="14"/>
-                                <CheckBox Content="Laser" Margin="0,0,0,5" FontFamily="Poppins" FontSize="14"/>
-                                <CheckBox Content="Luz Pulsantes" Margin="0,0,0,5" FontFamily="Poppins" FontSize="14"/>
-                                <CheckBox Content="Linha" Margin="0,0,0,5" FontFamily="Poppins" FontSize="14"/>
-                            </StackPanel>
-                        </Border>
+                        <!--Altura Inical/ Altura Central /Altura Final:///Tipo de Pele:-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
 
-                        <!--Area(s)-->
-                        <TextBlock Text="Area(s):" FontSize="14" Margin="0,10,0,3" FontFamily="Poppins"/>
-                        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="5">
-                            <Grid Margin="10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="310*"/>
+                                <ColumnDefinition Width="273*" />
+                            </Grid.ColumnDefinitions>
 
-                                <CheckBox Content="Axilas" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="0" Grid.Row="0"/>
-                                <CheckBox Content="Virilha" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="0" Grid.Row="1"/>
-                                <CheckBox Content="Costas" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="0" Grid.Row="2"/>
-                                <CheckBox Content="Peito / Abdómem" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="0" Grid.Row="3"/>
-                                <CheckBox Content="Braço / Antebraço" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="1" Grid.Row="0"/>
-                                <CheckBox Content="Coxa e Perna" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="1" Grid.Row="1"/>
-                                <CheckBox Content="Nadegas e Extras" Margin="0,0,5,5" FontFamily="Poppins" FontSize="14" Grid.Column="1" Grid.Row="2"/>
-                            </Grid>
-                        </Border>
+                            <TextBlock  Grid.Column="0" Text="Altura Inical/ Altura Central /Altura Final:" FontSize="14" FontFamily="Poppins" />
+                            <TextBlock  Grid.Column="1" Text="Tipo de Pele:" FontSize="14" FontFamily="Poppins" />
+
+                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
+
+                        <!--Ponto Inicial / PontoAlto / Ponto FInal://Cor da Henna:-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="310*"/>
+                                <ColumnDefinition Width="273*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Ponto Inicial / PontoAlto / Ponto FInal:" FontSize="14" FontFamily="Poppins" />
+                            <TextBlock  Grid.Column="1" Text="Cor da Henna:" FontSize="14" FontFamily="Poppins" />
+
+                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
+
+                        <!--Formato do Rosto://Formato dos Olhos::-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="310*"/>
+                                <ColumnDefinition Width="273*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Formato do Rosto:" FontSize="14" FontFamily="Poppins" />
+                            <TextBlock  Grid.Column="1" Text="Formato dos Olhos:" FontSize="14" FontFamily="Poppins" />
+
+                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
+
+                        <!--Espessura das sombrancelhas:-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Espessura das sombrancelhas:" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
+
+                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,350,0" Padding="10" >
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
                     </StackPanel>
 
 
-                    <Grid  Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Margin="0,-90,30,20">
+                    <!--bOTÕES DE FECHAR E SALVAR-->
+                    <Grid  Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,30,20">
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -234,7 +323,6 @@
                             </Button.Resources>
                         </Button>
                     </Grid>
-
 
                 </Grid>
 

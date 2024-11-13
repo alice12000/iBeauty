@@ -44,9 +44,10 @@
                             <TextBlock Grid.Column="1" Text="Comprimento:" FontSize="14" FontFamily="Poppins"/>
 
                             <ComboBox Grid.Column="0" Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Margin="0 0 15 0">
-                                <ComboBoxItem Content="Masculino"/>
-                                <ComboBoxItem Content="Feminino"/>
-                                <ComboBoxItem Content="Outro"/>
+                                <ComboBoxItem Content="Liso"/>
+                                <ComboBoxItem Content="Ondulado"/>
+                                <ComboBoxItem Content="Cacheado"/>
+                                <ComboBoxItem Content="Crespo"/>
                             </ComboBox>
                                 
                             <TextBox Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Padding="10">
@@ -72,7 +73,12 @@
                             <TextBlock Grid.Column="0" Text="Característica:" FontSize="14" FontFamily="Poppins"/>
                             <TextBlock Grid.Column="1" Text="Elasticidade:" FontSize="14" FontFamily="Poppins"/>
 
-                            <ComboBox Grid.Column="0" Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Margin="0 0 15 0" />
+                            <ComboBox Grid.Column="0" Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Margin="0 0 15 0">
+                                <ComboBoxItem Content="Fino"/>
+                                <ComboBoxItem Content="Extra-Fino"/>
+                                <ComboBoxItem Content="Grosso"/>
+                                <ComboBoxItem Content="Extra-Grosso"/>
+                            </ComboBox>
                             <TextBox Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
