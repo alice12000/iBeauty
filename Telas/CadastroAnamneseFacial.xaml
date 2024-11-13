@@ -12,7 +12,6 @@
         <Border BorderBrush="#FFB6667C" Height="550" Width="1250" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" CornerRadius="10"  Padding="0">
 
             <StackPanel >
-
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -285,7 +284,8 @@
                         </Grid>
                     </StackPanel>
 
-
+                    
+                    <!--bOTÕES DE FECHAR E SALVAR-->
                     <Grid  Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,30,20">
 
                         <Grid.ColumnDefinitions>
@@ -309,7 +309,6 @@
                             </Button.Resources>
                         </Button>
                     </Grid>
-
 
                 </Grid>
 

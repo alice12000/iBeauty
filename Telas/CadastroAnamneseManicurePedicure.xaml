@@ -9,198 +9,208 @@
       Title="CadastroAnamneseManicurePedicure">
 
     <Grid>
-        <Border BorderBrush="#FFB6667C" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0,30, 0, 100" BorderThickness="2" CornerRadius="10"  Padding="0">
-            <StackPanel Width="1000">
-                <!-- Lado Esquerdo -->
-                <StackPanel Grid.Row="1" Grid.Column="0" Margin="20">
-                    <TextBlock Text="Anamnese Manicure e Pedicure" FontSize="24" Margin="0,0,0,20" FontFamily="Poppins" />
+        <Border BorderBrush="#FFB6667C" Height="550" Width="1250" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" CornerRadius="10"  Padding="0">
 
-                    <!-- Frequência que faz as unhas -->
-                    <Grid Width="400" HorizontalAlignment="Left" Margin="0,10,0,0">
+            <StackPanel >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel Grid.Column="0" Margin="20">
+                        <TextBlock Text="Anamnese Manicure e Pedicure" FontSize="24" Margin="0,0,0,20" FontFamily="Poppins"/>
+
+                        <!--Frequência que faz as unhas:-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Frequência que faz as unhas:" FontSize="14" FontFamily="Poppins" />
+                            <TextBlock  Grid.Column="3" Text="Retira cúticula:" FontSize="14" FontFamily="Poppins" />
+
+                            <ComboBox Grid.Column="0"  Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Padding="10" Margin="0,0,80,0"/>
+
+                            <ComboBox Grid.Column="1"  Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Padding="10" Margin="0,0,80,0"/>
+                        </Grid>
+
+                        <!-- Roe Unhas? /  Alergias? / Se sim qual?-->
+                        <Grid Width="400" HorizontalAlignment="Left" Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="69*" />
+                                <ColumnDefinition Width="131*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Roe Unhas?" FontSize="14" FontFamily="Poppins" Margin="0,0,167,0" Grid.ColumnSpan="2"/>
+                            <TextBlock Text="Alergias?" FontSize="14" Margin="1,0,123,0" FontFamily="Poppins" Grid.Column="1" />
+                        </Grid>
+                        <Grid Width="583" Height="40" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*" />
+                                <ColumnDefinition Width="120*"/>
+                                <ColumnDefinition Width="18"/>
+                                <ColumnDefinition Width="140*"/>
+                                <ColumnDefinition Width="97*"/>
+                                <ColumnDefinition Width="208*" />
+                            </Grid.ColumnDefinitions>
+                            <ComboBox Width="120" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" Grid.Column="1" />
+                            <ComboBox Width="140" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" Grid.Column="3" />
+                            <TextBlock Text="Se sim qual?" FontSize="14" Margin="8,10,205,10" Grid.Column="4" FontFamily="Poppins" Grid.ColumnSpan="2" />
+                            <TextBox BorderThickness="1" BorderBrush="#FFB6667C" Margin="2,0,0,0" Grid.Column="5">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                        </Grid>
+
+                        <!--Qual o formato de preferência?-->
+                        <Grid Margin="0 10 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Qual o formato de preferência?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
+
+                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,350,0" Padding="10" >
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
+
+                        <!--Qual a tonalidade de preferência?// Unha Encravada?-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Qual a tonalidade de preferência?" FontSize="14" FontFamily="Poppins" />
+                            <TextBlock  Grid.Column="3" Text="Unha Encravada?" FontSize="14" FontFamily="Poppins" />
+
+                            <ComboBox Grid.Column="0"  Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Padding="10" Margin="0,0,80,0"/>
+
+                            <ComboBox Grid.Column="1"  Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Padding="10" Margin="0,0,80,0"/>
+                        </Grid>
+
+                        <!--Qual o formato de preferência?-->
+                        <Grid Margin="0 10 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock  Grid.Column="0" Text="Já teve algum tipo de Onicomicose (micoses, fungos)?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
+                            <ComboBox Grid.Column="0"  Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Padding="10" Margin="0,0,350,0"/>
+                        </Grid>
+
+                    </StackPanel>
+
+
+
+
+                    <!-- Lado Direito -->
+                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Margin="20" RenderTransformOrigin="0.506,0.479">
+                        <TextBlock Text="Cores Escolhidas:" FontSize="24" Margin="0,0,0,20" FontFamily="Poppins"/>
+
+                        <!--Espaço entre as Sobrancelhas///Espaço entre as Glândulas-->
+                        <Grid Margin="0 0 0 10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0"  Source="\Imagens\lupa.png" Stretch="Uniform" Margin="0,0,256,0" />
+                            <TextBlock Text="Procurar esmalte?" FontSize="14" FontFamily="Poppins" HorizontalAlignment="Center" Width="226" />
+
+                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0 0 80 0" Padding="10">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10" />
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <Button  Grid.Column="2" Grid.Row="1" Content="+   Incluir Esmalte" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" >
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="2"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+
+                        <DataGrid x:Name="EsmalteDataGrid" Margin="0 10 0 0" Height="100" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="250"/>
+                                <DataGridTextColumn Header="Cor" Binding="{Binding Cor}" Width="250"/>
+                                <DataGridTemplateColumn Header="Ações" Width="100">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Remover"  />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </StackPanel>
+
+
+                    <!--bOTÕES DE FECHAR E SALVAR-->
+                    <Grid  Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,30,20">
+
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Frequência que faz as unhas:" FontSize="14" FontFamily="Poppins" Margin="0,0,-40,0"/>
-                        <TextBlock Text="Retira cúticula:" FontSize="14" Margin="152,0,-75,0" Grid.Column="1" FontFamily="Poppins" />
-                    </Grid>
-                    <Grid Width="595" Height="40" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0*" />
-                            <ColumnDefinition Width="280*"/>
-                            <ColumnDefinition Width="72*"/>
-                            <ColumnDefinition Width="243*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBox BorderThickness="1" BorderBrush="#FFB6667C" Grid.Column="1" >
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10" />
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-                        <ComboBox Width="244"  BorderBrush="#FFB6667C" Background="White" Grid.Column="3" />
-                    </Grid>
 
-                    <!-- Ocorreu algum tipo de alergia -->
-                    <Grid Width="400" HorizontalAlignment="Left" Margin="0,10,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="Roe Unhas?" FontSize="14" FontFamily="Poppins" Margin="0,0,-40,0"/>
-                        <TextBlock Text="Alergias?" FontSize="14" Margin="174,0,103,0" FontFamily="Poppins" Grid.ColumnSpan="2" />
-                    </Grid>
-                    <Grid Width="595" Height="40" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0*" />
-                            <ColumnDefinition Width="143*"/>
-                            <ColumnDefinition Width="30*"/>
-                            <ColumnDefinition Width="144*"/>
-                            <ColumnDefinition Width="110*"/>
-                            <ColumnDefinition Width="168*" />
-                        </Grid.ColumnDefinitions>
-                        <ComboBox Width="142" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" Grid.Column="1" />
-                        <ComboBox Width="144" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White" Grid.Column="3" />
-                        <TextBlock Text="Se sim qual?" FontSize="14" Margin="15,10,2,10" Grid.Column="4" FontFamily="Poppins" />
-                        <TextBox BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,-1,0" Grid.Column="5">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10" />
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-
-                    </Grid>
-
-
-                    <!-- Possui alegia a cosmético / medicamento -->
-                    <Grid Width="305" HorizontalAlignment="Left" Margin="0,10,0,0">
-                        <TextBlock Text="Qual o formato de preferência?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="3"/>
-                    </Grid>
-                    <Grid Width="595" Height="40">
-                        <ComboBox BorderBrush="#FFB6667C" Background="White" Margin="0,0,158,0" />
-                    </Grid>
-
-
-                    <Grid Width="400" HorizontalAlignment="Left" Margin="0,10,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="Qual a tonalidade de preferência?" FontSize="14" FontFamily="Poppins" Margin="0,0,-40,0"/>
-                        <TextBlock Text="Unha Encravada?" FontSize="14" Margin="152,0,-75,0" Grid.Column="1" FontFamily="Poppins" />
-                    </Grid>
-                    <Grid Width="595" Height="40" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0*" />
-                            <ColumnDefinition Width="282*"/>
-                            <ColumnDefinition Width="68*"/>
-                            <ColumnDefinition Width="245*" />
-                        </Grid.ColumnDefinitions>
-                        <ComboBox BorderBrush="#FFB6667C" Background="White" Grid.Column="1" Margin="1,0,1,0" />
-                        <ComboBox BorderBrush="#FFB6667C" Background="White" Grid.Column="3" />
-                    </Grid>
-
-
-
-                    <!-- roblemas de pele -->
-                    <Grid Width="400" HorizontalAlignment="Left" Margin="0,10,0,0" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="0*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="Já teve algum tipo de Onicomicose (micoses, fungos)?" FontSize="14" FontFamily="Poppins"/>
-                    </Grid>
-                    <Grid Width="595" Height="40">
-                        <ComboBox BorderBrush="#FFB6667C" Background="White" Margin="0,0,158,0" />
-                    </Grid>
-
-                </StackPanel>
-
-
-
-                <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical" Margin="20,20,20,47" Grid.RowSpan="2">
-                    <TextBlock Text="Cores Escolhidas:" FontSize="24" Margin="0,0,0,20" FontFamily="Poppins"/>
-
-                    <Grid Width="200" HorizontalAlignment="Left" Margin="0,10,0,0" Height="21">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="28*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="169*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="\Imagens\lupa.png" Stretch="Uniform" />
-                        <TextBlock Text="Procurar esmalte?" FontSize="14" FontFamily="Poppins" HorizontalAlignment="Center" Width="160" Grid.Column="2" />
-                    </Grid>
-
-                    <Grid Width="595" Height="40" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0*" />
-                            <ColumnDefinition Width="280*"/>
-                            <ColumnDefinition Width="47*"/>
-                            <ColumnDefinition Width="268*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBox BorderThickness="1" BorderBrush="#FFB6667C" Grid.Column="1">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10" />
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-                        <Button Content="+   Incluir Esmalte" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Grid.Column="3" >
-
-
+                        <Button Grid.Column="0" Margin="0 0 5 0" Content="Fechar"  Width="150" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14"  >
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="2"/>
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+
+                        <Button Grid.Column="1" Content="Salvar" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Width="150">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
                             </Button.Resources>
                         </Button>
                     </Grid>
 
-                    <DataGrid x:Name="EsmalteDataGrid" Margin="0 10 0 0" Height="100" AutoGenerateColumns="False">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="250"/>
-                            <DataGridTextColumn Header="Cor" Binding="{Binding Cor}" Width="250"/>
-                            <DataGridTemplateColumn Header="Ações" Width="100">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button Content="Remover"  />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-
-
-
-
-                </StackPanel>
-
-
-
-
-
-
-
-                <StackPanel Grid.Row="2" HorizontalAlignment="Right" >
-                    <Button Content="Fechar"  Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Width="178" >
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </StackPanel>
-
-                <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" >
-                    <Button Content="Salvar" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Width="178">
-                        <Button.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                </StackPanel>
+                </Grid>
             </StackPanel>
         </Border>
     </Grid>
