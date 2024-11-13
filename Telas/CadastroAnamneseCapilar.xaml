@@ -43,12 +43,13 @@
                             <TextBlock Grid.Column="0" Text="Tipo de Cabelo:" FontSize="14" FontFamily="Poppins"/>
                             <TextBlock Grid.Column="1" Text="Comprimento:" FontSize="14" FontFamily="Poppins"/>
 
-                            <ComboBox Grid.Column="0" Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Margin="0 0 15 0"
+                            <ComboBox Grid.Column="0" Grid.Row="1" BorderBrush="#FFB6667C" Background="White" Margin="0 0 15 0">
                                 <ComboBoxItem Content="Masculino"/>
                                 <ComboBoxItem Content="Feminino"/>
                                 <ComboBoxItem Content="Outro"/>
-                                <ComboBox/>
-                                <TextBox Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Padding="10">
+                            </ComboBox>
+                                
+                            <TextBox Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
