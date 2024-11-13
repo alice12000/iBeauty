@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace IBeauty.Models
 {
-    internal class CadastroUsuario
+    public class CadastroUsuario
     {
-        public int Id { get; set; } 
-        public string Nome {get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Genero { get; set; }
         public string Email { get; set; }

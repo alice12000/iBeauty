@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IBeauty.Models
 {
-    internal class Endereco
+    public class Endereco
     {
         public int Id { get; set; }
         public string Rua { get; set; }

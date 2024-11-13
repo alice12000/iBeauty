@@ -47,8 +47,8 @@
                                 <ComboBoxItem Content="Masculino"/>
                                 <ComboBoxItem Content="Feminino"/>
                                 <ComboBoxItem Content="Outro"/>
-                            <ComboBox/>
-                            <TextBox Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Padding="10">
+                                <ComboBox/>
+                                <TextBox Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />

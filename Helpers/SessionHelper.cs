@@ -49,6 +49,7 @@ namespace IBeauty.Helpers
         {
             _ = GetInstance();
 
-            return _usuario != null ? _usuario : null;
+            return _usuario;
         }
+    }
 }

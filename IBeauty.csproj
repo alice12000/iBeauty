@@ -114,15 +114,14 @@
       <DependentUpon>MenuLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Helpers\CadastroUsuario.cs" />
+    <Compile Include="Helpers\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
     <Compile Include="Helpers\HashHelper.cs" />
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Helpers\UploadFileHeper.cs" />
-    <Compile Include="Models\Cadastro.cs" />
-    <Compile Include="Models\CadastroDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
-    <Compile Include="Models\EnderecoBase.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Servico.cs" />

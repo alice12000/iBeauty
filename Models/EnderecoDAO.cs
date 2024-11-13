@@ -111,10 +111,11 @@ namespace IBeauty.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "UPDATE Endereco SET " +
-                                      "rua = @rua, bairro = @bairro, numero = @numero, complemento = @complemento, " +
+                                      "id = @id, rua = @rua, bairro = @bairro, numero = @numero, complemento = @complemento, " +
                                       "cidade = @cidade, estado = @estado, cep = @cep " +
                                       "WHERE id_end = @id";
 
+                comando.Parameters.AddWithValue("@id", obj.Id);
                 comando.Parameters.AddWithValue("@rua", obj.Rua);
                 comando.Parameters.AddWithValue("@bairro", obj.Bairro);
                 comando.Parameters.AddWithValue("@numero", obj.Numero);
