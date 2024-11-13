@@ -89,7 +89,7 @@ namespace IBeauty.Controle
 
         private void BtnCadastroFornecedor_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroFornecedor());
+            MainFrame.Navigate(new Telas.TabelaFornecedor());
         }
 
         private void BtnCadastrarServico_Click(object sender, RoutedEventArgs e)

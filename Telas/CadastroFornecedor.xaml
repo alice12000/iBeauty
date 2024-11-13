@@ -5,23 +5,28 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:IBeauty.Telas"
       mc:Ignorable="d" 
-      d:DesignHeight="1050" d:DesignWidth="1920"
+      d:DesignHeight="800" d:DesignWidth="1720"
       Title="CadastroFornecedor">
 
-    <Grid>
-        <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Margin="20,30,05,40" Padding="20">
+    <Grid >
+        <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Margin="15,100" Padding="20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Grid.Row="0">
                     <TextBlock Text="Dados Cadastrais de Fornecedor" FontFamily="Poppins" FontSize="24" Foreground="Black" Margin="0,0,0,0" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                        <TextBlock Text="Nome:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
+                        <TextBlock Text="Nome Fantasia:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="nome_txt" Height="40" Width="700" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="tbnome" Height="40" Width="700" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -33,7 +38,7 @@
                         <TextBlock Text="Empresa:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="email_txt" Height="40" Width="700" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbempresa" Height="40" Width="700" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -65,14 +70,14 @@
                         <TextBlock Text="Telefone:" FontSize="14" Margin="210,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="cpf_txt" Height="40" Width="350" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbcpfcnpj" Height="40" Width="350" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                        <TextBox x:Name="celular_txt" Width="330" Height="40" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="20,0,0,0">
+                        <TextBox x:Name="tbtelefone" Width="330" Height="40" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="20,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -84,7 +89,7 @@
                         <TextBlock Text="Website:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="site_txt" Height="40" Width="700" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="tbwebsite" Height="40" Width="700" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -93,22 +98,22 @@
                         </TextBox>
                     </StackPanel>
                 </StackPanel>
-                <!--Parte de endereço-->
-                <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Margin="20,17,0,0" >
+                
+                <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Margin="20,17,0,0" >
                     <TextBlock Text="Endereço" FontFamily="Poppins" FontSize="16" Foreground="Black" Margin="0,0,0,0" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                         <TextBlock Text="Rua:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
                         <TextBlock Text="Bairro:" FontSize="14" Margin="235,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="rua_txt" Width="250" Height="40" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbrua" Width="250" Height="40" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                        <TextBox x:Name="bairro_txt" Height="40" Width="450" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
+                        <TextBox x:Name="tbbairro" Height="40" Width="450" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -122,14 +127,14 @@
                         <TextBlock Text="Complemento:" FontSize="14" Margin="150,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="numero_txt" Height="40" Width="200" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbnumero" Height="40" Width="200" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                        <TextBox x:Name="complemento_txt" Width="500" Height="40" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
+                        <TextBox x:Name="tbcomplemento" Width="500" Height="40" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -143,14 +148,14 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="cidade_txt" Height="40" Width="400" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbcidade" Height="40" Width="400" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                        <ComboBox x:Name="estado_cbx" Height="40" Width="300" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
+                        <ComboBox x:Name="cbestado" Height="40" Width="300" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
                             <ComboBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -189,19 +194,10 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                         <TextBlock Text="CEP:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
-                        <TextBlock Text="País:" FontSize="14" Margin="280,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="cep_txt" Height="40" Width="300" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-
-                        <TextBox x:Name="numero_telefone_txt" Height="40" Width="400" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
+                        <TextBox x:Name="tbcep" Height="40" Width="300" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -209,44 +205,23 @@
                             </TextBox.Resources>
                         </TextBox>
                     </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBlock Text="Nome de usuário:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins"/>
-                        <TextBlock Text="Senha:" FontSize="14" Margin="290,0,0,5" FontFamily="Poppins"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox x:Name="password" Height="40" Width="400" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-                        <TextBox x:Name="senha_txt" Height="40" Width="300" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,0">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,10,0">
-                            <Button.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                        <Button Content="Limpar" Width="150" Height="40" Background="White" Foreground="#FFB6667C" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,0,0">
-                            <Button.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20">
+                    <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,10,0" Click="Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Content="Limpar" Width="150" Height="40" Background="White" Foreground="#FFB6667C" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,0,0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Border>

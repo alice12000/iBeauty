@@ -114,6 +114,8 @@
       <DependentUpon>MenuLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Models\CadastroDoFornecedor.cs" />
+    <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
     <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
@@ -168,6 +170,9 @@
     </Compile>
     <Compile Include="Telas\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaFornecedor.xaml.cs">
+      <DependentUpon>TabelaFornecedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
@@ -237,6 +242,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Telas\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaFornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
