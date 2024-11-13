@@ -19,9 +19,10 @@ namespace IBeauty.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO Endereco (rua, bairro, numero, complemento, cidade, estado, cep) " +
-                                      "VALUES (@rua, @bairro, @numero, @complemento, @cidade, @estado, @cep)";
+                comando.CommandText = "INSERT INTO Endereco (id_end, rua_end, bairro_end, numero_end, complemento_end, cidade_end, estado_end, cep_end) " +
+                                      "VALUES (@id, @rua, @bairro, @numero, @complemento, @cidade, @estado, @cep)";
 
+                comando.Parameters.AddWithValue("@id", obj.Id);
                 comando.Parameters.AddWithValue("@rua", obj.Rua);
                 comando.Parameters.AddWithValue("@bairro", obj.Bairro);
                 comando.Parameters.AddWithValue("@numero", obj.Numero);
@@ -56,18 +57,16 @@ namespace IBeauty.Models
 
                 while (reader.Read())
                 {
-                    var endereco = new Endereco
-                    {
-                        Id = reader.GetInt32("id_end"),
-                        Rua = DAOHelper.GetString(reader, "rua_end"),
-                        Bairro = DAOHelper.GetString(reader, "bairro_end"),
-                        Numero = reader.GetInt32("numero_end"),
-                        Complemento = DAOHelper.GetString(reader, "complemento)end"),
-                        Cidade = DAOHelper.GetString(reader, "cidade_end"),
-                        Estado = DAOHelper.GetString(reader, "estado_end"),
-                        Cep = DAOHelper.GetString(reader, "cep_end")
-                    };
-
+                    var endereco = new Endereco(
+                    reader.GetInt32("id_end"),
+                    DAOHelper.GetString(reader, "rua_end"),
+                    DAOHelper.GetString(reader, "bairro_end"),
+                    reader.GetInt32("numero_end"),
+                    DAOHelper.GetString(reader, "complemento_end"),
+                    DAOHelper.GetString(reader, "cidade_end"),
+                    DAOHelper.GetString(reader, "estado_end"),
+                    DAOHelper.GetString(reader, "cep_end")
+                    );
                     lista.Add(endereco);
                 }
 
@@ -111,7 +110,7 @@ namespace IBeauty.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "UPDATE Endereco SET " +
-                                      "id = @id, rua = @rua, bairro = @bairro, numero = @numero, complemento = @complemento, " +
+                                      "rua = @rua, bairro = @bairro, numero = @numero, complemento = @complemento, " +
                                       "cidade = @cidade, estado = @estado, cep = @cep " +
                                       "WHERE id_end = @id";
 

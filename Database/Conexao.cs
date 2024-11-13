@@ -19,7 +19,7 @@ namespace IBauty.Database
 
         private static string password = "root";
 
-        private static string dbname = "bd_escola";
+        private static string dbname = "Ibeauty_bd";
 
         private static MySqlConnection connection;
 

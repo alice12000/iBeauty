@@ -64,26 +64,27 @@ namespace IBeauty.Models
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    var cadastro = new CadastroUsuario
-                    {
-                        Id = reader.GetInt32("id_cli"),
-                        Nome = reader.GetString("nome_cli"),
-                        DataNascimento = reader.GetDateTime("data_nascimento_cli"),
-                        Genero = reader.GetString("genero_cli"),
-                        Email = reader.GetString("email_cli"),
-                        Telefone = reader.GetInt32("telefone_cli"),
-                        Endereco = new Endereco
-                        {
-                            Id = reader.GetInt32("id_end"),
-                            Rua = DAOHelper.GetString(reader, "rua"),
-                            Bairro = DAOHelper.GetString(reader, "bairro"),
-                            Numero = reader.GetInt32("numero"),
-                            Complemento = DAOHelper.GetString(reader, "complemento"),
-                            Cidade = DAOHelper.GetString(reader, "cidade"),
-                            Estado = DAOHelper.GetString(reader, "estado"),
-                            Cep = DAOHelper.GetString(reader, "cep")
-                        }
-                    };
+                    Endereco endereco = new Endereco
+                        (
+                            reader.GetInt32("id_end"),
+                            DAOHelper.GetString(reader, "rua"),
+                            DAOHelper.GetString(reader, "bairro"),
+                            reader.GetInt32("numero"),
+                            DAOHelper.GetString(reader, "complemento"),
+                            DAOHelper.GetString(reader, "cidade"),
+                            DAOHelper.GetString(reader, "estado"),
+                            DAOHelper.GetString(reader, "cep")
+                        );
+                    var cadastro = new CadastroUsuario 
+                    (
+                        reader.GetInt32("id_cli"),
+                        reader.GetString("nome_cli"),
+                        reader.GetDateTime("data_nascimento_cli"),
+                        reader.GetString("genero_cli"),
+                        reader.GetString("email_cli"),
+                        reader.GetInt32("telefone_cli"),
+                        endereco
+                    );
                     lista.Add(cadastro);
                 }
                 reader.Close();

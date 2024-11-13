@@ -40,11 +40,11 @@ namespace IBeauty.Models
                 if (reader.Read())
                 {
                     return new Usuario
-                    {
-                        Id = reader.GetInt32("id_usu"),
-                        Email = reader.GetString("email_usu"),
-                        Senha = reader.GetString("senha_usu")
-                    };
+                    (
+                        reader.GetInt32("id_usu"),
+                        reader.GetString("email_usu"),
+                        reader.GetString("senha_usu")
+                    );
                 }
                 return null;
             }
