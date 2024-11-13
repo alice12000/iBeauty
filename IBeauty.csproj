@@ -122,6 +122,7 @@
     <Compile Include="Models\CadastroDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\EnderecoBase.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Servico.cs" />

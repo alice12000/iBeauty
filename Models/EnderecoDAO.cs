@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 namespace IBeauty.Models
 {
     internal class EnderecoDAO
-        
     {
-        /*
         private static Conexao _conn = new Conexao();
 
         public void Insert(Endereco obj)
@@ -21,9 +19,8 @@ namespace IBeauty.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO curso VALUES " +
-                "(null, @rua, @bairro, @numero, @complemento, @cidade, @estado, @cep)";
-
+                comando.CommandText = "INSERT INTO Endereco (rua, bairro, numero, complemento, cidade, estado, cep) " +
+                                      "VALUES (@rua, @bairro, @numero, @complemento, @cidade, @estado, @cep)";
 
                 comando.Parameters.AddWithValue("@rua", obj.Rua);
                 comando.Parameters.AddWithValue("@bairro", obj.Bairro);
@@ -39,7 +36,6 @@ namespace IBeauty.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
-
             }
             catch (Exception ex)
             {
@@ -47,7 +43,7 @@ namespace IBeauty.Models
             }
         }
 
-        public List<Cadastro> List()
+        public List<Endereco> List()
         {
             try
             {
@@ -60,16 +56,17 @@ namespace IBeauty.Models
 
                 while (reader.Read())
                 {
-                    var endereco = new Endereco();  
-
-                    endereco.Id = reader.GetInt32("id_end");
-                    endereco.Rua = DAOHelper.GetString(reader, "rua_end");
-                    endereco.Bairro = DAOHelper.GetString(reader, "bairro_end");
-                    endereco.Numero = DAOHelper.GetStirng(reader, "numero_ end");
-                    endereco.Complemento = DAOHelper.GetString(reader, "complemento_end");
-                    endereco.Cidade = DAOHelper.GetString(reader, "cidade_end");
-                    endereco.Estado = DAOHelper.GetString(reader, "estado_end");
-                    endereco.Cep = DAOHelper.GetString(reader, "cep_end");
+                    var endereco = new Endereco
+                    {
+                        Id = reader.GetInt32("id_end"),
+                        Rua = DAOHelper.GetString(reader, "rua_end"),
+                        Bairro = DAOHelper.GetString(reader, "bairro_end"),
+                        Numero = reader.GetInt32("numero_end"),
+                        Complemento = DAOHelper.GetString(reader, "complemento)end"),
+                        Cidade = DAOHelper.GetString(reader, "cidade_end"),
+                        Estado = DAOHelper.GetString(reader, "estado_end"),
+                        Cep = DAOHelper.GetString(reader, "cep_end")
+                    };
 
                     lista.Add(endereco);
                 }
@@ -77,7 +74,6 @@ namespace IBeauty.Models
                 reader.Close();
 
                 return lista;
-
             }
             catch (Exception ex)
             {
@@ -85,13 +81,13 @@ namespace IBeauty.Models
             }
         }
 
-        public void Delete(Curso obj)
+        public void Delete(Endereco obj)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM Curso WHERE id_cur = @id";
+                comando.CommandText = "DELETE FROM Endereco WHERE id_end = @id";
 
                 comando.Parameters.AddWithValue("@id", obj.Id);
 
@@ -99,37 +95,34 @@ namespace IBeauty.Models
 
                 if (resultado == 0)
                 {
-                    throw new Exception("Ocorreram erros ao salvar as informações.");
+                    throw new Exception("Ocorreram erros ao deletar as informações.");
                 }
-
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public void Update(Curso obj)
+
+        public void Update(Endereco obj)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Escola SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                comando.CommandText = "UPDATE Endereco SET " +
+                                      "rua = @rua, bairro = @bairro, numero = @numero, complemento = @complemento, " +
+                                      "cidade = @cidade, estado = @estado, cep = @cep " +
+                                      "WHERE id_end = @id";
 
-                
-                comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", escola.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", escola.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", escola.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", escola.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", escola.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", escola.Responsavel);
-
-                comando.Parameters.AddWithValue("@id", escola.Id);
-                
+                comando.Parameters.AddWithValue("@rua", obj.Rua);
+                comando.Parameters.AddWithValue("@bairro", obj.Bairro);
+                comando.Parameters.AddWithValue("@numero", obj.Numero);
+                comando.Parameters.AddWithValue("@complemento", obj.Complemento);
+                comando.Parameters.AddWithValue("@cidade", obj.Cidade);
+                comando.Parameters.AddWithValue("@estado", obj.Estado);
+                comando.Parameters.AddWithValue("@cep", obj.Cep);
+                comando.Parameters.AddWithValue("@id", obj.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -137,13 +130,11 @@ namespace IBeauty.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
-
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-*/
     }
 }

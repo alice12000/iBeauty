@@ -16,5 +16,16 @@ namespace IBeauty.Models
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public string Cep { get; set; }
+        public Endereco(int id, string rua, string bairro, int numero, string complemento, string cidade, string estado, string cep)
+        {
+            Id = id;
+            Rua = rua;
+            Bairro = bairro;
+            Numero = numero;
+            Complemento = complemento;
+            Cidade = cidade;
+            Estado = estado;
+            Cep = cep;
+        }
     }
 }
