@@ -90,7 +90,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
                         <TextBlock Text="Nome completo:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="690" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="tbnome" Height="40" Width="690" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -100,7 +100,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10 0 0 0">
                         <TextBlock Text="Data de nascimento:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="450" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="tbdn" Height="40" Width="450" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>
@@ -112,7 +112,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <StackPanel>
                         <TextBlock Text="Gênero:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <ComboBox Style="{StaticResource StyledComboBox}" Margin="0,0,0,0">
+                        <ComboBox x:Name="cbgenero" Style="{StaticResource StyledComboBox}" Margin="0,0,0,0">
                             <ComboBoxItem Content="Masculino"/>
                             <ComboBoxItem Content="Feminino"/>
                             <ComboBoxItem Content="Outro"/>
@@ -120,7 +120,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="10 0 0 0">
                         <TextBlock Text="Endereço de e-mail:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="540" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                        <TextBox x:Name="tbemail" Height="40" Width="540" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -130,7 +130,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="10,0,0,10" HorizontalAlignment="Left">
                         <TextBlock Text="Telefone:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="290" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                        <TextBox x:Name="tbtelefone" Height="40" Width="290" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -147,7 +147,7 @@
                     <StackPanel Orientation="Vertical" Margin="0,0,0,0" HorizontalAlignment="Left">
                         <TextBlock Text="Bairro:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
 
-                        <TextBox Height="40" Width="800" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                        <TextBox x:Name="tbbairro" Height="40" Width="800" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -158,7 +158,7 @@
                     
                     <StackPanel Orientation="Vertical" Margin="10,0,0,0">
                         <TextBlock Text="Número:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="340" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbnumero" Height="40" Width="340" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -173,7 +173,7 @@
                 
                     <StackPanel Orientation="Vertical" Margin="0,0,0,10">
                         <TextBlock Text="Complemento:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="450" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                        <TextBox x:Name="tbcomplemento" Height="40" Width="450" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -183,7 +183,17 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
                         <TextBlock Text="Rua:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Width="690" Height="40" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbrua" Width="400" Height="40" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+                        <TextBlock Text="CEP:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
+                        <TextBox x:Name="tbcep" Width="280" Height="40" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -197,7 +207,7 @@
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                         <TextBlock Text="Estado:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <ComboBox  Style="{StaticResource StyledComboBox}" Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0" IsEditable="True" IsReadOnly="True">
+                        <ComboBox x:Name="cbestado"  Style="{StaticResource StyledComboBox}" Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0" IsEditable="True" IsReadOnly="True">
                             <ComboBoxItem Content="Acre (AC)" />
                             <ComboBoxItem Content="Alagoas (AL)" />
                             <ComboBoxItem Content="Amapá (AP)" />
@@ -230,7 +240,7 @@
                     
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
                         <TextBlock Text="Cidade:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
-                        <TextBox Height="40" Width="740" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                        <TextBox x:Name="tbcidade" Height="40" Width="740" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -252,7 +262,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                    <Button Height="40" Width="100" Content="Enviar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,0,0">
+                    <Button Height="40" Width="100" Content="Cancelar" FontFamily="Poppins" FontSize="14" Background="#FFB6667C" Foreground="White" HorizontalAlignment="Center" BorderThickness="2" Margin="0,30,0,0" Click="Button_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IBeauty.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace IBeauty.Telas
 {
     /// <summary>
@@ -23,6 +25,12 @@ namespace IBeauty.Telas
         public Cadastro()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Endereco endereco = new Endereco(0, tbrua.Text, tbbairro.Text, Convert.ToInt32(tbnumero.Text), tbcomplemento.Text, tbcidade.Text, cbestado.Text, tbcep.Text);
+            CadastroUsuario cadastro = new CadastroUsuario(0, tbnome.Text, Convert.ToDateTime(tbdn.Text), cbgenero.Text, tbemail.Text, Convert.ToInt32(tbtelefone.Text), endereco);
         }
     }
 }

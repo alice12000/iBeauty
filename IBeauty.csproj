@@ -118,10 +118,13 @@
     <Compile Include="Helpers\HashHelper.cs" />
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Helpers\UploadFileHeper.cs" />
-    <Compile Include="Models\Cadastro.cs" />
-    <Compile Include="Models\CadastroDAO.cs" />
+    <Compile Include="Models\CadastroUsuario.cs" />
+    <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\EnderecoBase.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\UsuarioDAO.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
