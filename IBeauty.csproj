@@ -114,8 +114,8 @@
       <DependentUpon>MenuLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database\Conexao.cs" />
-    <Compile Include="Helpers\CadastroUsuario.cs" />
-    <Compile Include="Helpers\CadastroUsuarioDAO.cs" />
+    <Compile Include="Models\CadastroUsuario.cs" />
+    <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
     <Compile Include="Helpers\HashHelper.cs" />
     <Compile Include="Helpers\SessionHelper.cs" />
@@ -125,6 +125,8 @@
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Servico.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\UsuarioDAO.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
