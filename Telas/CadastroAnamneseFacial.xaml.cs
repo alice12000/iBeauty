@@ -24,5 +24,10 @@ namespace IBeauty.Telas
         {
             InitializeComponent();
         }
+
+        private void bFechar_Click(object sender, RoutedEventArgs e)
+        {
+            Window.GetWindow(this)?.Close();
+        }
     }
 }
