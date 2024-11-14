@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IBeauty.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,117 @@ namespace IBeauty.Telas
         {
             InitializeComponent();
         }
+
+        private void bFechar_Click(object sender, RoutedEventArgs e)
+        {
+
+            Window.GetWindow(this)?.Close();
+        }
+
+        private void bSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            // Verificação dos campos obrigatórios
+            if (cbtipoCabelo.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecione o tipo de cabelo.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbComprimento.Text))
+            {
+                MessageBox.Show("Por favor, insira o comprimento do cabelo.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (cbCaracteristica.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecione a característica do cabelo.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbElasticidade.Text))
+            {
+                MessageBox.Show("Por favor, insira a elasticidade do cabelo.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbpigmento.Text))
+            {
+                MessageBox.Show("Por favor, insira o pigmento predominante.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbEspessura.Text))
+            {
+                MessageBox.Show("Por favor, insira a espessura do fio.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbObservacao.Text))
+            {
+                MessageBox.Show("Por favor, insira alguma observação.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Verificação de pelo menos uma condição marcada
+            if (!cbTingimento.IsChecked.GetValueOrDefault() &&
+                !cbAlisamento.IsChecked.GetValueOrDefault() &&
+                !cbRelaxamento.IsChecked.GetValueOrDefault() &&
+                !cbEscovaProgressiva.IsChecked.GetValueOrDefault() &&
+                !cbEscova.IsChecked.GetValueOrDefault() &&
+                !cbLuzes.IsChecked.GetValueOrDefault())
+            {
+                MessageBox.Show("Por favor, selecione pelo menos uma condição capilar.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Verificação de pelo menos um antecedente alérgico marcado
+            if (!cbTinturas.IsChecked.GetValueOrDefault() &&
+                !cbAlisantes.IsChecked.GetValueOrDefault() &&
+                !cbMedicamentos.IsChecked.GetValueOrDefault() &&
+                !cbLiqPermanetes.IsChecked.GetValueOrDefault() &&
+                !cbTratamentosCapila.IsChecked.GetValueOrDefault() &&
+                !cbOutro.IsChecked.GetValueOrDefault())
+            {
+                MessageBox.Show("Por favor, selecione pelo menos um antecedente alérgico.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Aqui você pode adicionar a lógica de salvar os dados no banco de dados
+            MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // Após salvar, navegar de volta para a tela de cadastro de cliente
+            Window.GetWindow(this)?.Close();
+
+           
+        }
+
+        // Método para limpar os campos após o salvamento
+        private void LimparCampos()
+        {
+            cbtipoCabelo.SelectedIndex = -1;
+            tbComprimento.Clear();
+            cbCaracteristica.SelectedIndex = -1;
+            tbElasticidade.Clear();
+            tbpigmento.Clear();
+            tbEspessura.Clear();
+            tbObservacao.Clear();
+
+            cbTingimento.IsChecked = false;
+            cbAlisamento.IsChecked = false;
+            cbRelaxamento.IsChecked = false;
+            cbEscovaProgressiva.IsChecked = false;
+            cbEscova.IsChecked = false;
+            cbLuzes.IsChecked = false;
+
+            cbTinturas.IsChecked = false;
+            cbAlisantes.IsChecked = false;
+            cbMedicamentos.IsChecked = false;
+            cbLiqPermanetes.IsChecked = false;
+            cbTratamentosCapila.IsChecked = false;
+            cbOutro.IsChecked = false;
+        }
     }
+    
+    
 }
