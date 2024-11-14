@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -109,9 +109,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AgendaBloqueio.xaml.cs">
-      <DependentUpon>AgendaBloqueio.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controle\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
@@ -122,8 +119,6 @@
     <Compile Include="Models\CadastroDeProdutoDAO.cs" />
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
-    <Compile Include="Models\CadastroDoFuncionario.cs" />
-    <Compile Include="Models\CadastroDoFuncionarioDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
     <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
@@ -191,10 +186,6 @@
     <Compile Include="Telas\TelaInicialSistema.xaml.cs">
       <DependentUpon>TelaInicialSistema.xaml</DependentUpon>
     </Compile>
-    <Page Include="AgendaBloqueio.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controle\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
