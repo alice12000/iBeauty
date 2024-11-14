@@ -135,6 +135,9 @@
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\AgendaBloqueio.xaml.cs">
+      <DependentUpon>AgendaBloqueio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Cadastro.xaml.cs">
       <DependentUpon>Cadastro.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\Agenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\AgendaBloqueio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

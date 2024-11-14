@@ -72,12 +72,13 @@ namespace IBeauty.Telas
                 cadastroDoFornecedorDAO.Insert(cadastroDoFornecedor);
 
                 MessageBox.Show("Usuário cadastrado com sucesso!");
+                
                 NavigationService.Navigate(new Uri("Telas/TabelaFornecedor.xaml", UriKind.Relative));
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro: " + ex.Message);
-                Console.WriteLine("Detalhes do erro: " + ex.StackTrace); 
+                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Detalhes do erro: " + ex.StackTrace); 
                 throw new Exception("Erro ao salvar as informações: " + ex.Message);
             }
         }

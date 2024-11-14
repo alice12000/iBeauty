@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace IBeauty.Telas
 {
     /// <summary>
-    /// Interação lógica para Agenda.xam
+    /// Interação lógica para AgendaBloqueio.xam
     /// </summary>
-    public partial class Agenda : Window
+    public partial class AgendaBloqueio : Page
     {
-        public Agenda()
+        public AgendaBloqueio()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
