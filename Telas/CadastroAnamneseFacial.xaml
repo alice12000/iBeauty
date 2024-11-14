@@ -42,12 +42,12 @@
 
                             <TextBlock  Grid.Column="0" Text="É gestante?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
 
-                            <ComboBox  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                            <ComboBox x:Name="cbGestante" Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
                                 <ComboBoxItem Content="Sim"/>
                                 <ComboBoxItem Content="Não"/>
                             </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim quantas semanas?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
-                            <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
+                            <TextBox x:Name="tbgestante" Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -68,9 +68,9 @@
                                 <ColumnDefinition Width="262*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock  Grid.Column="0" Text="Tem problemas de queda de cabelos?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="3" Margin="0,0,249,0"/>
+                            <TextBlock  Grid.Column="0" Text="Tem problemas de queda de cabelos?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="3" Margin="0,0,32,0"/>
 
-                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                            <ComboBox x:Name="cbQuedaCabelo" Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
                                 <ComboBoxItem Content="Sim"/>
                                 <ComboBoxItem Content="Não"/>
                                 <ComboBoxItem Content="Talvez"/>
@@ -98,15 +98,15 @@
                                 <ColumnDefinition Width="262*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock  Grid.Column="0" Text="Possui alegia a henna/ cosmético / outros?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
+                            <TextBlock  Grid.Column="0" Text="Possui alegia a henna/ cosmético / outros?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="3" Margin="0,0,3,0"/>
 
-                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                            <ComboBox x:Name="cbAlergia" Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
                                 <ComboBoxItem Content="Sim"/>
                                 <ComboBoxItem Content="Não"/>
                                 <ComboBoxItem Content="Não sei"/>
                             </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim qual?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
-                            <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
+                            <TextBox x:Name="tbAlergia" Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -128,14 +128,14 @@
                                 <ColumnDefinition Width="262*" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock  Grid.Column="0" Text="Faz uso de alguma medicação?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
+                            <TextBlock  Grid.Column="0" Text="Faz uso de alguma medicação?" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="3" Margin="0,0,68,0"/>
 
-                            <ComboBox Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
+                            <ComboBox x:Name="cbMedicamento" Grid.Column="0"  Grid.Row="1" Width="213" HorizontalAlignment="Center" BorderBrush="#FFB6667C" Background="White">
                                 <ComboBoxItem Content="Sim"/>
                                 <ComboBoxItem Content="Não"/>
                             </ComboBox>
                             <TextBlock Grid.Column="1"  Grid.Row="1" Text="Se sim qual?" FontSize="14" Margin="19,10,8,10" FontFamily="Poppins" />
-                            <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
+                            <TextBox x:Name="tbMedicamento" Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,2,0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -166,7 +166,7 @@
                             <TextBlock  Grid.Column="0" Text="Espaço entre as Sobrancelhas:" FontSize="14" FontFamily="Poppins" />
                             <TextBlock  Grid.Column="3" Text="Espaço entre as Glândulas:" FontSize="14" FontFamily="Poppins" />
 
-                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0 0 80 0" Padding="10">
+                            <TextBox x:Name="tbEspacoSombrancelha" Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0 0 80 0" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -174,7 +174,7 @@
                                 </TextBox.Resources>
                             </TextBox>
 
-                            <TextBox  Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0 0 80 0" >
+                            <TextBox x:Name="tbEspacoGlandula" Grid.Column="2"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0 0 80 0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -198,7 +198,7 @@
                             <TextBlock  Grid.Column="0" Text="Altura Inical/ Altura Central /Altura Final:" FontSize="14" FontFamily="Poppins" />
                             <TextBlock  Grid.Column="1" Text="Tipo de Pele:" FontSize="14" FontFamily="Poppins" />
 
-                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
+                            <TextBox x:Name="tbAltura" Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -206,7 +206,7 @@
                                 </TextBox.Resources>
                             </TextBox>
 
-                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
+                            <TextBox x:Name="tbTipoPele" Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -230,7 +230,7 @@
                             <TextBlock  Grid.Column="0" Text="Ponto Inicial / PontoAlto / Ponto FInal:" FontSize="14" FontFamily="Poppins" />
                             <TextBlock  Grid.Column="1" Text="Cor da Henna:" FontSize="14" FontFamily="Poppins" />
 
-                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
+                            <TextBox x:Name="tbPonto" Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -238,7 +238,7 @@
                                 </TextBox.Resources>
                             </TextBox>
 
-                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
+                            <TextBox x:Name="tbCorHenna" Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -262,7 +262,7 @@
                             <TextBlock  Grid.Column="0" Text="Formato do Rosto:" FontSize="14" FontFamily="Poppins" />
                             <TextBlock  Grid.Column="1" Text="Formato dos Olhos:" FontSize="14" FontFamily="Poppins" />
 
-                            <TextBox Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
+                            <TextBox x:Name="tbFormacaoRosto" Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" Padding="10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -270,7 +270,7 @@
                                 </TextBox.Resources>
                             </TextBox>
 
-                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
+                            <TextBox x:Name="tbFormacaoOlhos" Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,80,0" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -288,7 +288,7 @@
 
                             <TextBlock  Grid.Column="0" Text="Espessura das sombrancelhas:" FontSize="14" FontFamily="Poppins" Grid.ColumnSpan="2"/>
 
-                            <TextBox  Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,350,0" Padding="10" >
+                            <TextBox x:Name="tbEspessuraSombracelhas" Grid.Column="1"  Grid.Row="1" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,350,0" Padding="10" >
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10" />
@@ -307,7 +307,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Button Grid.Column="0" Margin="0 0 5 0" Content="Fechar"  Width="150" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14"  >
+                        <Button x:Name="bFechar" Grid.Column="0" Margin="0,0,5,0" Content="Fechar"  Width="150" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Click="bFechar_Click" VerticalAlignment="Top"  >
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -315,7 +315,7 @@
                             </Button.Resources>
                         </Button>
 
-                        <Button Grid.Column="1" Content="Salvar" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Width="150">
+                        <Button x:Name="bSalvar" Grid.Column="1" Content="Salvar" Height="49" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Width="150">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>

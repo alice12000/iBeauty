@@ -116,6 +116,7 @@
       <DependentUpon>MenuLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Models\CadastroDeAnamneseCapilar.cs" />
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
