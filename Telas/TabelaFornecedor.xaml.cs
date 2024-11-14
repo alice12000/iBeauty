@@ -111,5 +111,10 @@ namespace IBeauty.Telas
                 MessageBox.Show("Selecione um fornecedor para excluir.");
             }
         }
+
+        private void dataGridFornecedores_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
