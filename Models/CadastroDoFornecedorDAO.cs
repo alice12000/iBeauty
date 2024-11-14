@@ -90,9 +90,6 @@ namespace IBeauty.Models
                 _conn.Close();
             }
         }
-
-
-
         public List<CadastroDoFornecedor> List()
         {
             try
