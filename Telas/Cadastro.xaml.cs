@@ -84,7 +84,8 @@ namespace IBeauty.Telas
                 Console.WriteLine("Erro ao cadastrar usuário: " + ex.ToString());
                 throw new Exception("Erro ao salvar as informações: " + ex.Message, ex.InnerException);
             }
-        }   
+        }
 
+       
     }
 }

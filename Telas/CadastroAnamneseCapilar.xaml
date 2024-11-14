@@ -5,15 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:IBeauty.Telas"
       mc:Ignorable="d" 
-      d:DesignHeight="1050" d:DesignWidth="1920"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="CadastroAnamneseCapilar">
 
 
     <Grid>
-        <Border BorderBrush="#FFB6667C" Height="550" Width="1250" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" CornerRadius="10"  Padding="0">
+        <Border BorderBrush="#FFB6667C" Height="550" Width="750" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" CornerRadius="10"  Padding="0">
            
             <StackPanel >
-                <Grid>
+                <Grid Width="739">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="80"/>

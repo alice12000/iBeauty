@@ -78,28 +78,28 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 30 0 0">
-                        <Button Content="Anamnese Capilar" FontFamily="Poppins" FontSize="12" Width="165" Height="70" Background="#FFB6667C" Foreground="#FFFFFF" Margin="0 0 10 0">
+                        <Button Content="Anamnese Capilar" FontFamily="Poppins" FontSize="12" Width="165" Height="70" Background="#FFB6667C" Foreground="#FFFFFF" Margin="0 0 10 0" Click="Button_Click">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="18"/>
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button Content="Anamnese Facial" FontFamily="Poppins" FontSize="12" Width="165" Height="70"   Margin="0 0 10 0" Background="#FFB6667C" Foreground="#FFFFFF">
+                        <Button Content="Anamnese Facial" FontFamily="Poppins" FontSize="12" Width="165" Height="70"   Margin="0 0 10 0" Background="#FFB6667C" Foreground="#FFFFFF" Click="Button_Click_1">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="18"/>
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button Content="Anamnese Corporal" FontFamily="Poppins" FontSize="12" Width="165" Height="70"  Background="#FFB6667C" Foreground="#FFFFFF" Margin="0 0 10 0">
+                        <Button Content="Anamnese Corporal" FontFamily="Poppins" FontSize="12" Width="165" Height="70"  Background="#FFB6667C" Foreground="#FFFFFF" Margin="0 0 10 0" Click="Button_Click_2">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="18"/>
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button Content="Anamnese Manicure" FontFamily="Poppins" FontSize="12" Width="165" Height="70" Background="#FFB6667C" Foreground="#FFFFFF">
+                        <Button Content="Anamnese Manicure" FontFamily="Poppins" FontSize="12" Width="165" Height="70" Background="#FFB6667C" Foreground="#FFFFFF" Click="Button_Click_3">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="18"/>

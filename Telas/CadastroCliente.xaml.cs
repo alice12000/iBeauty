@@ -20,6 +20,7 @@ namespace IBeauty.Telas
     /// </summary>
     public partial class CadastroCliente : Page
     {
+        public Frame MainFrame { get; set; }
         public CadastroCliente()
         {
             InitializeComponent();
@@ -45,6 +46,70 @@ namespace IBeauty.Telas
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+            Window novaJanela = new Window
+            {
+                Content = new CadastroAnamneseCapilar(), // Defina aqui a nova Page
+                Width = 800,
+                Height = 600,
+                Owner = Application.Current.MainWindow, // Define a janela principal como proprietária
+                WindowStartupLocation = WindowStartupLocation.CenterOwner // Centraliza a nova janela
+            };
+
+            // Exibe a janela como modal
+            novaJanela.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window novaJanela = new Window
+            {
+                Content = new CadastroAnamneseFacial(), // Defina aqui a nova Page
+                Width = 800,
+                Height = 600,
+                Owner = Application.Current.MainWindow, // Define a janela principal como proprietária
+                WindowStartupLocation = WindowStartupLocation.CenterOwner // Centraliza a nova janela
+            };
+
+            // Exibe a janela como modal
+            novaJanela.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+           
+            Window novaJanela = new Window
+            {
+                Content = new CadastroAnamneseCorporal(), // Defina aqui a nova Page
+                Width = 800,
+                Height = 600,
+                Owner = Application.Current.MainWindow, // Define a janela principal como proprietária
+                WindowStartupLocation = WindowStartupLocation.CenterOwner // Centraliza a nova janela
+            };
+
+            // Exibe a janela como modal
+            novaJanela.ShowDialog();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+            Window novaJanela = new Window
+            {
+                Content = new CadastroAnamneseManicurePedicure(), // Defina aqui a nova Page
+                Width = 800,
+                Height = 600,
+                Owner = Application.Current.MainWindow, // Define a janela principal como proprietária
+                WindowStartupLocation = WindowStartupLocation.CenterOwner // Centraliza a nova janela
+            };
+
+            // Exibe a janela como modal
+            novaJanela.ShowDialog();
         }
     }
 }
