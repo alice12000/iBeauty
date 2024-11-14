@@ -137,14 +137,105 @@
 
                                 <!-- Repete o StackPanel horizontal para os demais horários -->
                                 <StackPanel Orientation="Horizontal" Margin="5">
-                                    <TextBlock Text="9:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="09:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                     <Button Width="100" Height="40" Background="#F5B7B1"/>
                                     <Button Width="100" Height="40" Background="#F5B7B1"/>
                                     <Button Width="100" Height="40" Background="#F5B7B1"/>
                                     <Button Width="100" Height="40" Background="#F5B7B1"/>
                                     <Button Width="100" Height="40" Background="#F5B7B1"/>
                                     <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    
                                 </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="10:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="11:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="12:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="13:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="14:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="15:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="16:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <TextBlock Text="17:00" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+                                    <Button Width="100" Height="40" Background="#F5B7B1"/>
+
+                                </StackPanel>
+
+                                
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
