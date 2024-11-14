@@ -97,10 +97,8 @@ namespace IBeauty.Telas
 
                 if (fornecedorParaExcluir != null)
                 {
-                    // Exclui o fornecedor
                     dao.Delete(fornecedorParaExcluir);
 
-                    // Recarrega a lista de fornecedores após a exclusão
                     CarregarFornecedores();
                 }
                 else

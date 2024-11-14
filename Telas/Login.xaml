@@ -44,7 +44,7 @@
             <StackPanel>
                 <TextBlock Text="Login" FontFamily="Poppins" FontSize="24" Foreground="White" Margin="0,0,0,5" HorizontalAlignment="Center"/>
                 <TextBlock Text="E-mail:" FontFamily="Poppins" FontSize="14" Foreground="White" Margin="0,0,0,5"/>
-                <TextBox Width="480" Height="40" FontSize="14">
+                <TextBox x:Name="tbemail" Width="480" Height="40" FontSize="14">
                     <TextBox.Style>
                         <Style TargetType="TextBox">
                             <Setter Property="Template">
@@ -76,7 +76,7 @@
                     </TextBox.Style>
                 </TextBox>
                 <TextBlock Text="Senha:" FontFamily="Poppins" FontSize="14" Foreground="White" Margin="0,30,0,5"/>
-                <TextBox Width="480" Height="40" FontSize="14">
+                <TextBox x:Name="tbsenha" Width="480" Height="40" FontSize="14">
                     <TextBox.Style>
                         <Style TargetType="TextBox">
                             <Setter Property="Template">
@@ -109,7 +109,7 @@
                 </TextBox>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="Entrar" Width="480" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Margin="0, 40, 0, 0" BorderThickness="2">
+                    <Button Content="Entrar" Width="480" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" Margin="0, 40, 0, 0" BorderThickness="2" Click="Button_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">

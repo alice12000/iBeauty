@@ -89,9 +89,46 @@ namespace IBeauty.Models
             }
         }
 
-    
-
-    public List<CadastroUsuario> List()
+        public CadastroUsuario GetById(int id)
+        {
+            try
+            {
+                var comando = _conn.Query();
+                comando.CommandText = "SELECT * FROM Cadastro WHERE id_cad = @id";
+                comando.Parameters.AddWithValue("@id", id);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    return new CadastroUsuario
+                    (
+                        reader.GetInt32("id_cad"),
+                        reader.GetString("nome_cad"),
+                        reader.GetString("data_nascimento_cad"),
+                        reader.GetString("senha_cad"),
+                        reader.GetString("genero_cad"),
+                        reader.GetString("email_cad"),
+                        reader.GetString("telefone_cad"),
+                        new Endereco
+                        (
+                            reader.GetInt32("id_end_fk"),
+                            DAOHelper.GetString(reader, "rua_end"),
+                            DAOHelper.GetString(reader, "bairro_end"),
+                            reader.GetInt32("numero_end"),
+                            DAOHelper.GetString(reader, "complemento_end"),
+                            DAOHelper.GetString(reader, "cidade_end"),
+                            DAOHelper.GetString(reader, "estado_end"),
+                            DAOHelper.GetString(reader, "cep_end")
+                        )
+                    );
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar o cadastro: " + ex.Message);
+            }
+        }
+            public List<CadastroUsuario> List()
         {
             try
             {
