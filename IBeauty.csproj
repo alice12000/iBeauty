@@ -109,6 +109,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AgendaBloqueio.xaml.cs">
+      <DependentUpon>AgendaBloqueio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controle\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
@@ -183,9 +186,16 @@
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Telas\TelaInicialSistema.xaml.cs">
       <DependentUpon>TelaInicialSistema.xaml</DependentUpon>
     </Compile>
+=======
+    <Page Include="AgendaBloqueio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+>>>>>>> Stashed changes
     <Page Include="Controle\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
