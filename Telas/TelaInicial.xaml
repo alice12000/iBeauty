@@ -19,7 +19,7 @@
                 <ImageBrush ImageSource="/Imagens/IBeautytelainicial.png"/>
             </StackPanel.Background>
         </StackPanel>
-        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="230" Height="60" Margin="170 0 0 140" FontFamily="Poppins" FontSize="24" BorderBrush="#FFB6667C" Background="#FFB6667C" Foreground="White" >Iniciar
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="230" Height="60" Margin="170 0 0 140" FontFamily="Poppins" FontSize="24" BorderBrush="#FFB6667C" Background="#FFB6667C" Foreground="White" Click="Button_Click" >Iniciar
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="#FF71293C" BorderThickness="{TemplateBinding BorderThickness}">
@@ -33,7 +33,7 @@
         </Button>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="145 0 0 100">
             <TextBlock FontFamily="Poppins" FontSize="14" Foreground="#FFB6667C" VerticalAlignment="Center" FontWeight="Bold">Ainda não tem cadastro?</TextBlock>
-            <Button FontFamily="Poppins" FontSize="14" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB6667C" FontWeight="Bold">Clique aqui</Button>
+            <Button FontFamily="Poppins" FontSize="14" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB6667C" FontWeight="Bold" Click="Button_Click_1">Clique aqui</Button>
         </StackPanel>
     </Grid>
 </Page>

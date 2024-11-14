@@ -13,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using IBeauty.Controle;
+using IBeauty.Telas;
+
 
 namespace IBeauty.Telas
 {
@@ -30,28 +33,32 @@ namespace IBeauty.Telas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Captura os valores de email e senha dos campos de entrada
             string email = tbemail.Text;
             string senha = tbsenha.Text;
-
-            // Verifica se o campo de email ou senha está vazio
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
             {
                 MessageBox.Show("Por favor, preencha todos os campos.");
                 return;
             }
 
-            // Verifica se o usuário existe e se a senha está correta
-            
-                // Chama o método de autenticação passando o e-mail e a senha
-                Usuario usuario = _usuarioDAO.AuthenticateUser(email, senha);
+                Usuario usuario = _usuarioDAO.AuthenticateEmail(email, senha);
 
                 if (usuario != null)
                 {
                     MessageBox.Show("Login bem-sucedido!");
-                    // Aqui você pode redirecionar o usuário para outra página após o login
-                }
-                else
+
+                JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+
+                janelaPrincipal.MainFrame.Navigate(new TelaInicialSistema());
+
+                janelaPrincipal.menuLogin.Visibility = Visibility.Collapsed;
+                janelaPrincipal.menuControl.Visibility = Visibility.Visible;
+
+                Application.Current.MainWindow = janelaPrincipal;
+                janelaPrincipal.Show();
+                Window.GetWindow(this)?.Close();
+            }
+            else
                 {
                     MessageBox.Show("Email ou senha incorretos. Tente novamente.");
                 }
@@ -59,6 +66,10 @@ namespace IBeauty.Telas
             
         }
 
-
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+            janelaPrincipal.MainFrame.Navigate(new Cadastro());
+        }
     }
 }

@@ -4,142 +4,127 @@ using MySql.Data.MySqlClient;
 using System.Windows;
 using System;
 
-public class UsuarioDAO
+namespace IBeauty.Models
 {
-    private static Conexao _conn = new Conexao();
-
-    public void Insert(Usuario usuario)
+    public class UsuarioDAO
     {
-        try
+        private static Conexao _conn = new Conexao();
+
+        public Usuario GetByUsuario(string email)
         {
-            if (_conn == null)
+            try
             {
-                throw new Exception("A conexão com o banco de dados não foi estabelecida.");
-            }
-
-            var comando = _conn.Query();
-            comando.CommandText = "INSERT INTO Usuario (email_usu, senha_usu, id_cad_fk) VALUES (@email, @senha, @id_cad_fk)";
-            comando.Parameters.AddWithValue("@email", usuario.Email);
-            comando.Parameters.AddWithValue("@senha", usuario.Senha);
-            comando.Parameters.AddWithValue("@id_cad_fk", usuario.Cadastro.Id); // Certifique-se de passar o id do Cadastro
-            var resultado = comando.ExecuteNonQuery();
-            if (resultado == 0)
-            {
-                throw new Exception("Erro ao salvar o usuário.");
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception("Erro ao salvar o usuário: " + ex.Message);
-        }
-    }
-
-    public Usuario GetByUsuario(string email)
-    {
-        try
-        {
-            var comando = _conn.Query();
-            comando.CommandText = "SELECT * FROM Usuario WHERE email_usu = @email";
-            comando.Parameters.AddWithValue("@email", email);
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.Read())
-            {
-                // Obter o Cadastro relacionado ao Usuario
-                var cadastro = new CadastroUsuarioDAO().GetById(reader.GetInt32("id_cad_fk"));
-
-                return new Usuario
-                (
-                    reader.GetInt32("id_usu"),
-                    reader.GetString("email_usu"),
-                    reader.GetString("senha_usu"),
-                    cadastro
-                );
-            }
-            return null;
-        }
-        catch (Exception ex)
-        {
-            throw new Exception("Erro ao buscar o usuário: " + ex.Message);
-        }
-    }
-
-    public Usuario AuthenticateUser(string email, string senha)
-    {
-        var comando = _conn.Query();
-        comando.CommandText = "SELECT id_usu, email_usu, senha_usu, id_cad_fk FROM Usuario WHERE email_usu = @email";
-        comando.Parameters.AddWithValue("@email", email);
-
-        using (MySqlDataReader reader = comando.ExecuteReader())
-        {
-            if (reader.Read())
-            {
-                // Comparar a senha informada com a senha armazenada no banco
-                string senhaSalva = reader.GetString("senha_usu");
-
-                if (senhaSalva == senha) // Se a senha bater
+                var comando = _conn.Query();
+                comando.CommandText = "SELECT * FROM Usuario WHERE email_usu = @email";
+                comando.Parameters.AddWithValue("@email", email);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.Read())
                 {
-                    // Obter id_cad_fk que referencia o CadastroUsuario
-                    int idCadastro = reader.GetInt32("id_cad_fk");
+                    var cadastro = new CadastroUsuarioDAO().GetById(reader.GetInt32("id_cad_fk"));
 
-                    // Fechar o DataReader anterior antes de abrir o próximo
-                    reader.Close();
+                    return new Usuario
+                    (
+                        reader.GetInt32("id_usu"),
+                        reader.GetString("email_usu"),
+                        reader.GetString("senha_usu"),
+                        cadastro
+                    );
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar o usuário: " + ex.Message);
+            }
+        }
 
-                    // Criar a consulta para buscar o CadastroUsuario
-                    var comandoCadastro = _conn.Query();
-                    comandoCadastro.CommandText = "SELECT * FROM Cadastro WHERE id_cad = @id";
-                    comandoCadastro.Parameters.AddWithValue("@id", idCadastro);
+        public Usuario AuthenticateEmail(string email, string senha)
+        {
+            try
+            {
+                var comando = _conn.Query();
+                comando.CommandText = @"
+                    SELECT 
+                        Usuario.id_usu, 
+                        Usuario.email_usu, 
+                        Usuario.senha_usu, 
+                        Usuario.id_cad_fk,
+                        Cadastro.nome_cad, 
+                        Cadastro.data_nascimento_cad, 
+                        Cadastro.senha_cad, 
+                        Cadastro.genero_cad, 
+                        Cadastro.email_cad, 
+                        Cadastro.telefone_cad, 
+                        Endereco.id_end, 
+                        Endereco.rua_end, 
+                        Endereco.bairro_end, 
+                        Endereco.numero_end, 
+                        Endereco.complemento_end, 
+                        Endereco.cidade_end, 
+                        Endereco.estado_end, 
+                        Endereco.cep_end
+                    FROM Usuario 
+                    INNER JOIN Cadastro ON Usuario.id_cad_fk = Cadastro.id_cad
+                    LEFT JOIN Endereco ON Cadastro.id_end_fk = Endereco.id_end
+                    WHERE Usuario.email_usu = @email";
+                comando.Parameters.AddWithValue("@email", email);
 
-                    using (MySqlDataReader readerCadastro = comandoCadastro.ExecuteReader())
+                using (MySqlDataReader reader = comando.ExecuteReader())
+                {
+                    if (reader.Read())
                     {
-                        CadastroUsuario cadastro = null;
+                        string senhaSalva = reader.GetString("senha_usu");
 
-                        if (readerCadastro.Read())
+                        if (senhaSalva == senha) 
                         {
-                            cadastro = new CadastroUsuario
+                            var endereco = reader.IsDBNull(reader.GetOrdinal("id_end")) ? null : new Endereco
                             (
-                                readerCadastro.GetInt32("id_cad"),
-                                readerCadastro.GetString("nome_cad"),
-                                readerCadastro.GetString("data_nascimento_cad"),
-                                readerCadastro.GetString("senha_cad"),
-                                readerCadastro.GetString("genero_cad"),
-                                readerCadastro.GetString("email_cad"),
-                                readerCadastro.GetString("telefone_cad"),
-                                new Endereco
-                                (
-                                    readerCadastro.GetInt32("id_end"),
-                                    readerCadastro.GetString("rua_end"),
-                                    readerCadastro.GetString("bairro_end"),
-                                    readerCadastro.GetInt32("numero_end"),
-                                    readerCadastro.GetString("complemento_end"),
-                                    readerCadastro.GetString("cidade_end"),
-                                    readerCadastro.GetString("estado_end"),
-                                    readerCadastro.GetString("cep_end")
-                                )
+                                reader.GetInt32("id_end"),
+                                reader.GetString("rua_end"),
+                                reader.GetString("bairro_end"),
+                                reader.GetInt32("numero_end"),
+                                reader.GetString("complemento_end"),
+                                reader.GetString("cidade_end"),
+                                reader.GetString("estado_end"),
+                                reader.GetString("cep_end")
+                            );
+
+                            CadastroUsuario cadastro = new CadastroUsuario
+                            (
+                                reader.GetInt32("id_cad_fk"),
+                                reader.GetString("nome_cad"),
+                                reader.GetString("data_nascimento_cad"),
+                                reader.GetString("senha_cad"),
+                                reader.GetString("genero_cad"),
+                                reader.GetString("email_cad"),
+                                reader.GetString("telefone_cad"),
+                                endereco
+                            );
+
+                            return new Usuario
+                            (
+                                reader.GetInt32("id_usu"), 
+                                reader.GetString("email_usu"),
+                                reader.GetString("senha_usu"),
+                                cadastro
                             );
                         }
-
-                        // Agora retornar o objeto Usuario com o CadastroUsuario associado
-                        return new Usuario
-                        (
-                            reader.GetInt32("id_usu"),
-                            reader.GetString("email_usu"),
-                            reader.GetString("senha_usu"),
-                            cadastro // Associando o cadastro ao usuario
-                        );
+                        else
+                        {
+                            MessageBox.Show("Senha incorreta. Tente novamente.");
+                            return null;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário não encontrado. Tente novamente.");
+                        return null;
                     }
                 }
-                else
-                {
-                    // Senha incorreta
-                    MessageBox.Show("Senha incorreta. Tente novamente.");
-                    return null;
-                }
             }
-            else
+            catch (Exception ex)
             {
-                // Usuário não encontrado
-                MessageBox.Show("Usuário não encontrado. Tente novamente.");
-                return null;
+                throw new Exception("Erro ao autenticar o usuário: " + ex.Message);
             }
         }
     }

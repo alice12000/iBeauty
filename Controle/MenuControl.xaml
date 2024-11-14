@@ -126,7 +126,16 @@
                             <Button Content="Facial" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
                             <Button Content="Manicure" Background="Transparent" Foreground="White" HorizontalContentAlignment="Right" FontFamily="JosefinSans" FontSize="14" />
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnDesconectar_Click"  BorderThickness="2" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="JosefinSans" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Image Source="/Imagens/sair.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Sair" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
                     </StackPanel>
+                   
                 </Border>
             </Grid>
         </Grid>

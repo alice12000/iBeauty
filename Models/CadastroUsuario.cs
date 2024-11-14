@@ -27,5 +27,9 @@ namespace IBeauty.Models
             Telefone = telefone;
             Endereco = endereco;
         }
-    }
+        public CadastroUsuario()
+        {
+
+        }
+    }    
 }

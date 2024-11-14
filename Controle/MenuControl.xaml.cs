@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IBeauty.Telas;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -105,6 +106,20 @@ namespace IBeauty.Controle
         {
             isAnamneseExpanded = !isAnamneseExpanded;
             AnamneseOptions.Visibility = isAnamneseExpanded ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void BtnDesconectar_Click(object sender, RoutedEventArgs e)
+        {
+            JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+
+            janelaPrincipal.MainFrame.Navigate(new TelaInicial());
+
+            janelaPrincipal.menuLogin.Visibility = Visibility.Visible;
+            janelaPrincipal.menuControl.Visibility = Visibility.Collapsed;
+
+            Application.Current.MainWindow = janelaPrincipal;
+            janelaPrincipal.Show();
+            Window.GetWindow(this)?.Close();
         }
     }
 }

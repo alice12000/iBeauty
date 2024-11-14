@@ -62,7 +62,8 @@ namespace IBeauty.Models
 
                 // Agora inserir o cadastro com o id_end_fk (id do endereço)
                 comando.CommandText = "INSERT INTO Cadastro (nome_cad, data_nascimento_cad, senha_cad, genero_cad, email_cad, telefone_cad, id_end_fk) " +
-                                      "VALUES (@nome, @datanascimento, @senha, @genero, @email, @telefone, @idendereco)";
+                                      "VALUES (@nome, @datanascimento, @senha, @genero, @email, @telefone, @idendereco);" +
+                                      "INSERT INTO Usuario (email_usu, senha_usu, id_cad_fk) SELECT email_cad, senha_cad, id_cad FROM Cadastro;";
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@nome", obj.Nome);
                 comando.Parameters.AddWithValue("@datanascimento", obj.DataNascimento);
@@ -128,7 +129,7 @@ namespace IBeauty.Models
                 throw new Exception("Erro ao buscar o cadastro: " + ex.Message);
             }
         }
-            public List<CadastroUsuario> List()
+        public List<CadastroUsuario> List()
         {
             try
             {
@@ -190,60 +191,6 @@ namespace IBeauty.Models
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                _conn.Close();
-            }
-        }
-
-        public void Update(CadastroUsuario obj)
-        {
-            MySqlTransaction transaction = null;
-            try
-            {
-                Console.WriteLine("Iniciando atualização no banco...");
-                var comando = _conn.Query();
-
-                transaction = comando.Connection.BeginTransaction();
-                comando.Transaction = transaction;
-
-                comando.CommandText = "UPDATE Endereco SET rua_end = @rua, bairro_end = @bairro, numero_end = @numero, " +
-                                      "complemento_end = @complemento, cidade_end = @cidade, estado_end = @estado, cep_end = @cep " +
-                                      "WHERE id_end = @id";
-                comando.Parameters.AddWithValue("@rua", obj.Endereco.Rua);
-                comando.Parameters.AddWithValue("@bairro", obj.Endereco.Bairro);
-                comando.Parameters.AddWithValue("@numero", obj.Endereco.Numero);
-                comando.Parameters.AddWithValue("@complemento", obj.Endereco.Complemento);
-                comando.Parameters.AddWithValue("@cidade", obj.Endereco.Cidade);
-                comando.Parameters.AddWithValue("@estado", obj.Endereco.Estado);
-                comando.Parameters.AddWithValue("@cep", obj.Endereco.Cep);
-                comando.Parameters.AddWithValue("@id", obj.Endereco.Id);
-
-                comando.ExecuteNonQuery();
-
-                comando.CommandText = "UPDATE Cadastro SET nome_cad = @nome, data_nascimento_cad = @datanascimento, " +
-                                      "senha_cad = @senha, genero_cad = @genero, email_cad = @email, telefone_cad = @telefone " +
-                                      "WHERE id_cad = @id";
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@nome", obj.Nome);
-                comando.Parameters.AddWithValue("@datanascimento", obj.DataNascimento);
-                comando.Parameters.AddWithValue("@senha", obj.Senha);
-                comando.Parameters.AddWithValue("@genero", obj.Genero);
-                comando.Parameters.AddWithValue("@email", obj.Email);
-                comando.Parameters.AddWithValue("@telefone", obj.Telefone);
-                comando.Parameters.AddWithValue("@id", obj.Id);
-
-                comando.ExecuteNonQuery();
-
-                transaction.Commit();
-                Console.WriteLine("Dados atualizados com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                transaction?.Rollback();
-                Console.WriteLine("Erro: " + ex.Message);
-                throw new Exception("Erro ao salvar as informações: " + ex.Message);
             }
             finally
             {

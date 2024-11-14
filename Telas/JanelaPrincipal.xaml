@@ -3,18 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controle="clr-namespace:IBeauty.Controle"
         Title="IBeauty"  Height="1080" Width="1920"
-        WindowState="Maximized">
+        WindowState="Maximized"
+        Loaded="JanelaPrincipal_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="0" Panel.ZIndex="1">
-            <TextBlock Text="Alternar menu:" Margin="0, 0, 10, 0" FontSize="20" Foreground="#FFB6667C"/>
-            <CheckBox Name="cbMenuControl" Content="Menu Sistema" Checked="CheckBox_Checked" Margin="5, 0, 0, 0" FontSize="20" Foreground="#FFB6667C" Background="White" BorderBrush="#FFB6667C" />
-            <CheckBox Name="cbMenuLogin" Content="Menu Login" Checked="CheckBox_Checked" Margin="15, 0, 10, 0"  FontSize="20" Foreground="#FFB6667C" Background="White" BorderBrush="#FFB6667C"/>
-        </StackPanel>
 
         <Frame x:Name="MainFrame" Margin="0,40,0,0" NavigationUIVisibility="Hidden" Panel.ZIndex="-1" Grid.Row="1"/>
 
