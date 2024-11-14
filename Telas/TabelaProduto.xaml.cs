@@ -58,27 +58,48 @@ namespace IBeauty.Telas
             dataGridProdutos.ItemsSource = produtos;
         }
 
-        private void ExcluirProduto_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroDeProdutoDAO dao = new CadastroDeProdutoDAO();
-
-            var produtoSelecionado = (CadastroDeProduto)dataGridProdutos.SelectedItem;
-            if (produtoSelecionado != null)
-            {
-
-                dao.Delete(produtoSelecionado); 
-                List<CadastroDeProduto> produtosAtualizados = dao.List();  // Ou o método adequado para obter todos os produtos
-                dataGridProdutos.ItemsSource = produtosAtualizados;  // Atualiza a lista no DataGrid
-            }
-            else
-            {
-                MessageBox.Show("Selecione um produto para excluir.");
-            }
-        }
-
-        private void Button_CadastrarProduto_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Telas/CadastroProduto.xaml", UriKind.Relative));
         }
+        private void ButtonExcluir(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Instância do DAO
+                CadastroDeProdutoDAO dao = new CadastroDeProdutoDAO();
+
+                // Verificando se há um item selecionado no DataGrid
+                var produtoSelecionado = dataGridProdutos.SelectedItem;
+
+                if (produtoSelecionado != null)
+                {
+                    int idSelecionado = (int)produtoSelecionado.GetType().GetProperty("ID").GetValue(produtoSelecionado);
+
+                    CadastroDeProduto produtoParaExcluir = dao.List().FirstOrDefault(p => p.Id == idSelecionado);
+
+                    if (produtoParaExcluir != null)
+                    {
+                        dao.Delete(produtoParaExcluir);
+
+                        CarregarProdutos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Produto não encontrado.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um produto para excluir.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Exibe a mensagem de erro em caso de falha
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
+        }
+
     }
 }
