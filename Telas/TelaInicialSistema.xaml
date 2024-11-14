@@ -9,6 +9,9 @@
       Title="TelaInicialSistema">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/fundologin.png"/>
+        </Grid.Background>
         <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="555" Height="130" Background="#8CB6667C">
             <StackPanel>
                 <TextBlock Foreground="White" FontFamily="Poppins" FontSize="24" HorizontalAlignment="Center">Olá, Usuario!</TextBlock>

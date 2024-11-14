@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:IBeauty.Telas"
       mc:Ignorable="d" 
-      d:DesignHeight="1050" d:DesignWidth="1920"
+      d:DesignHeight="800" d:DesignWidth="1720"
       Title="CadastroFuncionario">
 
 
@@ -36,11 +36,61 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="ComboBox" x:Key="StyledComboBox">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FFB6667C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontFamily" Value="JosefinSans"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Grid.Effect>
+                                <DropShadowEffect Color="Black" Opacity="0.3" BlurRadius="8" ShadowDepth="2"/>
+                            </Grid.Effect>
+                            <Border Name="ComboBoxBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
+                                <DockPanel>
+                                    <ContentPresenter Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" Content="{TemplateBinding SelectionBoxItem}"/>
+                                    <ToggleButton Name="DropDownToggle" DockPanel.Dock="Right" Focusable="False" 
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                        <ToggleButton.Template>
+                                            <ControlTemplate TargetType="ToggleButton">
+                                                <Grid Width="40" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center">
+
+                                                    <Path Data="M 0 0 L 6 6 L 12 0 Z" Fill="#FFB6667C" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 10 0"/>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </ToggleButton.Template>
+                                    </ToggleButton>
+                                </DockPanel>
+                            </Border>
+
+                            <Popup Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True">
+                                <Border Background="White" BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="5">
+                                    <ScrollViewer Width="400">
+                                        <StackPanel IsItemsHost="True"/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="449*"/>
+            <RowDefinition Height="351*"/>
+        </Grid.RowDefinitions>
 
-        <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Margin="70,150,70,150" Padding="20" Grid.ColumnSpan="2">
+        <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Margin="50,100,50,100" Padding="20" Height="600" Grid.RowSpan="2">
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1.3*"/>
@@ -63,7 +113,7 @@
                                     </Style>
                                 </TextBox.Resources>
                             </TextBox>
-                            <TextBox Height="40" Width="300" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,10">
+                            <TextBox Height="40" Width="310" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,10">
                                 <TextBox.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10"/>
@@ -76,7 +126,8 @@
                             <TextBlock Text="Endereço de e-mail:" FontSize="14" Margin="260,0,0,5" FontFamily="Poppins"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                            <ComboBox Height="40" Width="300" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+
+                            <ComboBox x:Name="cbgenero" Style="{StaticResource StyledComboBox}" Margin="0,0,0,0">
                                 <ComboBoxItem Content="Masculino"/>
                                 <ComboBoxItem Content="Feminino"/>
                                 <ComboBoxItem Content="Outro"/>
@@ -109,23 +160,23 @@
                                 </TextBox.Resources>
                             </TextBox>
                         </StackPanel>
-                    </StackPanel>
-
-                </Grid>
-
-                <Grid Grid.Column="2">
-                    <StackPanel>
                         <StackPanel>
-                            <TextBlock Text="Expediente:" FontSize="14" FontFamily="Poppins"/>
+                            <TextBlock Text="Expediente:" FontSize="14" FontFamily="Poppins" Margin="0 0 0 10"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <ComboBox Height="40" Width="300" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                                 <ComboBoxItem Content="Horário geral"/>
                             </ComboBox>
-                            <Button Content="Novo expediente +" Margin="10, 0, 0, 0"  FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" HorizontalAlignment="Center"/>
+                            <Button Content="Novo expediente +" Margin="10, 0, 0, 0"  FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" HorizontalAlignment="Center" BorderBrush="{x:Null}">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
                         </StackPanel>
 
-                        <StackPanel>
+                        <StackPanel Margin="0 30 0 10">
                             <TextBlock Text="Categoria:" FontSize="14" FontFamily="Poppins"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
@@ -134,42 +185,139 @@
                             <RadioButton Content="Rosto" Margin="0, 0, 5, 0"  GroupName="Servicos" Style="{StaticResource CustomRadioButtonStyle}" />
                             <RadioButton Content="Corpo" Margin="0, 0, 5, 0"  GroupName="Servicos" Style="{StaticResource CustomRadioButtonStyle}" />
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 0"  >
-                            <Button FontFamily="Poppins" FontSize="16" Background="#DFAEBB" Padding="10,5" HorizontalAlignment="Center" Foreground="#FFB6667C" BorderBrush="#FFB6667C">
-                                <Button.Resources>
-                                    <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="10"/>
-                                    </Style>
-                                </Button.Resources>
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Image Source="/imagens/acesso.png" Width="20" Height="20" Margin="0 0 10 0" />
-                                    <TextBlock Text="Perfil de acesso" VerticalAlignment="Center" />
-                                </StackPanel>
-                            </Button>
+
+                    </StackPanel>
+
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <StackPanel>
+
+
+                        <TextBlock Margin="0 20 0 0" FontSize="20" FontFamily="Poppins" Foreground="Black">Endereço</TextBlock>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
+                            <StackPanel Orientation="Vertical" Margin="0,0,0,0" HorizontalAlignment="Left">
+                                <TextBlock Text="Bairro:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="Black"/>
+
+                                <TextBox x:Name="tbbairro" Height="40" Width="800" FontFamily="JosefinSans" Padding="10" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Número:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
+                                <TextBox x:Name="tbnumero" Height="40" Width="340" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+
                         </StackPanel>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="Defina o privilegio de acesso" FontSize="10" FontFamily="Poppins"/>
-                            <TextBlock Text="acesso desse profissional." FontSize="10" FontFamily="Poppins"/>
+
+
+                        <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+
+                            <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+                                <TextBlock Text="Complemento:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="Black"/>
+                                <TextBox x:Name="tbcomplemento" Height="40" Width="450" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+                                <TextBlock Text="Rua:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="Black"/>
+                                <TextBox x:Name="tbrua" Width="400" Height="40" FontFamily="JosefinSans" Padding="10" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+                                <TextBlock Text="CEP:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="White"/>
+                                <TextBox x:Name="tbcep" Width="280" Height="40" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 0">
-                            <RadioButton Content="Possui agenda" Margin="0, 0, 5, 0" GroupName="Servicos" Style="{StaticResource CustomRadioButtonStyle}" />
-                            <RadioButton Content="Ativo" Margin="0, 0, 5, 0"  GroupName="Servicos" Style="{StaticResource CustomRadioButtonStyle}" />
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0, 30, 0, 0">
-                            <Button Content="Salvar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" HorizontalAlignment="Center" BorderThickness="0" Margin="0,0,0,0">
-                                <Button.Resources>
-                                    <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="10"/>
-                                    </Style>
-                                </Button.Resources>
-                            </Button>
-                            <Button Content="Cancelar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" HorizontalAlignment="Left" BorderThickness="0" Margin="10,0,0,0">
-                                <Button.Resources>
-                                    <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="10"/>
-                                    </Style>
-                                </Button.Resources>
-                            </Button>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
+
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                                <TextBlock Text="Estado:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="Black"/>
+                                <ComboBox x:Name="cbestado" Style="{StaticResource StyledComboBox}" Height="40" Width="400" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Background="White" Margin="0,0,0,0">
+                                    <ComboBoxItem Content="Acre (AC)" />
+                                    <ComboBoxItem Content="Alagoas (AL)" />
+                                    <ComboBoxItem Content="Amapá (AP)" />
+                                    <ComboBoxItem Content="Amazonas (AM)" />
+                                    <ComboBoxItem Content="Bahia (BA)" />
+                                    <ComboBoxItem Content="Ceará (CE)" />
+                                    <ComboBoxItem Content="Distrito Federal (DF)" />
+                                    <ComboBoxItem Content="Espírito Santo (ES)" />
+                                    <ComboBoxItem Content="Goiás (GO)" />
+                                    <ComboBoxItem Content="Maranhão (MA)" />
+                                    <ComboBoxItem Content="Mato Grosso (MT)" />
+                                    <ComboBoxItem Content="Mato Grosso do Sul (MS)" />
+                                    <ComboBoxItem Content="Minas Gerais (MG)" />
+                                    <ComboBoxItem Content="Pará (PA)" />
+                                    <ComboBoxItem Content="Paraíba (PB)" />
+                                    <ComboBoxItem Content="Paraná (PR)" />
+                                    <ComboBoxItem Content="Pernambuco (PE)" />
+                                    <ComboBoxItem Content="Piauí (PI)" />
+                                    <ComboBoxItem Content="Rio de Janeiro (RJ)" />
+                                    <ComboBoxItem Content="Rio Grande do Norte (RN)" />
+                                    <ComboBoxItem Content="Rio Grande do Sul (RS)" />
+                                    <ComboBoxItem Content="Rondônia (RO)" />
+                                    <ComboBoxItem Content="Roraima (RR)" />
+                                    <ComboBoxItem Content="Santa Catarina (SC)" />
+                                    <ComboBoxItem Content="São Paulo (SP)" />
+                                    <ComboBoxItem Content="Sergipe (SE)" />
+                                    <ComboBoxItem Content="Tocantins (TO)" />
+                                </ComboBox>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0,0,0">
+                                <TextBlock Text="Cidade:" FontSize="14" Margin="0,0,0,5" FontFamily="Poppins" Foreground="Black"/>
+                                <TextBox x:Name="tbcidade" Height="40" Width="740" Padding="10" FontFamily="JosefinSans" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 0" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                                <Button Content="Salvar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" BorderThickness="0" Margin="0,0,0,0">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                                <Button Content="Cancelar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Foreground="White" Padding="10,5" HorizontalAlignment="Left" BorderThickness="0" Margin="10,0,0,0">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
