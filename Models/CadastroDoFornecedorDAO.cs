@@ -156,6 +156,8 @@ namespace IBeauty.Models
                 var comando = _conn.Query();
                 comando.CommandText = "DELETE FROM Fornecedor WHERE id_for = @id";
                 comando.Parameters.AddWithValue("@id", obj.Id);
+
+                _conn.Open();
                 comando.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -164,7 +166,7 @@ namespace IBeauty.Models
             }
             finally
             {
-                _conn.Close();
+                _conn.Close(); // Fecha a conexão após a exclusão
             }
         }
 

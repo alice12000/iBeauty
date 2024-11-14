@@ -18,6 +18,8 @@
             <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
             <Setter Property="BorderBrush" Value="#B6667C"/>
             <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="RowHeaderWidth" Value="30"/>
+            <Setter Property="AlternatingRowBackground" Value="#F0F0F0"/>
             <Setter Property="CellStyle">
                 <Setter.Value>
                     <Style TargetType="DataGridCell">
@@ -25,29 +27,47 @@
                         <Setter Property="BorderBrush" Value="#D3D3D3"/>
                         <Setter Property="BorderThickness" Value="0.5"/>
                         <Setter Property="Padding" Value="10"/>
+
+                        <!-- Cor de fundo e cor de texto para a linha selecionada -->
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FFB6667C"/>
+                                <!-- Cor de fundo ao selecionar -->
+                                <Setter Property="Foreground" Value="White"/>
+                                <!-- Cor da fonte ao selecionar -->
+                            </Trigger>
+                        </Style.Triggers>
                     </Style>
                 </Setter.Value>
             </Setter>
-            <Setter Property="RowHeaderWidth" Value="30"/>
-            <Setter Property="AlternatingRowBackground" Value="#F0F0F0"/>
         </Style>
     </Page.Resources>
+
     <Grid Margin="20">
-        <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10"  Width="1310" Height="515" Background="White">
-            <DataGrid x:Name="dataGridFornecedores" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White" SelectionChanged="dataGridFornecedores_SelectionChanged">
-                
-            </DataGrid>
-        </Border>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,20">
-            <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,10,0" Click="Button_Click">
+        <StackPanel>
+        <TextBlock FontSize="34" HorizontalAlignment="Center" Margin="0 30" FontFamily="Poppins" Foreground="#FFB6667C">Fornecedores cadastrados</TextBlock>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200, 0, 0, 30">
+            <Button Content="+ Novo Fornecedor" Width="200" Height="50" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="18" BorderThickness="1" BorderBrush="#FFB6667C" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            
+                <Button Content="Excluir" Width="100" Height="50" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="18" BorderThickness="1" BorderBrush="#FFB6667C" Margin="30 0 0 0" Click="ButtonExcluir">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+            <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10"  Width="1310" Height="515" Background="White">
+                <DataGrid x:Name="dataGridFornecedores" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White">
+                    
+                </DataGrid>
+
+            </Border>
         </StackPanel>
-    
     </Grid>
 </Page>

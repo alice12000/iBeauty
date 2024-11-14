@@ -19,7 +19,13 @@ namespace IBeauty.Database
             connection = new MySqlConnection($"server={host};database={dbname};port={port};user={user};password={password}");
             connection.Open();
         }
-
+        public void Open()
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+        }
         public MySqlCommand Query()
         {
             try

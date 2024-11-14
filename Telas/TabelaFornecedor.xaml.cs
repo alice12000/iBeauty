@@ -56,29 +56,62 @@ namespace IBeauty.Telas
         {
             CadastroDoFornecedorDAO dao = new CadastroDoFornecedorDAO();
             List<CadastroDoFornecedor> fornecedores = dao.List();
-            dataGridFornecedores.ItemsSource = fornecedores;
-        }
-        private void ExcluirFornecedor_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroDoFornecedorDAO dao = new CadastroDoFornecedorDAO();
 
-            var fornecedorSelecionado = (CadastroDoFornecedor)dataGridFornecedores.SelectedItem;
-            if (fornecedorSelecionado != null)
+            var fornecedoresExibidos = fornecedores.Select(f => new
             {
-                dao.Delete(fornecedorSelecionado);
-                List<CadastroDoFornecedor> fornecedoresAtualizados = dao.List();
-                dataGridFornecedores.ItemsSource = fornecedoresAtualizados;
-            }
-            else
-            {
-                MessageBox.Show("Selecione um fornecedor para excluir.");
-            }
+                ID = f.Id,
+                Nome = f.Nome,
+                Empresa = f.Empresa,
+                CPF_ou_CNPJ = f.CpfCnpj,
+                Telefone = f.Telefone,
+                Website = f.Website,
+                Rua = f.Endereco.Rua,
+                Bairro = f.Endereco.Bairro,
+                Numero = f.Endereco.Numero,
+                Complemento = f.Endereco.Complemento,
+                Cidade = f.Endereco.Cidade,
+                Estado = f.Endereco.Estado,
+                CEP = f.Endereco.Cep
+            }).ToList();
+
+            dataGridFornecedores.ItemsSource = fornecedoresExibidos;
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Telas/CadastroFornecedor.xaml", UriKind.Relative));
         }
 
+        private void ButtonExcluir(object sender, RoutedEventArgs e)
+        {
+            CadastroDoFornecedorDAO dao = new CadastroDoFornecedorDAO();
+
+            var fornecedorSelecionado = dataGridFornecedores.SelectedItem;
+
+            if (fornecedorSelecionado != null)
+            {
+                int idSelecionado = (int)fornecedorSelecionado.GetType().GetProperty("ID").GetValue(fornecedorSelecionado);
+
+                CadastroDoFornecedor fornecedorParaExcluir = dao.List().FirstOrDefault(f => f.Id == idSelecionado);
+
+                if (fornecedorParaExcluir != null)
+                {
+                    // Exclui o fornecedor
+                    dao.Delete(fornecedorParaExcluir);
+
+                    // Recarrega a lista de fornecedores após a exclusão
+                    CarregarFornecedores();
+                }
+                else
+                {
+                    MessageBox.Show("Fornecedor não encontrado.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fornecedor para excluir.");
+            }
+        }
     }
 }
