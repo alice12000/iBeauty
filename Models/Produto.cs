@@ -6,27 +6,37 @@ using System.Threading.Tasks;
 
 namespace IBeauty.Models
 {
-    public class CadastroDeProduto
+    public class Produto
     {
-        public int Id { get; set; }
         public string Nome { get; set; }
         public int Unidades { get; set; }
         public double PrecoUnitario { get; set; }
         public double Comissao { get; set; }
         public string Descricao { get; set; }
         public double PrecoFinal { get; private set; }
+        public byte[] Imagem { get; set; }
 
-
-        public CadastroDeProduto(int id, string nome, int unidades, string descricao, double precoUnitario, double comissao, double precoVenda)
+        //metodo construtor vazio
+        public Produto()
         {
-            Id = id;
-            Nome = nome;
-            Unidades = unidades;
-            Descricao = descricao;
-            PrecoUnitario = precoUnitario;
-            Comissao = comissao;
-            PrecoFinal = precoVenda;
+
         }
 
+        public Produto(string nome, int unidades, double precoUnitario, double comissao, string descricao, byte[] imagem)
+        {
+            Nome = nome;
+            Unidades = unidades;
+            PrecoUnitario = precoUnitario;
+            Comissao = comissao;
+            Descricao = descricao;
+            Imagem = imagem;
+            CalcularPrecoFinal();
+        }
+
+        // Calcula o preço final do produto
+        private void CalcularPrecoFinal()
+        {
+            PrecoFinal = PrecoUnitario + (PrecoUnitario * (Comissao / 100));
+        }
     }
 }
