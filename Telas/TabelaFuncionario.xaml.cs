@@ -76,8 +76,6 @@ namespace IBeauty.Telas
 
         private void dataGridFuncionarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Aqui pode-se adicionar algum comportamento adicional caso a seleção de um funcionário na grid
-            // altere algum estado ou detalhe, como preencher um formulário com as informações do funcionário selecionado
         }
     }
 }

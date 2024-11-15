@@ -29,12 +29,32 @@ namespace IBeauty.Telas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
+                string cpfCnpj = tbcpfcnpj.Text.Trim();
+
+                // Verifica qual RadioButton está selecionado e valida CPF ou CNPJ
+                if (rbCpf.IsChecked == true)
+                {
+                    if (!CadastroDoFornecedor.ValidarCpf(cpfCnpj))
+                    {
+                        MessageBox.Show("Por favor, insira um CPF válido.");
+                        return;
+                    }
+                }
+                else if (rbCnpj.IsChecked == true)
+                {
+                    if (!CadastroDoFornecedor.ValidarCnpj(cpfCnpj))
+                    {
+                        MessageBox.Show("Por favor, insira um CNPJ válido.");
+                        return;
+                    }
+                }
+
+                // Validações e código de cadastro
                 string rua = tbrua.Text;
                 string bairro = tbbairro.Text;
-                int numero = 0;
+                int numero;
 
                 if (!int.TryParse(tbnumero.Text, out numero))
                 {
@@ -47,9 +67,9 @@ namespace IBeauty.Telas
                 string estado = cbestado.Text;
                 string cep = tbcep.Text;
 
-                if (string.IsNullOrWhiteSpace(tbnome.Text) || string.IsNullOrWhiteSpace(tbempresa.Text) || string.IsNullOrWhiteSpace(tbcpfcnpj.Text) ||
-                    string.IsNullOrWhiteSpace(tbtelefone.Text) || string.IsNullOrWhiteSpace(tbwebsite.Text) || string.IsNullOrWhiteSpace(rua) || string.IsNullOrWhiteSpace(bairro) ||
-                    string.IsNullOrWhiteSpace(cidade) || string.IsNullOrWhiteSpace(estado) || numero == 0)
+                if (string.IsNullOrWhiteSpace(tbnome.Text) || string.IsNullOrWhiteSpace(tbempresa.Text) || string.IsNullOrWhiteSpace(cpfCnpj) ||
+                    string.IsNullOrWhiteSpace(tbtelefone.Text) || string.IsNullOrWhiteSpace(tbwebsite.Text) || string.IsNullOrWhiteSpace(rua) ||
+                    string.IsNullOrWhiteSpace(bairro) || string.IsNullOrWhiteSpace(cidade) || string.IsNullOrWhiteSpace(estado) || numero == 0)
                 {
                     MessageBox.Show("Por favor, preencha todos os campos.");
                     return;
@@ -62,23 +82,21 @@ namespace IBeauty.Telas
 
                 string nome = tbnome.Text;
                 string empresa = tbempresa.Text;
-                string cpfcnpj = tbcpfcnpj.Text;               
                 string telefone = tbtelefone.Text;
                 string webSite = tbwebsite.Text;
 
-                var cadastroDoFornecedor = new CadastroDoFornecedor(0, nome, empresa, cpfcnpj, telefone, webSite, endereco);
+                var cadastroDoFornecedor = new CadastroDoFornecedor(0, nome, empresa, cpfCnpj, telefone, webSite, endereco);
 
                 var cadastroDoFornecedorDAO = new CadastroDoFornecedorDAO();
                 cadastroDoFornecedorDAO.Insert(cadastroDoFornecedor);
 
                 MessageBox.Show("Usuário cadastrado com sucesso!");
-                
+
                 NavigationService.Navigate(new Uri("Telas/TabelaFornecedor.xaml", UriKind.Relative));
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
-                MessageBox.Show("Detalhes do erro: " + ex.StackTrace); 
                 throw new Exception("Erro ao salvar as informações: " + ex.Message);
             }
         }

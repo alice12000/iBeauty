@@ -46,7 +46,6 @@ namespace IBeauty.Telas
                 {
                     categoriaSelecionada = "Corpo";
                 }
-                // Captura os dados dos campos do formulário
                 string nome = tbnome.Text;
                 string telefone = tbtelefone.Text;
                 string genero = cbgenero.Text;
@@ -55,7 +54,6 @@ namespace IBeauty.Telas
                 string dataNascimento = tbdn.Text;
                 string expediente = cbexpediente.Text;
 
-                // Captura os dados de endereço
                 string rua = tbrua.Text;
                 string bairro = tbbairro.Text;
                 int numero = 0;
@@ -71,7 +69,6 @@ namespace IBeauty.Telas
                 string estado = cbestado.Text;
                 string cep = tbcep.Text;
 
-                // Validação se todos os campos estão preenchidos
                 if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(telefone) || string.IsNullOrWhiteSpace(genero) ||
                     string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(observacao) || string.IsNullOrWhiteSpace(dataNascimento) ||
                     string.IsNullOrWhiteSpace(expediente) || string.IsNullOrWhiteSpace(categoriaSelecionada) ||
@@ -82,23 +79,18 @@ namespace IBeauty.Telas
                     return;
                 }
 
-                // Criação do objeto Endereço
                 var endereco = new Endereco(0, rua, bairro, numero, complemento, cidade, estado, cep);
 
-                // Inserir endereço no banco de dados
                 var enderecoDAO = new EnderecoDAO();
                 enderecoDAO.Insert(endereco);
 
-                // Criação do objeto CadastroDeFuncionario
                 var cadastroFuncionario = new CadastroDeFuncionario(0, nome, telefone, genero, email, observacao, dataNascimento, expediente, categoriaSelecionada, endereco);
 
-                // Inserir dados do funcionário no banco
                 var cadastroFuncionarioDAO = new CadastroDeFuncionarioDAO();
                 cadastroFuncionarioDAO.Insert(cadastroFuncionario);
 
                 MessageBox.Show("Funcionário cadastrado com sucesso!");
 
-                // Navega para outra tela ou reseta o formulário
                 NavigationService.Navigate(new Uri("Telas/TabelaFuncionario.xaml", UriKind.Relative));
             
             

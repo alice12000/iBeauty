@@ -28,13 +28,10 @@
                         <Setter Property="BorderThickness" Value="0.5"/>
                         <Setter Property="Padding" Value="10"/>
 
-                        <!-- Cor de fundo e cor de texto para a linha selecionada -->
                         <Style.Triggers>
                             <Trigger Property="IsSelected" Value="True">
                                 <Setter Property="Background" Value="#FFB6667C"/>
-                                <!-- Cor de fundo ao selecionar -->
                                 <Setter Property="Foreground" Value="White"/>
-                                <!-- Cor da fonte ao selecionar -->
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -65,7 +62,6 @@
 
             <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Width="1310" Height="515" Background="White">
                 <DataGrid x:Name="dataGridFuncionarios" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White" SelectionChanged="dataGridFuncionarios_SelectionChanged">
-                    <!-- Defina as colunas do DataGrid com base nas propriedades do funcionário -->
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                         <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="200"/>
