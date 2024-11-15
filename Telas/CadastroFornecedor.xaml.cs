@@ -34,6 +34,7 @@ namespace IBeauty.Telas
                 string cpfCnpj = tbcpfcnpj.Text.Trim();
 
                 // Verifica qual RadioButton está selecionado e valida CPF ou CNPJ
+                /*
                 if (rbCpf.IsChecked == true)
                 {
                     if (!CadastroDoFornecedor.ValidarCpf(cpfCnpj))
@@ -49,7 +50,7 @@ namespace IBeauty.Telas
                         MessageBox.Show("Por favor, insira um CNPJ válido.");
                         return;
                     }
-                }
+                }*/
 
                 // Validações e código de cadastro
                 string rua = tbrua.Text;
