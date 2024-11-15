@@ -1,6 +1,9 @@
-﻿using System;
+﻿using IBeauty.Database;
+using IBeauty.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -99,6 +102,36 @@ namespace IBeauty.Telas
                 MessageBox.Show("Por favor, selecione pelo menos um antecedente alérgico.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+
+
+            // Criação do objeto a ser salvo no banco de dados
+
+            string tipoCabelo = cbtipoCabelo.Text; 
+            string comprimento = tbComprimento.Text;
+            string caracteristica = cbCaracteristica.Text;
+            string elasticidade = tbElasticidade.Text;
+            string pigmento = tbpigmento.Text;
+            string espessura = tbEspessura.Text;
+            string observacao = tbObservacao.Text;     
+            bool tingimento = cbTingimento.IsChecked.GetValueOrDefault();
+            bool alisamento = cbAlisamento.IsChecked.GetValueOrDefault();
+            bool relaxamento = cbRelaxamento.IsChecked.GetValueOrDefault();
+            bool escovaProgressiva = cbEscovaProgressiva.IsChecked.GetValueOrDefault();
+            bool escova = cbEscova.IsChecked.GetValueOrDefault();
+            bool luzes = cbLuzes.IsChecked.GetValueOrDefault();
+            bool tinturas = cbTinturas.IsChecked.GetValueOrDefault();
+            bool alisantes = cbAlisantes.IsChecked.GetValueOrDefault();
+            bool medicamentos = cbMedicamentos.IsChecked.GetValueOrDefault();
+            bool liqPermanentes = cbLiqPermanetes.IsChecked.GetValueOrDefault();
+            bool tratamentosCapilares = cbTratamentosCapila.IsChecked.GetValueOrDefault();
+            bool outro = cbOutro.IsChecked.GetValueOrDefault();
+
+            var anamnese = new CadastroDeAnamneseCapilar(0, tipoCabelo, comprimento, caracteristica, elasticidade, pigmento, espessura, observacao,
+                tingimento, alisamento, relaxamento, escovaProgressiva, escova, luzes, tinturas, alisantes, medicamentos, liqPermanentes, tratamentosCapilares, outro);
+
+            var cadastroDeAnamneseCapilarDAO = new CadastroDeAnamneseCapilarDAO();
+            cadastroDeAnamneseCapilarDAO.Insert(anamnese);
+
 
             // Aqui você pode adicionar a lógica de salvar os dados no banco de dados
             MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);

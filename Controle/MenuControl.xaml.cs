@@ -50,7 +50,7 @@ namespace IBeauty.Controle
 
         private void BtnAnamneseCapilar_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroAnamneseCapilar());
+            MainFrame.Navigate(new Telas.TabelaAnamneseCapilar());
         }
 
         private void BtnAnamneseCorporal_Click(object sender, RoutedEventArgs e)

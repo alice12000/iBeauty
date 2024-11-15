@@ -92,15 +92,27 @@ carga_horaria_exp int,
 salario_exp double
 );
 
-create table AnamneseCapilar(
-id_anpac int primary key auto_increment,
-tipo_cabelo_ancap varchar(300), 
-caracteristica_ancap varchar(300), 
-pigmento_ancap varchar(300), 
-observacao_ancap varchar(300), 
-comprimento_ancap varchar(300), 
-elasticidade_ancap  varchar(300), 
-espessura_ancap varchar(300)
+create table AnamneseCapilar (
+id_ancap int primary key auto_increment,
+tipo_cabelo_ancap varchar(50) not null,
+comprimento_ancap varchar(50),
+caracteristica_ancap varchar(100),
+elasticidade_ancap varchar(50),
+pigmento_ancap varchar(50),
+espessura_ancap varchar(50),
+observacao_ancap text,
+tingimento boolean default false,
+alisamento  boolean default false,
+relaxamento boolean default false,
+escova_progressiva boolean default false,
+escova boolean default false,
+luzes boolean default false,
+tinturas boolean default false,
+alisantes boolean default false,
+medicamentos boolean default false,
+liq_permanentes boolean default false,
+tratamentos_capilares text,
+outro text
 );
 
 SELECT * FROM Endereco;

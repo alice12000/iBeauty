@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilar.cs" />
+    <Compile Include="Models\CadastroDeAnamneseCapilarDAO.cs" />
     <Compile Include="Models\CadastroDeFuncionario.cs" />
     <Compile Include="Models\CadastroDeFuncionarioDAO.cs" />
     <Compile Include="Models\CadastroDoFornecedor.cs" />
@@ -178,6 +179,9 @@
     </Compile>
     <Compile Include="Telas\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaAnamneseCapilar.xaml.cs">
+      <DependentUpon>TabelaAnamneseCapilar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TabelaFornecedor.xaml.cs">
       <DependentUpon>TabelaFornecedor.xaml</DependentUpon>
@@ -260,6 +264,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Telas\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaAnamneseCapilar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

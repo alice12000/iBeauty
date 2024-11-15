@@ -94,6 +94,8 @@
                 }
             }
 
+
+
             public List<CadastroDeFuncionario> List()
             {
                 try
