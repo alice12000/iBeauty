@@ -118,10 +118,13 @@
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilar.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilarDAO.cs" />
+    <Compile Include="Models\CadastroDeCliente.cs" />
+    <Compile Include="Models\CadastroDeClienteDAO.cs" />
     <Compile Include="Models\CadastroDeFuncionario.cs" />
     <Compile Include="Models\CadastroDeFuncionarioDAO.cs" />
     <Compile Include="Models\CadastroDeProduto.cs" />
     <Compile Include="Models\CadastroDeProdutoDAO.cs" />
+    <Compile Include="Models\CadastroDeServicoDAO.cs" />
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
@@ -134,7 +137,7 @@
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
-    <Compile Include="Models\Servico.cs" />
+    <Compile Include="Models\CadastroDeServico.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuarioDAO.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
@@ -193,6 +196,9 @@
     </Compile>
     <Compile Include="Telas\TabelaProduto.xaml.cs">
       <DependentUpon>TabelaProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaServico.xaml.cs">
+      <DependentUpon>TabelaServico.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
@@ -285,6 +291,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TabelaProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaServico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

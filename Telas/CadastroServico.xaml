@@ -96,14 +96,14 @@
                         <TextBlock Text="Retorno(em dias):" FontSize="14" Margin="90,0,0,5" FontFamily="Poppins"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                        <TextBox Height="40" Width="260" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
+                        <TextBox x:Name="duracao_txt" Height="40" Width="260" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,10">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                        <TextBox Height="40" Width="260" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,10" >
+                        <TextBox x:Name="retorno_txt" Height="40" Width="260" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,0,10" >
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -113,7 +113,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="80 0 0 0" >
-                        <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,10,0">
+                        <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,10,0" Click="Button_Click">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>

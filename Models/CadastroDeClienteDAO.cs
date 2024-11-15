@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace IBeauty.Models
 {
-    public class Servico
+    public class CadastroDeClienteDAO
     {
-
     }
 }
