@@ -120,6 +120,8 @@
     <Compile Include="Models\CadastroDeAnamneseCapilarDAO.cs" />
     <Compile Include="Models\CadastroDeFuncionario.cs" />
     <Compile Include="Models\CadastroDeFuncionarioDAO.cs" />
+    <Compile Include="Models\CadastroDeProduto.cs" />
+    <Compile Include="Models\CadastroDeProdutoDAO.cs" />
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
@@ -188,6 +190,9 @@
     </Compile>
     <Compile Include="Telas\TabelaFuncionario.xaml.cs">
       <DependentUpon>TabelaFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaProduto.xaml.cs">
+      <DependentUpon>TabelaProduto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
@@ -276,6 +281,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TabelaFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

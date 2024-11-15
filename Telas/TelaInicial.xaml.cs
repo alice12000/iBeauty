@@ -27,12 +27,12 @@ namespace IBeauty.Telas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Telas/Cadastro.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Telas/Login.xaml", UriKind.Relative));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Telas/Login.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("Telas/Cadastro.xaml", UriKind.Relative));      
         }
     }
 }
