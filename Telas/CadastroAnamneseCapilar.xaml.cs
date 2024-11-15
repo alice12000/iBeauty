@@ -135,6 +135,7 @@ namespace IBeauty.Telas
 
             // Aqui você pode adicionar a lógica de salvar os dados no banco de dados
             MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+            
 
             // Após salvar, navegar de volta para a tela de cadastro de cliente
             Window.GetWindow(this)?.Close();
