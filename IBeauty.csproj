@@ -109,6 +109,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CadastroAgenda.xaml.cs">
+      <DependentUpon>CadastroAgenda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controle\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
@@ -206,6 +209,10 @@
     <Compile Include="Telas\TelaInicialSistema.xaml.cs">
       <DependentUpon>TelaInicialSistema.xaml</DependentUpon>
     </Compile>
+    <Page Include="CadastroAgenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controle\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
