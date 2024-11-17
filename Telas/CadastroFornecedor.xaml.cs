@@ -52,7 +52,6 @@ namespace IBeauty.Telas
                     }
                 }*/
 
-                // Validações e código de cadastro
                 string rua = tbrua.Text;
                 string bairro = tbbairro.Text;
                 int numero;

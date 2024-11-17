@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IBeauty.Telas"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="1800">
+             d:DesignHeight="800" d:DesignWidth="1700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
