@@ -203,7 +203,6 @@ namespace IBeauty.Models
             {
                 _conn.Close();
             }
-
         }
     }
 

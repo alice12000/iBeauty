@@ -13,6 +13,9 @@ cep_end varchar(200)
  
 );
 
+insert into Endereco (rua_end, bairro_end, numero_end, complemento_end, cidade_end, estado_end, cep_end) values ('Flores', 'Centro', '1234', 'Apartamento 10', 'Ji-Parana', 'Rondonia (RO)', '12345678');
+select * from Endereco;
+
 create table Cadastro(
 id_cad int primary key auto_increment,
 nome_cad varchar(300),
@@ -25,11 +28,19 @@ id_end_fk int,
 foreign key(id_end_fk) references Endereco(id_end)
 );
 
+insert into Cadastro (nome_cad, data_nascimento_cad, senha_cad, genero_cad, email_cad, telefone_cad, id_end_fk) values ('Tata', '03/04/2007', '123', 'Feminino', 'Tata', '69 99999-9999', 1);
+select * from Cadastro;
+
 create table Usuario(
 id_usu int primary key auto_increment,
 email_usu varchar(300),
-senha_usu varchar(100)
+senha_usu varchar(100),
+id_cad_fk int,
+foreign key(id_cad_fk) references Cadastro(id_cad)
 );
+
+insert into Usuario (email_usu, senha_usu, id_cad_fk) values ('Tata', '123', 1);
+select * from Usuario;
 
 create table Produto(
 id_pro int primary key auto_increment,
