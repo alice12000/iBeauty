@@ -1,4 +1,5 @@
 ﻿using IBeauty.Database;
+using IBeauty.Helpers;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+
 
 namespace IBeauty.Models
 {
@@ -26,10 +28,7 @@ namespace IBeauty.Models
 
                 Console.WriteLine("Comando preparado.");
 
-                comando.CommandText = "INSERT INTO Servico (id_ser, descricao_ser, " +
-                    "preco_unitario_ser, comissao_ser, preco_venda_ser, duracao_ser, retorno_ser, categoria_ser, id_fun_fk, servico_ser) " +
-                "VALUES (@id, @descricao, @precoUnitario,@comissao, @precofinal, " +
-                "@duracao, @retorno, @categoria, @funcionario, @nome;";
+                comando.CommandText = "INSERT INTO Servico (id_ser, descricao_ser, preco_unitario_ser,comissao_ser, preco_venda_ser, duracao_ser, retorno_ser, categoria_ser, id_fun_fk, servico_ser) VALUES (@id, @descricao, @precoUnitario, @comissao, @precofinal, @duracao, @retorno, @categoria, @funcionario, @nome)";
                 comando.Parameters.AddWithValue("@id", obj.Id);
                 comando.Parameters.AddWithValue("@descricao", obj.Descricao);
                 comando.Parameters.AddWithValue("@precoUnitario", obj.PrecoUnitario);
@@ -41,8 +40,6 @@ namespace IBeauty.Models
                 comando.Parameters.AddWithValue("@funcionario", obj.Funcionario);
                 comando.Parameters.AddWithValue("@nome", obj.Servico);
 
-
-                // Apenas uma chamada ao ExecuteNonQuery()
                 int rowsAffected = comando.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -68,7 +65,6 @@ namespace IBeauty.Models
             }
         }
 
-
         public List<CadastroDeServico> List()
         {
             try
@@ -76,10 +72,13 @@ namespace IBeauty.Models
                 var list = new List<CadastroDeServico>();
                 var comando = _conn.Query();
 
-                comando.CommandText = @"SELECT id_ser, descricao_ser, categoria_ser,
-                preco_unitario_ser, comissao_ser,id_fun_fk, retorno_ser,duracao_ser, preco_venda_ser, servico_ser FROM Servico";
+                comando.CommandText = @"SELECT * FROM Servico";
 
                 MySqlDataReader reader = comando.ExecuteReader();
+                /* int id, string descricao, string categoria, 
+                 * double precoUnitario, double comissao,
+                 * int funcionario, int retorno, int duracao, 
+                 * double precofinal, string servico)*/
                 while (reader.Read())
                 {
                     var servico = new CadastroDeServico
@@ -91,7 +90,7 @@ namespace IBeauty.Models
                         reader.GetDouble("comissao_ser"),
                         reader.GetInt32("id_fun_fk"),
                         reader.GetInt32("retorno_ser"),
-                        reader.GetInt32("duracao_ser"),
+                        reader.GetTimeSpan("duracao_ser"),
                         reader.GetDouble("preco_venda_ser"),
                         reader.GetString("servico_ser")
                     );
@@ -172,5 +171,5 @@ namespace IBeauty.Models
         */
 
 
-    }
+            }
 }
