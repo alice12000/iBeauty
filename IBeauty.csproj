@@ -363,6 +363,7 @@
     <Resource Include="Imagens\Ibeautytelainicial.png" />
     <Resource Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
     <Resource Include="Imagens\sair.png" />
+    <Content Include="Banco de dados\IBEAUTY_BD.sql" />
     <Content Include="Imagens\usuario.png" />
     <Resource Include="Imagens\menu.png" />
   </ItemGroup>
