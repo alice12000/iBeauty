@@ -133,7 +133,7 @@
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
     <Compile Include="Models\CadastroDeExpediente.cs" />
-    <Compile Include="Models\CadastroExpedienteDAO.cs" />
+    <Compile Include="Models\CadastroDeExpedienteDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
     <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
@@ -148,6 +148,7 @@
     <Compile Include="Models\CadastroDeServico.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuarioDAO.cs" />
+    <Compile Include="Models\Verificacoes.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
@@ -195,6 +196,9 @@
     </Compile>
     <Compile Include="Telas\TabelaAnamneseCapilar.xaml.cs">
       <DependentUpon>TabelaAnamneseCapilar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaCliente.xaml.cs">
+      <DependentUpon>TabelaCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TabelaExpediente.xaml.cs">
       <DependentUpon>TabelaExpediente.xaml</DependentUpon>
@@ -294,6 +298,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TabelaAnamneseCapilar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

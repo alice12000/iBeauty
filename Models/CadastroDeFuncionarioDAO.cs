@@ -8,8 +8,9 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+using System.Windows;
 
-    namespace IBeauty.Models
+namespace IBeauty.Models
     {
         public class CadastroDeFuncionarioDAO
         {
@@ -98,8 +99,7 @@
 
             public List<CadastroDeFuncionario> List()
             {
-                try
-                {
+            
                     var lista = new List<CadastroDeFuncionario>();
                     var comando = _conn.Query();
 
@@ -113,46 +113,51 @@
                             INNER JOIN Endereco ON Endereco.id_end = Funcionario.id_end_fk";
 
                     MySqlDataReader reader = comando.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        Endereco endereco = new Endereco
-                        (
-                            reader.GetInt32("id_end"),
-                            DAOHelper.GetString(reader, "rua_end"),
-                            DAOHelper.GetString(reader, "bairro_end"),
-                            reader.GetInt32("numero_end"),
-                            DAOHelper.GetString(reader, "complemento_end"),
-                            DAOHelper.GetString(reader, "cidade_end"),
-                            DAOHelper.GetString(reader, "estado_end"),
-                            DAOHelper.GetString(reader, "cep_end")
-                        );
-
-                        var cadastro = new CadastroDeFuncionario
-                        (
-                            reader.GetInt32("id_func"),
-                            reader.GetString("nome_func"),
-                            reader.GetString("telefone_func"),
-                            DAOHelper.GetString(reader, "genero_func"),
-                            DAOHelper.GetString(reader, "email_func"),
-                            DAOHelper.GetString(reader, "observacao_func"),
-                            DAOHelper.GetString(reader, "data_nascimento_func"),
-                            DAOHelper.GetString(reader, "expediente_func"),
-                            DAOHelper.GetString(reader, "categoria_func"),
-                            endereco
-                        );
-
-                        lista.Add(cadastro);
-                    }
-
-                    reader.Close();
-                    return lista;
-                }
-                catch (Exception ex)
+                if (!reader.HasRows)
                 {
-                    Console.WriteLine($"Erro ao carregar os funcionários: {ex.Message}");
+                    MessageBox.Show("Nenhum registro encontrado.");
                     return new List<CadastroDeFuncionario>();
                 }
+
+                while (reader.Read())
+                {
+
+                    Endereco endereco = new Endereco
+                    (
+                        reader.GetInt32("id_end"),
+                        DAOHelper.GetString(reader, "rua_end"),
+                        DAOHelper.GetString(reader, "bairro_end"),
+                        reader.GetInt32("numero_end"),
+                        DAOHelper.GetString(reader, "complemento_end"),
+                        DAOHelper.GetString(reader, "cidade_end"),
+                        DAOHelper.GetString(reader, "estado_end"),
+                        DAOHelper.GetString(reader, "cep_end")
+                    );
+
+                    var cadastro = new CadastroDeFuncionario
+                    (
+                        reader.GetInt32("id_func"),
+                        reader.GetString("nome_func"),
+                        reader.GetString("telefone_func"),
+                        DAOHelper.GetString(reader, "genero_func"),
+                        DAOHelper.GetString(reader, "email_func"),
+                        DAOHelper.GetString(reader, "observacao_func"),
+                        DAOHelper.GetString(reader, "data_nascimento_func"),
+                        DAOHelper.GetString(reader, "expediente_func"),
+                        DAOHelper.GetString(reader, "categoria_func"),
+                        endereco
+                    );
+
+                    lista.Add(cadastro);
+                }
+
+                reader.Close();
+
+                return lista;
             }
+              
+            
+
 
             public void Delete(CadastroDeFuncionario obj)
             {

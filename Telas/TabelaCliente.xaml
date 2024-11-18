@@ -1,0 +1,38 @@
+﻿<Page x:Class="IBeauty.Telas.TabelaCliente"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IBeauty.Telas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TabelaCliente">
+
+    <Grid>
+        <StackPanel Background="White">
+            <TextBlock FontSize="34" HorizontalAlignment="Center" Margin="0 30" FontFamily="Poppins" Foreground="#FFB6667C">Clientes cadastrados</TextBlock>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200, 0, 0, 30">
+                <Button Content="+ Novo Expediente" Width="200" Height="50" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="18" BorderThickness="1" BorderBrush="#FFB6667C" Click="Button_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Excluir" Width="100" Height="50" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="18" BorderThickness="1" BorderBrush="#FFB6667C" Margin="30 0 0 0" Click="ButtonExcluir">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+            <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Width="1310" Height="515" Background="White" >
+                <DataGrid x:Name="dataGridCliente" HorizontalAlignment="Center" AutoGenerateColumns="True" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White" SelectionChanged="dataGridExpediente_SelectionChanged">
+                    
+                </DataGrid>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

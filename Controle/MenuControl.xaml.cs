@@ -70,22 +70,22 @@ namespace IBeauty.Controle
 
         private void BtnCadastroFuncionario_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroFuncionario());
+            MainFrame.Navigate(new Telas.TabelaFuncionario());
         }
 
         private void BtnCadastroCliente_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroCliente());
+            MainFrame.Navigate(new Telas.TabelaCliente());
         }
 
         private void BtnCadastroExpediente_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroExpediente());
+            MainFrame.Navigate(new Telas.TabelaExpediente());
         }
 
         private void BtnCadastroProduto_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroProduto());
+            MainFrame.Navigate(new Telas.TabelaProduto());
         }
 
         private void BtnCadastroFornecedor_Click(object sender, RoutedEventArgs e)
@@ -95,7 +95,7 @@ namespace IBeauty.Controle
 
         private void BtnCadastrarServico_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new Telas.CadastroServico());
+            MainFrame.Navigate(new Telas.TabelaServico());
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
