@@ -130,6 +130,8 @@
     <Compile Include="Models\CadastroDeServicoDAO.cs" />
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
+    <Compile Include="Models\CadastroExpediente.cs" />
+    <Compile Include="Models\CadastroExpedienteDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
     <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
