@@ -10,6 +10,7 @@
 
 
     <Grid Background="White">
+        <StackPanel>
         <Border BorderBrush="#FFB6667C" Height="550" Width="750" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2" CornerRadius="10"  Padding="0">
 
             <StackPanel >
@@ -200,5 +201,6 @@
 
             </StackPanel>
         </Border>
+        </StackPanel>
     </Grid>
 </Page>

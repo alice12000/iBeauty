@@ -121,6 +121,8 @@
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilar.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilarDAO.cs" />
+    <Compile Include="Models\CadastroDeAnamneseCorporal.cs" />
+    <Compile Include="Models\CadastroDeAnamneseCorporalDAO.cs" />
     <Compile Include="Models\CadastroDeCliente.cs" />
     <Compile Include="Models\CadastroDeClienteDAO.cs" />
     <Compile Include="Models\CadastroDeFuncionario.cs" />
@@ -139,6 +141,7 @@
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Helpers\UploadFileHeper.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Produto.cs" />

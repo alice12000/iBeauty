@@ -10,7 +10,6 @@ complemento_end varchar(200),
 cidade_end varchar(200),
 estado_end varchar(200),
 cep_end varchar(200)
- 
 );
 
 insert into Endereco (rua_end, bairro_end, numero_end, complemento_end, cidade_end, estado_end, cep_end) values ('Flores', 'Centro', '1234', 'Apartamento 10', 'Ji-Parana', 'Rondonia (RO)', '12345678');
@@ -105,26 +104,42 @@ salario_exp double
 
 create table AnamneseCapilar (
 id_ancap int primary key auto_increment,
-tipo_cabelo_ancap varchar(50) not null,
+tipo_cabelo_ancap varchar(50),
 comprimento_ancap varchar(50),
 caracteristica_ancap varchar(100),
 elasticidade_ancap varchar(50),
 pigmento_ancap varchar(50),
 espessura_ancap varchar(50),
 observacao_ancap text,
-tingimento boolean default false,
-alisamento  boolean default false,
-relaxamento boolean default false,
-escova_progressiva boolean default false,
-escova boolean default false,
-luzes boolean default false,
-tinturas boolean default false,
-alisantes boolean default false,
-medicamentos boolean default false,
-liq_permanentes boolean default false,
-tratamentos_capilares text,
-outro text
+tingimento varchar(50),
+alisamento  varchar(50),
+relaxamento varchar(50),
+escova_progressiva varchar(50),
+escova varchar(50),
+luzes varchar(50),
+tinturas varchar(50),
+alisantes varchar(50),
+medicamentos varchar(50),
+liq_permanentes varchar(50),
+tratamentos_capilares varchar(50),
+outro varchar(50)
 );
+
+create table Cliente(
+id_cli int primary key auto_increment,
+nome_cli varchar(200),
+dataNascimento_cl varchar(45),
+genero_cli varchar(100),
+email_cli varchar(100),
+celular_cli varchar(100),
+id_end_fk int,
+foreign key(id_end_fk) references Endereco(id_end),
+id_ancap_fk int,
+foreign key(id_ancap_fk) references AnamneseCapilar(id_ancap),
+id_ancor_fk int,
+foreign key(id_ancor_fk) references AnamneseCorporal(id_ancor)
+);
+
 
 SELECT * FROM Endereco;
 SELECT * FROM Cadastro;
