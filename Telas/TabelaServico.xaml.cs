@@ -30,10 +30,6 @@ namespace IBeauty.Telas
         {
             CadastroDeServicoDAO dao = new CadastroDeServicoDAO();
             List<CadastroDeServico> servico = dao.List();
-            /*       
-        public int Retorno { get; set; }
-        public int Duracao { get; set; }
-        public double PrecoFinal { get; private set; }*/
 
             var servicosExibidos = servico.Select(s => new
             {

@@ -56,6 +56,16 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                         <ComboBox x:Name="funcionario_cbx" Height="40" Width="250" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,0,0,0">
+                            <ComboBoxItem Content="1"/>
+                            <ComboBoxItem Content="2"/>
+                            <ComboBoxItem Content="3"/>
+                            <ComboBoxItem Content="4"/>
+                            <ComboBoxItem Content="5"/>
+                            <ComboBoxItem Content="6"/>
+                            <ComboBoxItem Content="7"/>
+                            <ComboBoxItem Content="8"/>
+                            <ComboBoxItem Content="9"/>
+                            <ComboBoxItem Content="10"/>
                         </ComboBox>
                         <ComboBox x:Name="categoria_cbx" Height="40" Width="250" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="20,0,0,0">
                             <ComboBoxItem Content="Cabelo"/>

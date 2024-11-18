@@ -33,7 +33,7 @@ namespace IBeauty.Telas
 
             var anamnesesExibidas = anamneses.Select(ancap => new
             {
-                Id = ancap.Id,
+                ID = ancap.Id,
                 TipoCabelo = ancap.TipoCabelo,
                 Comprimento = ancap.Comprimento,
                 Caracteristica = ancap.Caracteristica,
@@ -50,15 +50,17 @@ namespace IBeauty.Telas
                 Tinturas = ancap.Tinturas,
                 Alisantes = ancap.Alisantes,
                 Medicamentos = ancap.Medicamentos,
-                LiqPermanentes = ancap.LiqPermanentes,
+                LiquidosPermanentes = ancap.LiquidosPermanentes,
                 TratamentosCapilares = ancap.TratamentosCapilares,
                 Outro = ancap.Outro
             }).ToList();
 
+            dataGridAnamneseCapilar.Items.Clear();
             dataGridAnamneseCapilar.ItemsSource = anamnesesExibidas;
         }
 
-        private void dataGridAnamneses_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void dataGridAnamneseCapilar_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
             CadastroDeAnamneseCapilarDAO dao = new CadastroDeAnamneseCapilarDAO();
             List<CadastroDeAnamneseCapilar> anamneses = dao.List();
@@ -82,7 +84,6 @@ namespace IBeauty.Telas
                 Tinturas = ancap.Tinturas,
                 Alisantes = ancap.Alisantes,
                 Medicamentos = ancap.Medicamentos,
-                LiqPermanentes = ancap.LiqPermanentes,
                 TratamentosCapilares = ancap.TratamentosCapilares,
                 Outro = ancap.Outro
             }).ToList();
@@ -127,7 +128,29 @@ namespace IBeauty.Telas
         {
             // Este método pode ser implementado conforme necessário
         }
+        public class AnamneseCapilarExibida
+        {
+            public int Id { get; set; }
+            public string TipoCabelo { get; set; }
+            public string Comprimento { get; set; }
+            public string Caracteristica { get; set; }
+            public string Elasticidade { get; set; }
+            public string Pigmento { get; set; }
+            public string Espessura { get; set; }
+            public string Observacao { get; set; }
+            public string Tingimento { get; set; }
+            public string Alisamento { get; set; }
+            public string Relaxamento { get; set; }
+            public string EscovaProgressiva { get; set; }
+            public string Escova { get; set; }
+            public string Luzes { get; set; }
+            public string Tinturas { get; set; }
+            public string Alisantes { get; set; }
+            public string Medicamentos { get; set; }
+            public string TratamentosCapilares { get; set; }
+            public string Outro { get; set; }
+        }
 
-       
+
     }
 }

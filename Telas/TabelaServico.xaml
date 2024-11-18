@@ -64,7 +64,6 @@
             </StackPanel>
             <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10"  Width="1310" Height="515" Background="White">
                 <DataGrid x:Name="dataGridServicos" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White">
-
                 </DataGrid>
             </Border>
         </StackPanel>

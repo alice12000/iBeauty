@@ -17,11 +17,12 @@ namespace IBeauty.Models
         public double Comissao { get; set; }
         public int Funcionario { get; set; }
         public int Retorno { get; set; }
-        public int Duracao { get; set; }
+
+        public TimeSpan? Duracao { get; set; }  // Tipo DateTime? 
         public double PrecoFinal { get; private set; }
 
         // Método construtor
-        public CadastroDeServico(int id, string descricao, string categoria, double precoUnitario, double comissao, int funcionario, int retorno, int duracao, double precofinal, string servico)
+        public CadastroDeServico(int id, string descricao, string categoria, double precoUnitario, double comissao, int funcionario, int retorno,TimeSpan duracao, double precofinal, string servico)
         {
             Id = id;
             Servico = servico;

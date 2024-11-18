@@ -63,30 +63,8 @@
             </StackPanel>
 
             <Border BorderBrush="#FFB6667C" BorderThickness="2" CornerRadius="10" Width="1310" Height="515" Background="White">
-                <DataGrid x:Name="dataGridAnamneseCapilar" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White">
-                    <!-- Defina as colunas do DataGrid com base nas propriedades do funcionário -->
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" Binding="{Binding IdAncap}" Width="40"/>
-                        <DataGridTextColumn Header="Tipo de Cabelo" Binding="{Binding TipoCabeloAncap}" Width="130"/>
-                        <DataGridTextColumn Header="Comprimento" Binding="{Binding ComprimentoAncap}" Width="120"/>
-                        <DataGridTextColumn Header="Característica" Binding="{Binding CaracteristicaAncap}" Width="120"/>
-                        <DataGridTextColumn Header="Elasticidade" Binding="{Binding ElasticidadeAncap}" Width="120"/>
-                        <DataGridTextColumn Header="Pigmento" Binding="{Binding PigmentoAncap}" Width="90"/>
-                        <DataGridTextColumn Header="Espessura" Binding="{Binding EspessuraAncap}" Width="90"/>
-                        <DataGridTextColumn Header="Observação" Binding="{Binding ObservacaoAncap}" Width="150"/>
-                        <DataGridCheckBoxColumn Header="Tingimento" Binding="{Binding Tingimento}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Alisamento" Binding="{Binding Alisamento}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Relaxamento" Binding="{Binding Relaxamento}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Escova Progressiva" Binding="{Binding EscovaProgressiva}" Width="150"/>
-                        <DataGridCheckBoxColumn Header="Escova" Binding="{Binding Escova}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Luzes" Binding="{Binding Luzes}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Tinturas" Binding="{Binding Tinturas}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Alisantes" Binding="{Binding Alisantes}" Width="100"/>
-                        <DataGridCheckBoxColumn Header="Medicamentos" Binding="{Binding Medicamentos}" Width="120"/>
-                        <DataGridCheckBoxColumn Header="Líquidos Permanentes" Binding="{Binding LiqPermanentes}" Width="150"/>
-                        <DataGridTextColumn Header="Tratamentos Capilares" Binding="{Binding TratamentosCapilares}" Width="200"/>
-                        <DataGridTextColumn Header="Outro" Binding="{Binding Outro}" Width="200"/>
-                    </DataGrid.Columns>
+                <DataGrid x:Name="dataGridAnamneseCapilar" AutoGenerateColumns="True" HorizontalAlignment="Center" FontSize="14" VerticalAlignment="Center" Width="1300" Height="500" FontFamily="Poppins" Foreground="#FFB6667C" BorderBrush="White" SelectionChanged="dataGridAnamneseCapilar_SelectionChanged_1">>
+                    
                 </DataGrid>
             </Border>
         </StackPanel>
