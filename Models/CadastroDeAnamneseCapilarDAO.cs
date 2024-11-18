@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace IBeauty.Models
 {
@@ -14,22 +15,25 @@ namespace IBeauty.Models
         public void Insert(CadastroDeAnamneseCapilar obj)
         {
             MySqlTransaction transaction = null;
-            try
-            {
-                Console.WriteLine("Iniciando inserção no banco...");
+            
                 var comando = _conn.Query();
 
                 transaction = comando.Connection.BeginTransaction();
                 comando.Transaction = transaction;
 
-                comando.CommandText = "INSERT INTO AnamneseCapilar (tipo_cabelo_ancap, comprimento_ancap, caracteristica_ancap, " +
-                                      "elasticidade_ancap, pigmento_ancap, espessura_ancap, observacao_ancap, tingimento, " +
-                                      "alisamento, relaxamento, escova_progressiva, escova, luzes, tinturas, alisantes, medicamentos, " +
-                                      "liq_permanentes, tratamentos_capilares, outro) " +
-                                      "VALUES (@tipoCabelo, @comprimento, @caracteristica, @elasticidade, @pigmento, " +
-                                      "@espessura, @observacao, @tingimento, @alisamento, @relaxamento, @escovaProgressiva, " +
-                                      "@escova, @luzes, @tinturas, @alisantes, @medicamentos, @liqPermanentes, @tratamentosCapilares, @outro);";
+                // Verifica se o endereço já existe
 
+
+                // Insere os dados da anamnese capilar
+                comando.CommandText = "INSERT INTO AnamneseCapilar (tipo_cabelo_ancap, comprimento_ancap, caracteristica_ancap, elasticidade_ancap, " +
+                                      "pigmento_ancap, espessura_ancap, observacao_ancap, tingimento, alisamento, relaxamento, " +
+                                      "escova_progressiva, escova, luzes, tinturas, alisantes, medicamentos, liq_permanentes, " +
+                                      "tratamentos_capilares, outro) " +
+                                      "VALUES (@tipoCabelo, @comprimento, @caracteristica, @elasticidade, @pigmento, @espessura, @observacao, " +
+                                      "@tingimento, @alisamento, @relaxamento, @escovaProgressiva, @escova, @luzes, @tinturas, " +
+                                      "@alisantes, @medicamentos, @liqPermanentes, @tratamentosCapilares, @outro)";
+
+                comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@tipoCabelo", obj.TipoCabelo);
                 comando.Parameters.AddWithValue("@comprimento", obj.Comprimento);
                 comando.Parameters.AddWithValue("@caracteristica", obj.Caracteristica);
@@ -46,33 +50,26 @@ namespace IBeauty.Models
                 comando.Parameters.AddWithValue("@tinturas", obj.Tinturas);
                 comando.Parameters.AddWithValue("@alisantes", obj.Alisantes);
                 comando.Parameters.AddWithValue("@medicamentos", obj.Medicamentos);
-                comando.Parameters.AddWithValue("@liqPermanentes", obj.LiqPermanentes);
+                comando.Parameters.AddWithValue("@liqPermanentes", obj.LiquidosPermanentes);
                 comando.Parameters.AddWithValue("@tratamentosCapilares", obj.TratamentosCapilares);
                 comando.Parameters.AddWithValue("@outro", obj.Outro);
 
                 int rowsAffected = comando.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    Console.WriteLine("Dados inseridos com sucesso na tabela AnamneseCapilar.");
+                    MessageBox.Show("Dados inseridos com sucesso na tabela AnamneseCapilar.");
                 }
                 else
                 {
-                    Console.WriteLine("Nenhum dado foi inserido na tabela AnamneseCapilar.");
+                    MessageBox.Show("Nenhum dado foi inserido na tabela AnamneseCapilar.");
                 }
-                transaction.Commit();
-            }
-            catch (Exception ex)
-            {
-                transaction?.Rollback();
-                Console.WriteLine("Erro: " + ex.Message);
-                throw new Exception("Erro ao salvar as informações: " + ex.Message);
-            }
-            finally
-            {
-                _conn.Close();
-            }
-        }
 
+                // Comita a transação
+                transaction.Commit();     
+            
+                _conn.Close();
+            
+        }
         public List<CadastroDeAnamneseCapilar> List()
         {
             try
@@ -99,18 +96,18 @@ namespace IBeauty.Models
                         reader.GetString("pigmento_ancap"),
                         reader.GetString("espessura_ancap"),
                         reader.GetString("observacao_ancap"),
-                        reader.GetBoolean("tingimento"),
-                        reader.GetBoolean("alisamento"),
-                        reader.GetBoolean("relaxamento"),
-                        reader.GetBoolean("escova_progressiva"),
-                        reader.GetBoolean("escova"),
-                        reader.GetBoolean("luzes"),
-                        reader.GetBoolean("tinturas"),
-                        reader.GetBoolean("alisantes"),
-                        reader.GetBoolean("medicamentos"),
-                        reader.GetBoolean("liq_permanentes"),
-                        reader.GetBoolean("tratamentos_capilares"),
-                        reader.GetBoolean("outro")
+                        reader.GetString("tingimento"),
+                        reader.GetString("alisamento"),
+                        reader.GetString("relaxamento"),
+                        reader.GetString("escova_progressiva"),
+                        reader.GetString("escova"),
+                        reader.GetString("luzes"),
+                        reader.GetString("tinturas"),
+                        reader.GetString("alisantes"),
+                        reader.GetString("medicamentos"),
+                        reader.GetString("liq_permanentes"),
+                        reader.GetString("tratamentos_capilares"),
+                        reader.GetString("outro")
                     );
 
                     lista.Add(cadastro);
@@ -184,7 +181,7 @@ namespace IBeauty.Models
                 comando.Parameters.AddWithValue("@tinturas", obj.Tinturas);
                 comando.Parameters.AddWithValue("@alisantes", obj.Alisantes);
                 comando.Parameters.AddWithValue("@medicamentos", obj.Medicamentos);
-                comando.Parameters.AddWithValue("@liqPermanentes", obj.LiqPermanentes);
+                comando.Parameters.AddWithValue("@liqPermanentes", obj.LiquidosPermanentes);
                 comando.Parameters.AddWithValue("@tratamentosCapilares", obj.TratamentosCapilares);
                 comando.Parameters.AddWithValue("@outro", obj.Outro);
                 comando.Parameters.AddWithValue("@id", obj.Id);

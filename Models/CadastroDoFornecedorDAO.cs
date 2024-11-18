@@ -19,13 +19,10 @@ namespace IBeauty.Models
             MySqlTransaction transaction = null;
             try
             {
-                Console.WriteLine("Iniciando inserção no banco...");
                 var comando = _conn.Query();
 
                 transaction = comando.Connection.BeginTransaction();
                 comando.Transaction = transaction;
-
-                Console.WriteLine("Comando preparado.");
 
                 comando.CommandText = "SELECT id_end FROM Endereco WHERE rua_end = @rua AND bairro_end = @bairro AND cep_end = @cep";
                 comando.Parameters.AddWithValue("@rua", obj.Endereco.Rua);
@@ -39,7 +36,7 @@ namespace IBeauty.Models
                 if (result != null)
                 {
                     idEndereco = Convert.ToInt32(result);
-                    Console.WriteLine("Endereço já existente. Usando o ID: " + idEndereco);
+                    MessageBox.Show("Endereço já existente. Usando o ID: " + idEndereco);
                 }
                 else
                 {
@@ -54,7 +51,7 @@ namespace IBeauty.Models
 
                     comando.CommandText = "SELECT LAST_INSERT_ID()";
                     idEndereco = Convert.ToInt32(comando.ExecuteScalar());
-                    Console.WriteLine("Novo endereço inserido. ID: " + idEndereco);
+                    MessageBox.Show("Novo endereço inserido. ID: " + idEndereco);
                 }
 
                 comando.CommandText = "INSERT INTO Fornecedor (nome_for, empresa_for, cpfcnpj_for, telefone_for, website_for, id_end_fk) " +
@@ -70,7 +67,7 @@ namespace IBeauty.Models
                 int rowsAffected = comando.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    Console.WriteLine("Dados inseridos com sucesso na tabela Fornecedor.");
+                    MessageBox.Show("Dados inseridos com sucesso na tabela Fornecedor.");
                 }
                 else
                 {

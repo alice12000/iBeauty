@@ -16,25 +16,22 @@ namespace IBeauty.Models
         public string Pigmento { get; set; }
         public string Espessura { get; set; }
         public string Observacao { get; set; }
-        public bool Tingimento { get; set; }
-        public bool Alisamento { get; set; }
-        public bool Relaxamento { get; set; }
-        public bool EscovaProgressiva { get; set; }
-        public bool Escova { get; set; }
-        public bool Luzes { get; set; }
-        public bool Tinturas { get; set; }
-        public bool Alisantes { get; set; }
-        public bool Medicamentos { get; set; }
-        public bool LiqPermanentes { get; set; }
-        public bool TratamentosCapilares { get; set; }
-        public bool Outro { get; set; }
 
-        // Construtor completo, usado ao criar uma nova instância da anamnese
-        public CadastroDeAnamneseCapilar(int id, string tipoCabelo, string comprimento, string caracteristica,
-                                         string elasticidade, string pigmento, string espessura, string observacao,
-                                         bool tingimento, bool alisamento, bool relaxamento, bool escovaProgressiva,
-                                         bool escova, bool luzes, bool tinturas, bool alisantes,
-                                         bool medicamentos, bool liqPermanentes, bool tratamentosCapilares, bool outro)
+        public string Tingimento { get; set; }
+        public string Alisamento { get; set; }
+        public string Relaxamento { get; set; }
+        public string EscovaProgressiva { get; set; }
+        public string Escova { get; set; }
+        public string Luzes { get; set; }
+
+        public string Tinturas { get; set; }
+        public string Alisantes { get; set; }
+        public string Medicamentos { get; set; }
+        public string LiquidosPermanentes { get; set; }
+        public string TratamentosCapilares { get; set; }
+        public string Outro { get; set; }
+
+        public CadastroDeAnamneseCapilar(int id, string tipoCabelo, string comprimento, string caracteristica, string elasticidade, string pigmento, string espessura, string observacao, string tingimento, string alisamento, string relaxamento, string escovaProgressiva, string escova, string luzes, string tinturas, string alisantes, string medicamentos, string liquidosPermanentes, string tratamentosCapilares, string outro)
         {
             Id = id;
             TipoCabelo = tipoCabelo;
@@ -53,10 +50,9 @@ namespace IBeauty.Models
             Tinturas = tinturas;
             Alisantes = alisantes;
             Medicamentos = medicamentos;
-            LiqPermanentes = liqPermanentes;
+            LiquidosPermanentes = liquidosPermanentes;
             TratamentosCapilares = tratamentosCapilares;
             Outro = outro;
         }
     }
-
 }

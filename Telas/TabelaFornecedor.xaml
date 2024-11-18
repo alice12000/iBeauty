@@ -28,13 +28,10 @@
                         <Setter Property="BorderThickness" Value="0.5"/>
                         <Setter Property="Padding" Value="10"/>
 
-                        <!-- Cor de fundo e cor de texto para a linha selecionada -->
                         <Style.Triggers>
                             <Trigger Property="IsSelected" Value="True">
                                 <Setter Property="Background" Value="#FFB6667C"/>
-                                <!-- Cor de fundo ao selecionar -->
                                 <Setter Property="Foreground" Value="White"/>
-                                <!-- Cor da fonte ao selecionar -->
                             </Trigger>
                         </Style.Triggers>
                     </Style>
