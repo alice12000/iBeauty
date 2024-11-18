@@ -193,6 +193,9 @@
     <Compile Include="Telas\TabelaAnamneseCapilar.xaml.cs">
       <DependentUpon>TabelaAnamneseCapilar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\TabelaExpediente.xaml.cs">
+      <DependentUpon>TabelaExpediente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TabelaFornecedor.xaml.cs">
       <DependentUpon>TabelaFornecedor.xaml</DependentUpon>
     </Compile>
@@ -288,6 +291,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TabelaAnamneseCapilar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaExpediente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

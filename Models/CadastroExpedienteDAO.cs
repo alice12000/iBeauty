@@ -31,7 +31,7 @@ namespace IBeauty.Models
 
         public void Insert(Expediente obj)
         {
-            MySqlTransaction transaction = null;
+         
             try
             {
                 var comando = _conn.Query();
