@@ -50,7 +50,7 @@ namespace IBeauty.Telas
 
             var Conexao = new Conexao();
 
-            var Expediente = new CadastroExpediente(0, mes, nome, ano, carga_horaria, salario);
+            var Expediente = new CadastroDeExpediente(0, mes, nome, ano, carga_horaria, salario);
 
 
         }
@@ -60,7 +60,7 @@ namespace IBeauty.Telas
             NavigationService.GoBack();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Cadastrar_Click_1(object sender, RoutedEventArgs e)
         {
 
         }

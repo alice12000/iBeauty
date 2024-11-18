@@ -100,7 +100,7 @@
                                 </TextBox>
                             </StackPanel>
 
-                            <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="-300,30,10,0">
+                            <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="-300,30,10,0" Click="Cadastrar_Click">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="10"/>

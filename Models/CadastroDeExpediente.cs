@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IBeauty.Models
 {
-    public class CadastroExpediente
+    public class CadastroDeExpediente
     {
         public int Id { get; set; }
         public string Mes { get; set; }
@@ -15,7 +15,7 @@ namespace IBeauty.Models
         public string Carga_horaria { get; set; }
         public string Salario { get; set; }
 
-        public CadastroExpediente(int id, string mes, string nome, string ano, string carga_horaria, string salario)
+        public CadastroDeExpediente(int id, string mes, string nome, string ano, string carga_horaria, string salario)
         {
             Id = id;
             Mes = mes;
