@@ -345,6 +345,7 @@
     <Folder Include="Recursos\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagens\usuario.png" />
     <Resource Include="Imagens\adicionar-usuario.png" />
     <Resource Include="Imagens\cancelar.png" />
     <Resource Include="Imagens\acesso.png" />
@@ -364,7 +365,6 @@
     <Resource Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
     <Resource Include="Imagens\sair.png" />
     <Content Include="Banco de dados\IBEAUTY_BD.sql" />
-    <Content Include="Imagens\usuario.png" />
     <Resource Include="Imagens\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
