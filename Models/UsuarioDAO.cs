@@ -80,7 +80,6 @@ namespace IBeauty.Models
                     }
                     else
                     {
-                        // Caso não encontre o usuário, retorna null
                         MessageBox.Show("Credenciais inválidas. Tente novamente.");
                         return null;
                     }
@@ -88,7 +87,6 @@ namespace IBeauty.Models
             }
             catch (Exception ex)
             {
-                // Tratamento de erro em caso de exceção
                 throw new Exception("Erro ao autenticar o usuário: " + ex.Message);
             }
         }

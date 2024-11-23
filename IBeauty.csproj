@@ -188,6 +188,9 @@
     <Compile Include="Telas\CadastroServico.xaml.cs">
       <DependentUpon>CadastroServico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\InformacoesUsuario.xaml.cs">
+      <DependentUpon>InformacoesUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\JanelaPrincipal.xaml.cs">
       <DependentUpon>JanelaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -285,6 +288,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Telas\InformacoesUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\JanelaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -365,6 +372,7 @@
     <Folder Include="Recursos\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagens\usuariomenu.png" />
     <Resource Include="Imagens\usuario.png" />
     <Resource Include="Imagens\adicionar-usuario.png" />
     <Resource Include="Imagens\cancelar.png" />

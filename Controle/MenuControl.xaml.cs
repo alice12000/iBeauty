@@ -121,5 +121,20 @@ namespace IBeauty.Controle
             janelaPrincipal.Show();
             Window.GetWindow(this)?.Close();
         }
+
+        private void UserButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window novaJanela = new Window
+            {
+                Content = new InformacoesUsuario(),
+                Width = 800,
+                Height = 460,
+                Owner = Application.Current.MainWindow,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                WindowStyle = WindowStyle.None, 
+                ResizeMode = ResizeMode.NoResize
+            };
+            novaJanela.ShowDialog();
+        }
     }
 }
