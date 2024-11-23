@@ -21,12 +21,12 @@ namespace IBeauty.Telas
     /// </summary>
     public partial class InformacoesUsuario : Page
     {
-        public InformacoesUsuario(int usuarioId)
+        public InformacoesUsuario()
         {
             InitializeComponent();
             _cadastroDAO = new CadastroUsuarioDAO();
 
-            CarregarDadosUsuario(usuarioId);
+            //CarregarDadosUsuario(usuarioId);
         }
         private CadastroUsuarioDAO _cadastroDAO;
 
