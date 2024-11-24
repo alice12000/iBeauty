@@ -36,10 +36,14 @@
     </Page.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/fundologin.png"/>
         </Grid.Background>
-        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="525" Height="420" Background="#8CB6667C">
+        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="525" Height="420" Background="#8CB6667C" Margin="698,195,698,330" Grid.Row="1">
 
             <StackPanel>
                 <TextBlock Text="Login" FontFamily="Poppins" FontSize="24" Foreground="White" Margin="0,0,0,5" HorizontalAlignment="Center"/>
@@ -128,7 +132,7 @@
                     <TextBlock FontSize="14" VerticalAlignment="Center" Foreground="White">Novo no IBeauty?</TextBlock>
                     <Button Background="{x:Null}" Foreground="White" FontSize="14" BorderBrush="{x:Null}" Click="Button_Click_1">Faça seu cadastro</Button>
                 </StackPanel>
-                
+
             </StackPanel>
         </Border>
     </Grid>

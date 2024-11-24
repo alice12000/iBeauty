@@ -177,6 +177,9 @@
     <Compile Include="Telas\CadastrodeCategoria.xaml.cs">
       <DependentUpon>CadastrodeCategoria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\CadastroComanda.xaml.cs">
+      <DependentUpon>CadastroComanda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\CadastroExpediente.xaml.cs">
       <DependentUpon>CadastroExpediente.xaml</DependentUpon>
     </Compile>
@@ -279,6 +282,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\CadastrodeCategoria.xaml">
+    <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\CadastroComanda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
