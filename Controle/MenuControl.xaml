@@ -17,9 +17,14 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Row="0" Grid.Column="1" Background="#FFB6667C" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Name="UserButton" Click="UserButton_Click" HorizontalAlignment="Right" Margin="0 0 5 0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0">
+                    <Image Source="\Imagens\usuariomenu.png" Width="100" Height="30" Margin="1" />
+            </Button>
             <Button Name="CloseButton" Click="CloseButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Transparent" BorderThickness="0">
                 <Image Source="\Imagens\cancelar.png" Width="30" Height="30" Margin="5" />
             </Button>
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="0" Background="#FFB6667C" >
             <TextBlock FontFamily="Poppins" FontSize="12" Foreground="White" Margin="50,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="120">
@@ -40,83 +45,176 @@
             <Grid x:Name="MenuPanel" Background="#FFDFC5CC" Visibility="Collapsed"  Width="250" HorizontalAlignment="Left"  VerticalAlignment="Stretch">
                 <Border BorderThickness="1" BorderBrush="#FFB6667C">
                     <StackPanel Orientation="Vertical" Margin="1.5 3 0 0">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroFuncionario_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C">
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Image Source="/Imagens/funcionario.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Funcionário" VerticalAlignment="Center" />
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnAgenda_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/agenda.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Agenda" VerticalAlignment="Center" />
                                 </StackPanel>
-                                
+                            </Button>
+                        </StackPanel>
+                        <StackPanel x:Name="AgendaOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnCalendario" Click="BtnCalendario_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/calendario.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Calendario" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnListagemAgenda" Click="BtnListagemAgenda_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/lista.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Listagem" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnBloqueios" Click="BtnBloqueios_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/agendaBloqueio.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Bloqueios" VerticalAlignment="Center" />
+                                </StackPanel>
                             </Button>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" >
-                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroCliente_Click"  BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnFinanceiro_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/financeiro.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Financeiro" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel x:Name="FinanceiroOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnComandas" Click="BtnComandas_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/comanda.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Comandas" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnCaixa" Click="BtnCaixa_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/caixa.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Caixa" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnClientes_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
                                     <Image Source="/Imagens/cliente.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Cliente" VerticalAlignment="Center" />
+                                    <TextBlock Text="Clientes" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" >
-                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroFornecedor_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Image Source="/Imagens/fornecedor.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Fornecedor" VerticalAlignment="Center" />
+                        <StackPanel x:Name="ClientesOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnListagemClientes" Click="BtnListagemClientes_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/lista.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Listagem" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnOrcamento" Click="BtnOrcamento_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/orcamento.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Orçamento" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
                         <StackPanel Orientation="Horizontal" >
-                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroProduto_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Image Source="/Imagens/produto.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Produto" VerticalAlignment="Center" />
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnRelatorio_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/relatorio.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Relatorios" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
+                        <StackPanel x:Name="RelatorioOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnPainel" Click="BtnPainel_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/painel.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Painel" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal" >
-                            <Button Background="#FFDFC5CC" Width="243" BorderThickness="1" Height="50" Click="BtnCadastrarServico_Click" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnServico_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
                                     <Image Source="/Imagens/servico.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Serviço" VerticalAlignment="Center" />
+                                    <TextBlock Text="Serviços" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
+                        <StackPanel x:Name="ServicoOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnListagemServico" Click="BtnListagemServico_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/lista.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Listagem" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnCategoria" Click="BtnCategoria_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/categoria.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Categoria" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnPacote" Click="BtnPacote_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/pacote.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Pacotes" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal" >
-                            <Button Background="#FFDFC5CC" Width="243" Click="BtnCadastroExpediente_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Image Source="/Imagens/expediente.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Espediente" VerticalAlignment="Center" />
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnProduto_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/produto.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Produtos" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
+                        <StackPanel x:Name="ProdutoOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnListagemProduto" Click="BtnListagemProduto_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/lista.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Listagem" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnCategoriaProduto" Click="BtnCategoriaProduto_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/categoria.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Categoria" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnEstoque" Click="BtnEstoque_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/estoque.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Estoque" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Name="BtnFornecedor" Click="BtnFornecedor_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/fornecedor.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Fornecedores" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal" >
-                            <Button Background="#FFDFC5CC" Width="243" Click="BtnAnamnese_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Image Source="/Imagens/anamnese.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Cadastro de Anamneses" VerticalAlignment="Center" />
+                            <Button Background="#FFDFC5CC" Width="243" Click="BtnFuncionario_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/funcionario.png" Width="20" Height="20" Margin="0 0 -440 0"/>
+                                    <TextBlock Text="Funcionarios" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
-                        <StackPanel x:Name="AnamneseOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
-                            <Button Name="BtnAnamneseCapilar" Click="BtnAnamneseCapilar_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
-
-                                <TextBlock Text="Anamnese Capilar" />
+                        <StackPanel x:Name="FuncionarioOptions"  Margin="0,0,0,0" Background="#FFF0E1E5" Visibility="Collapsed">
+                            <Button Name="BtnListagemFuncinario" Click="BtnListagemFuncionario_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/lista.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Listagem" VerticalAlignment="Center" />
+                                </StackPanel>
                             </Button>
-                            <Button Name="BtnAnamneseCorporal" Click="BtnAnamneseCorporal_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
-                                <TextBlock Text="Anamnese Corporal" />
-                            </Button>
-                            <Button Name="BtnAnamneseFacial" Click="BtnAnamneseFacial_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
-                                <TextBlock Text="Anamnese Facial" />
-                            </Button>
-                            <Button Name="BtnAnamneseManicure" Click="BtnAnamneseManicure_Click" Background="Transparent" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="JosefinSans" FontSize="14" BorderBrush="#FFE8D2DA">
-                                <TextBlock Text="Anamnese Manicure" />
+                            <Button Name="BtnExpediente" Click="BtnExpediente_Click" Background="#FFF0E1E5" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="15,0,0,0" FontFamily="Poppins" FontSize="14" BorderBrush="#FFE8D2DA">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                    <Image Source="/Imagens/expediente.png" Width="20" Height="20" Margin="0 0 -410 0"/>
+                                    <TextBlock Text="Expediente" VerticalAlignment="Center" />
+                                </StackPanel>
                             </Button>
                         </StackPanel>
 

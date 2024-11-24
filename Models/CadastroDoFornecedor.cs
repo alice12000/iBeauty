@@ -18,11 +18,6 @@ namespace IBeauty.Models
         public Endereco Endereco { get; set; }
         public CadastroDoFornecedor(int id, string nome, string empresa, string cpfCnpj, string telefone, string website, Endereco endereco)
         {
-            if (!ValidarCpfCnpj(cpfCnpj))
-            {
-                throw new ArgumentException("CPF ou CNPJ inválido.");
-            }
-
             Id = id;
             Nome = nome;
             Empresa = empresa;
@@ -31,66 +26,6 @@ namespace IBeauty.Models
             Website = website;
             Endereco = endereco;
         }
-        private static bool ValidarCpf(string cpf)
-        {
-            cpf = new string(cpf.Where(char.IsDigit).ToArray());
-
-            if (cpf.Length != 11)
-                return false;
-            if (cpf.Distinct().Count() == 1)
-                return false;
-            int soma = 0;
-            for (int i = 0; i < 9; i++)
-                soma += (cpf[i] - '0') * (10 - i);
-
-            int primeiroDigitoVerificador = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-            soma = 0;
-            for (int i = 0; i < 10; i++)
-                soma += (cpf[i] - '0') * (11 - i);
-
-            int segundoDigitoVerificador = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-            return cpf[9] - '0' == primeiroDigitoVerificador && cpf[10] - '0' == segundoDigitoVerificador;
-        }
-
-        private static bool ValidarCnpj(string cnpj)
-        {
-            cnpj = new string(cnpj.Where(char.IsDigit).ToArray());
-
-            if (cnpj.Length != 14)
-                return false;
-            if (cnpj.Distinct().Count() == 1)
-                return false;
-
-            int[] multiplicador1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-
-            int soma = 0;
-            for (int i = 0; i < 12; i++)
-                soma += (cnpj[i] - '0') * multiplicador1[i];
-
-            int primeiroDigitoVerificador = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-
-            soma = 0;
-            for (int i = 0; i < 13; i++)
-                soma += (cnpj[i] - '0') * multiplicador2[i];
-
-            int segundoDigitoVerificador = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-            
-            return cnpj[12] - '0' == primeiroDigitoVerificador && cnpj[13] - '0' == segundoDigitoVerificador;
-        }
-
-        public static bool ValidarCpfCnpj(string cpfCnpj)
-        {
-            cpfCnpj = new string(cpfCnpj.Where(char.IsDigit).ToArray());
-
-            if (cpfCnpj.Length == 11)
-                return ValidarCpf(cpfCnpj);
-            else if (cpfCnpj.Length == 14)
-                return ValidarCnpj(cpfCnpj);
-
-            return false;
-        }
-
     }
 
 }

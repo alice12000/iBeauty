@@ -121,6 +121,8 @@
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilar.cs" />
     <Compile Include="Models\CadastroDeAnamneseCapilarDAO.cs" />
+    <Compile Include="Models\CadastroDeAnamneseCorporal.cs" />
+    <Compile Include="Models\CadastroDeAnamneseCorporalDAO.cs" />
     <Compile Include="Models\CadastroDeCliente.cs" />
     <Compile Include="Models\CadastroDeClienteDAO.cs" />
     <Compile Include="Models\CadastroDeFuncionario.cs" />
@@ -131,7 +133,7 @@
     <Compile Include="Models\CadastroDoFornecedor.cs" />
     <Compile Include="Models\CadastroDoFornecedorDAO.cs" />
     <Compile Include="Models\CadastroDeExpediente.cs" />
-    <Compile Include="Models\CadastroExpedienteDAO.cs" />
+    <Compile Include="Models\CadastroDeExpedienteDAO.cs" />
     <Compile Include="Models\CadastroUsuario.cs" />
     <Compile Include="Models\CadastroUsuarioDAO.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
@@ -139,12 +141,14 @@
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Helpers\UploadFileHeper.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EnderecoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\CadastroDeServico.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuarioDAO.cs" />
+    <Compile Include="Models\Verificacoes.cs" />
     <Compile Include="Telas\Agenda.xaml.cs">
       <DependentUpon>Agenda.xaml</DependentUpon>
     </Compile>
@@ -184,6 +188,9 @@
     <Compile Include="Telas\CadastroServico.xaml.cs">
       <DependentUpon>CadastroServico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\InformacoesUsuario.xaml.cs">
+      <DependentUpon>InformacoesUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\JanelaPrincipal.xaml.cs">
       <DependentUpon>JanelaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -192,6 +199,9 @@
     </Compile>
     <Compile Include="Telas\TabelaAnamneseCapilar.xaml.cs">
       <DependentUpon>TabelaAnamneseCapilar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaCliente.xaml.cs">
+      <DependentUpon>TabelaCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TabelaExpediente.xaml.cs">
       <DependentUpon>TabelaExpediente.xaml</DependentUpon>
@@ -213,6 +223,9 @@
     </Compile>
     <Compile Include="Telas\TelaInicialSistema.xaml.cs">
       <DependentUpon>TelaInicialSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Teste.xaml.cs">
+      <DependentUpon>Teste.xaml</DependentUpon>
     </Compile>
     <Page Include="CadastroAgenda.xaml">
       <SubType>Designer</SubType>
@@ -278,6 +291,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Telas\InformacoesUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\JanelaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -291,6 +308,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TabelaAnamneseCapilar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -319,6 +340,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\TelaInicialSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\Teste.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -354,6 +379,21 @@
     <Folder Include="Recursos\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagens\estoque.png" />
+    <Resource Include="Imagens\pacote.png" />
+    <Resource Include="Imagens\categoria.png" />
+    <Resource Include="Imagens\servico.png" />
+    <Resource Include="Imagens\painel.png" />
+    <Resource Include="Imagens\relatorio.png" />
+    <Resource Include="Imagens\orcamento.png" />
+    <Resource Include="Imagens\caixa.png" />
+    <Resource Include="Imagens\comanda.png" />
+    <Resource Include="Imagens\financeiro.png" />
+    <Resource Include="Imagens\lista.png" />
+    <Resource Include="Imagens\calendario.png" />
+    <Resource Include="Imagens\agenda.png" />
+    <Resource Include="Imagens\agendaBloqueio.png" />
+    <Resource Include="Imagens\usuariomenu.png" />
     <Resource Include="Imagens\usuario.png" />
     <Resource Include="Imagens\adicionar-usuario.png" />
     <Resource Include="Imagens\cancelar.png" />
@@ -364,7 +404,6 @@
     <Resource Include="Imagens\fornecedor.png" />
     <Resource Include="Imagens\produto.png" />
     <Resource Include="Imagens\expediente.png" />
-    <Resource Include="Imagens\servico.png" />
     <Resource Include="Imagens\anamnese.png" />
     <Resource Include="Imagens\anamnesecapilar.png" />
     <Resource Include="Imagens\casa.png" />

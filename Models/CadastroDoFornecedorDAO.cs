@@ -92,8 +92,8 @@ namespace IBeauty.Models
 
         public List<CadastroDoFornecedor> List()
         {
-            try
-            {
+            MessageBox.Show("Lista carregada");
+            
                 var lista = new List<CadastroDoFornecedor>();
                 var comando = _conn.Query();
 
@@ -109,6 +109,7 @@ namespace IBeauty.Models
                 MySqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
+                    MessageBox.Show("Carregando itens");
                     Endereco endereco = new Endereco
                     (
                         reader.GetInt32("id_end"),
@@ -137,12 +138,7 @@ namespace IBeauty.Models
 
                 reader.Close();
                 return lista;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao carregar os fornecedores: {ex.Message}");
-                return new List<CadastroDoFornecedor>();
-            }
+            
         }
 
 

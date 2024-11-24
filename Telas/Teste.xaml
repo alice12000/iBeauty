@@ -1,0 +1,132 @@
+﻿<Page x:Class="IBeauty.Telas.Teste"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IBeauty.Telas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="Teste">
+
+    <Page.Resources>
+        <!-- Fonte Poppins -->
+        <Style TargetType="Control" x:Key="DefaultFontStyle">
+            <Setter Property="FontFamily" Value="Poppins" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <!-- Estilo para Botões Arredondados -->
+        <Style TargetType="Button" BasedOn="{StaticResource DefaultFontStyle}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="10" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Height" Value="35" />
+            <Setter Property="Width" Value="120" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+        </Style>
+
+        <!-- Estilo para DataGrid -->
+        <Style TargetType="DataGrid" BasedOn="{StaticResource DefaultFontStyle}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="#FFEDBB" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="AlternatingRowBackground" Value="#FFF3F3" />
+            <Setter Property="RowBackground" Value="#FFFFFF" />
+            <Setter Property="ColumnHeaderHeight" Value="40" />
+            <Setter Property="RowHeight" Value="40" />
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Regular" />
+            <Setter Property="HorizontalGridLinesBrush" Value="#FFEDBB" />
+            <Setter Property="VerticalGridLinesBrush" Value="#FFEDBB" />
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DefaultFontStyle}">
+            <Setter Property="Background" Value="#FF67A2" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <Style TargetType="DataGridRow" BasedOn="{StaticResource DefaultFontStyle}">
+            <Setter Property="BorderBrush" Value="#FFEDBB" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Filtros e Botões -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,20" VerticalAlignment="Top">
+            <TextBox Width="200" Height="35" Margin="0,0,10,0" VerticalContentAlignment="Center"
+                     Background="White" BorderBrush="#FFEDBB" BorderThickness="1"
+                     Padding="10,0">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Text" Value="Procurar por:"/>
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Text" Value=""/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+
+            <ComboBox Width="150" Height="35" Margin="0,0,10,0" Background="White" Padding="5" BorderBrush="#FFEDBB" BorderThickness="1">
+                <ComboBoxItem Content="Ativos" IsSelected="True"/>
+                <ComboBoxItem Content="Inativos"/>
+            </ComboBox>
+
+            <Button Content="Buscar" Background="#FF67A2" />
+            <Button Content="Exibir Todos" Background="#FF67A2" />
+            <Button Content="+ Novo Produto" Background="#FF67A2" Width="160" />
+        </StackPanel>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="ProductsGrid" Grid.Row="1"
+                  AutoGenerateColumns="False" CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <!-- Columns -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="100" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*" />
+                <DataGridTextColumn Header="Especialidade" Binding="{Binding Especialidade}" Width="200" />
+                <DataGridTextColumn Header="Preço (R$)" Binding="{Binding Preco}" Width="100" />
+                <DataGridTextColumn Header="Custo (R$)" Binding="{Binding Custo}" Width="100" />
+                <DataGridTextColumn Header="Estoque" Binding="{Binding Estoque}" Width="80" />
+                <DataGridTemplateColumn Header="Ações" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="✏" Background="#FF67A2" Width="30" Height="30"/>
+                                <Button Content="🗑" Background="#FF67A2" Width="30" Height="30"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

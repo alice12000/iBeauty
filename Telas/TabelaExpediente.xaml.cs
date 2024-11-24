@@ -29,8 +29,8 @@ namespace IBeauty.Telas
 
         private void CarregarExpediente()
         {
-            CadastroExpediente dao = new CadastroExpediente();
-            List<Expediente> expedientes = dao.List();
+            CadastroDeExpedienteDAO dao = new CadastroDeExpedienteDAO();
+            List<CadastroDeExpediente> expedientes = dao.List();
 
             var fornecedoresExibidos = expedientes.Select(e => new
             {
@@ -43,6 +43,21 @@ namespace IBeauty.Telas
             }).ToList();
 
             dataGridExpediente.ItemsSource = expedientes;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Telas/CadastroExpediente.xaml", UriKind.Relative));
+        }
+
+        private void ButtonExcluir(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void dataGridExpediente_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

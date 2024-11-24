@@ -42,18 +42,42 @@ namespace IBeauty.Telas
         private void Cadastrar_Click(object sender, RoutedEventArgs e)
         {
             string mes = tb_mes.Text;
-            string nome = tb_nome.Text;
-            string ano = tb_ano.Text;
-            string carga_horaria = tb_carga_horaria.Text;
-            string salario = tb_salario.Text;
-            int numero = 0;
+            int idFunc;
 
-            var Conexao = new Conexao();
+            // Verifica se o ID do funcionário é um número válido
+            if (int.TryParse(tb_idFunc.Text, out idFunc))
+            {
+                var daoFuncionario = new CadastroDeExpedienteDAO(); // Supondo que você tenha um DAO para verificar o funcionário
+                if (daoFuncionario.ExisteFuncionario(idFunc)) // Verifica se o funcionário existe no banco
+                {
+                    string ano = tb_ano.Text;
+                    string carga_horaria = tb_carga_horaria.Text;
+                    string salario = tb_salario.Text;
+                    int id = 0;
 
-            var Expediente = new CadastroDeExpediente(0, mes, nome, ano, carga_horaria, salario);
+                    // Criação do objeto CadastroDeExpediente
+                    var Expediente = new CadastroDeExpediente(id, mes, ano, carga_horaria, salario, null, idFunc);
+                    var dao = new CadastroDeExpedienteDAO();
+                    dao.Insert(Expediente);
+                    MessageBox.Show("Expediente cadastrado com sucesso!");
 
-
+                    // Redireciona para a tabela de expediente
+                    NavigationService.Navigate(new Uri("Telas/TabelaExpediente.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    // Se o funcionário não existir, exibe uma mensagem e redireciona para a tela de cadastro de funcionário
+                    MessageBox.Show("O ID do funcionário não existe. Redirecionando para o cadastro de funcionários.");
+                    NavigationService.Navigate(new Uri("Telas/CadastroFuncionario.xaml", UriKind.Relative));
+                }
+            }
+            else
+            {
+                // Caso o ID não seja um número válido
+                MessageBox.Show("Por favor, insira um valor numérico válido para o ID do funcionário.");
+            }
         }
+
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
         {

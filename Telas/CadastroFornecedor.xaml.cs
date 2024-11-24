@@ -31,13 +31,12 @@ namespace IBeauty.Telas
         {
             try
             {
-                string cpfCnpj = tbcpfcnpj.Text.Trim();
+                string cpfCnpj = tbcpfcnpj.Text;
+                Verificacoes verificar = new Verificacoes();
 
-                // Verifica qual RadioButton está selecionado e valida CPF ou CNPJ
-                /*
                 if (rbCpf.IsChecked == true)
                 {
-                    if (!CadastroDoFornecedor.ValidarCpf(cpfCnpj))
+                    if (!verificar.ValidarCpf(cpfCnpj))
                     {
                         MessageBox.Show("Por favor, insira um CPF válido.");
                         return;
@@ -45,54 +44,57 @@ namespace IBeauty.Telas
                 }
                 else if (rbCnpj.IsChecked == true)
                 {
-                    if (!CadastroDoFornecedor.ValidarCnpj(cpfCnpj))
+                    if (!verificar.ValidarCnpj(cpfCnpj))
                     {
                         MessageBox.Show("Por favor, insira um CNPJ válido.");
                         return;
                     }
-                }*/
-
-                string rua = tbrua.Text;
-                string bairro = tbbairro.Text;
-                int numero;
-
-                if (!int.TryParse(tbnumero.Text, out numero))
-                {
-                    MessageBox.Show("Por favor, insira um número válido para o campo 'Número'.");
-                    return;
                 }
-
-                string complemento = tbcomplemento.Text;
-                string cidade = tbcidade.Text;
-                string estado = cbestado.Text;
-                string cep = tbcep.Text;
-
-                if (string.IsNullOrWhiteSpace(tbnome.Text) || string.IsNullOrWhiteSpace(tbempresa.Text) || string.IsNullOrWhiteSpace(cpfCnpj) ||
-                    string.IsNullOrWhiteSpace(tbtelefone.Text) || string.IsNullOrWhiteSpace(tbwebsite.Text) || string.IsNullOrWhiteSpace(rua) ||
-                    string.IsNullOrWhiteSpace(bairro) || string.IsNullOrWhiteSpace(cidade) || string.IsNullOrWhiteSpace(estado) || numero == 0)
+                else
                 {
-                    MessageBox.Show("Por favor, preencha todos os campos.");
-                    return;
+
+                    string rua = tbrua.Text;
+                    string bairro = tbbairro.Text;
+                    int numero;
+
+                    if (!int.TryParse(tbnumero.Text, out numero))
+                    {
+                        MessageBox.Show("Por favor, insira um número válido para o campo 'Número'.");
+                        return;
+                    }
+
+                    string complemento = tbcomplemento.Text;
+                    string cidade = tbcidade.Text;
+                    string estado = cbestado.Text;
+                    string cep = tbcep.Text;
+
+                    if (string.IsNullOrWhiteSpace(tbnome.Text) || string.IsNullOrWhiteSpace(tbempresa.Text) || string.IsNullOrWhiteSpace(cpfCnpj) ||
+                        string.IsNullOrWhiteSpace(tbtelefone.Text) || string.IsNullOrWhiteSpace(tbwebsite.Text) || string.IsNullOrWhiteSpace(rua) ||
+                        string.IsNullOrWhiteSpace(bairro) || string.IsNullOrWhiteSpace(cidade) || string.IsNullOrWhiteSpace(estado) || numero == 0)
+                    {
+                        MessageBox.Show("Por favor, preencha todos os campos.");
+                        return;
+                    }
+
+                    var endereco = new Endereco(0, rua, bairro, numero, complemento, cidade, estado, cep);
+
+                    var enderecoDAO = new EnderecoDAO();
+                    enderecoDAO.Insert(endereco);
+
+                    string nome = tbnome.Text;
+                    string empresa = tbempresa.Text;
+                    string telefone = tbtelefone.Text;
+                    string webSite = tbwebsite.Text;
+
+                    var cadastroDoFornecedor = new CadastroDoFornecedor(0, nome, empresa, cpfCnpj, telefone, webSite, endereco);
+
+                    var cadastroDoFornecedorDAO = new CadastroDoFornecedorDAO();
+                    cadastroDoFornecedorDAO.Insert(cadastroDoFornecedor);
+
+                    MessageBox.Show("Usuário cadastrado com sucesso!");
+
+                    NavigationService.Navigate(new Uri("Telas/TabelaFornecedor.xaml", UriKind.Relative));
                 }
-
-                var endereco = new Endereco(0, rua, bairro, numero, complemento, cidade, estado, cep);
-
-                var enderecoDAO = new EnderecoDAO();
-                enderecoDAO.Insert(endereco);
-
-                string nome = tbnome.Text;
-                string empresa = tbempresa.Text;
-                string telefone = tbtelefone.Text;
-                string webSite = tbwebsite.Text;
-
-                var cadastroDoFornecedor = new CadastroDoFornecedor(0, nome, empresa, cpfCnpj, telefone, webSite, endereco);
-
-                var cadastroDoFornecedorDAO = new CadastroDoFornecedorDAO();
-                cadastroDoFornecedorDAO.Insert(cadastroDoFornecedor);
-
-                MessageBox.Show("Usuário cadastrado com sucesso!");
-
-                NavigationService.Navigate(new Uri("Telas/TabelaFornecedor.xaml", UriKind.Relative));
             }
             catch (Exception ex)
             {

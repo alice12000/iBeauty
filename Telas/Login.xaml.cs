@@ -33,37 +33,39 @@ namespace IBeauty.Telas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string email = tbemail.Text;
-            string senha = tbsenha.Text;
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
+            try
             {
-                MessageBox.Show("Por favor, preencha todos os campos.");
-                return;
-            }
+                string email = tbemail.Text; 
+                string senha = tbsenha.Text;
 
-                Usuario usuario = _usuarioDAO.AuthenticateEmail(email, senha);
+                UsuarioDAO usuarioAutenticado = new UsuarioDAO();
+                usuarioAutenticado.AuthenticateCadastro(email, senha);
 
-                if (usuario != null)
+                if (usuarioAutenticado != null)
                 {
                     MessageBox.Show("Login bem-sucedido!");
 
-                JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+                    JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
 
-                janelaPrincipal.MainFrame.Navigate(new TelaInicialSistema());
+                    janelaPrincipal.MainFrame.Navigate(new TelaInicialSistema());
 
-                janelaPrincipal.menuLogin.Visibility = Visibility.Collapsed;
-                janelaPrincipal.menuControl.Visibility = Visibility.Visible;
+                    janelaPrincipal.menuLogin.Visibility = Visibility.Collapsed;
+                    janelaPrincipal.menuControl.Visibility = Visibility.Visible;
 
-                Application.Current.MainWindow = janelaPrincipal;
-                janelaPrincipal.Show();
-                Window.GetWindow(this)?.Close();
-            }
-            else
+                    Application.Current.MainWindow = janelaPrincipal;
+                    janelaPrincipal.Show();
+                    Window.GetWindow(this)?.Close();
+                }
+                else
                 {
                     MessageBox.Show("Email ou senha incorretos. Tente novamente.");
                 }
-            
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao realizar o login: " + ex.Message);
+            }
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

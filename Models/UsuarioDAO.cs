@@ -38,86 +38,49 @@ namespace IBeauty.Models
             }
         }
 
-        public Usuario AuthenticateEmail(string email, string senha)
+        public CadastroUsuario AuthenticateCadastro(string email, string senha)
         {
             try
             {
+                // Consulta SQL para verificar se o e-mail e a senha correspondem na tabela Cadastro
                 var comando = _conn.Query();
                 comando.CommandText = @"
-                    SELECT 
-                        Usuario.id_usu, 
-                        Usuario.email_usu, 
-                        Usuario.senha_usu, 
-                        Usuario.id_cad_fk,
-                        Cadastro.nome_cad, 
-                        Cadastro.data_nascimento_cad, 
-                        Cadastro.senha_cad, 
-                        Cadastro.genero_cad, 
-                        Cadastro.email_cad, 
-                        Cadastro.telefone_cad, 
-                        Endereco.id_end, 
-                        Endereco.rua_end, 
-                        Endereco.bairro_end, 
-                        Endereco.numero_end, 
-                        Endereco.complemento_end, 
-                        Endereco.cidade_end, 
-                        Endereco.estado_end, 
-                        Endereco.cep_end
-                    FROM Usuario 
-                    INNER JOIN Cadastro ON Usuario.id_cad_fk = Cadastro.id_cad
-                    LEFT JOIN Endereco ON Cadastro.id_end_fk = Endereco.id_end
-                    WHERE Usuario.email_usu = @email";
+            SELECT 
+                Cadastro.id_cad,
+                Cadastro.nome_cad,
+                Cadastro.data_nascimento_cad,
+                Cadastro.senha_cad,
+                Cadastro.genero_cad,
+                Cadastro.email_cad,
+                Cadastro.telefone_cad
+            FROM Cadastro
+            WHERE Cadastro.email_cad = @email AND Cadastro.senha_cad = @senha";
+
+                // Adiciona os parâmetros para o e-mail e senha
                 comando.Parameters.AddWithValue("@email", email);
+                comando.Parameters.AddWithValue("@senha", senha);
 
                 using (MySqlDataReader reader = comando.ExecuteReader())
                 {
+                    // Verifica se a consulta retornou algum resultado
                     if (reader.Read())
                     {
-                        string senhaSalva = reader.GetString("senha_usu");
-
-                        if (senhaSalva == senha) 
-                        {
-                            var endereco = reader.IsDBNull(reader.GetOrdinal("id_end")) ? null : new Endereco
-                            (
-                                reader.GetInt32("id_end"),
-                                reader.GetString("rua_end"),
-                                reader.GetString("bairro_end"),
-                                reader.GetInt32("numero_end"),
-                                reader.GetString("complemento_end"),
-                                reader.GetString("cidade_end"),
-                                reader.GetString("estado_end"),
-                                reader.GetString("cep_end")
-                            );
-
-                            CadastroUsuario cadastro = new CadastroUsuario
-                            (
-                                reader.GetInt32("id_cad_fk"),
-                                reader.GetString("nome_cad"),
-                                reader.GetString("data_nascimento_cad"),
-                                reader.GetString("senha_cad"),
-                                reader.GetString("genero_cad"),
-                                reader.GetString("email_cad"),
-                                reader.GetString("telefone_cad"),
-                                endereco
-                            );
-
-                            return new Usuario
-                            (
-                                reader.GetInt32("id_usu"), 
-                                reader.GetString("email_usu"),
-                                reader.GetString("senha_usu"),
-                                cadastro
-                            );
-                        }
-                        else
-                        {
-                            MessageBox.Show("Senha incorreta. Tente novamente.");
-                            return null;
-                        }
+                        // Se encontrar o usuário com o e-mail e senha, cria o objeto CadastroUsuario
+                        return new CadastroUsuario
+                        (
+                            reader.GetInt32("id_cad"),
+                            reader.GetString("nome_cad"),
+                            reader.GetString("data_nascimento_cad"),
+                            reader.GetString("senha_cad"),
+                            reader.GetString("genero_cad"),
+                            reader.GetString("email_cad"),
+                            reader.GetString("telefone_cad"), 
+                            null
+                        );
                     }
                     else
                     {
-                        MessageBox.Show("Usuário não encontrado. Tente novamente.");
+                        MessageBox.Show("Credenciais inválidas. Tente novamente.");
                         return null;
                     }
                 }
@@ -127,5 +90,7 @@ namespace IBeauty.Models
                 throw new Exception("Erro ao autenticar o usuário: " + ex.Message);
             }
         }
+
+
     }
 }

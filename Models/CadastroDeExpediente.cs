@@ -10,20 +10,21 @@ namespace IBeauty.Models
     {
         public int Id { get; set; }
         public string Mes { get; set; }
-        public string Nome { get; set; }
         public string Ano { get; set; }
-        public string Carga_horaria { get; set; }
+        public string CargaHoraria { get; set; }
         public string Salario { get; set; }
+        public string NomeFuncionario { get; set; }
+        public int IdFunc { get; set; }
 
-        public CadastroDeExpediente(int id, string mes, string nome, string ano, string carga_horaria, string salario)
+        public CadastroDeExpediente(int id, string mes, string ano, string cargaHoraria, string salario, string nomeFuncionario, int idFunc)
         {
             Id = id;
             Mes = mes;
-            Nome = nome;
             Ano = ano;
-            Carga_horaria = carga_horaria;
+            CargaHoraria = cargaHoraria;
             Salario = salario;
-         
+            NomeFuncionario = nomeFuncionario;
+            IdFunc = idFunc;
         }
     }
 }

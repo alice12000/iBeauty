@@ -8,28 +8,29 @@ namespace IBeauty.Models
 {
     public class Cliente
     {
-        public string NomeCompleto { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string DataNascimento { get; set; }
         public string Genero { get; set; }
         public string Email { get; set; }
         public string CPF { get; set; }
         public string Celular { get; set; }
-        public string EnderecoCliente { get; set; }
-        public Cliente(string nomeCompleto, DateTime dataNascimento, string genero, string email, string cpf, string celular)
+        public Endereco Endereco { get; set; }
+        public CadastroDeAnamneseCapilar AnamneseCapilar { get; set; }
+        public CadastroDeAnamneseCorporal AnamneseCorporal { get; set; }
+
+        public Cliente(int id, string nome, string dataNascimento, string genero, string email, string cPF, string celular, Endereco endereco, CadastroDeAnamneseCapilar anamneseCapilar, CadastroDeAnamneseCorporal anamneseCorporal)
         {
-            NomeCompleto = nomeCompleto;
+            Nome = nome;
             DataNascimento = dataNascimento;
             Genero = genero;
             Email = email;
-            CPF = cpf;
+            CPF = cPF;
             Celular = celular;
+            Endereco = endereco;
+            AnamneseCapilar = anamneseCapilar;
+            AnamneseCorporal = anamneseCorporal;
         }
-
-        public Cliente()
-        {
-
-        }
-
     }
 
 }
