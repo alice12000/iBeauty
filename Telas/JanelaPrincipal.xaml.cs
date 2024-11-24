@@ -9,7 +9,7 @@ namespace IBeauty
         public JanelaPrincipal()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Teste());
+            MainFrame.Navigate(new TelaInicial());
 
             bool isUserLoggedIn = false;
 
