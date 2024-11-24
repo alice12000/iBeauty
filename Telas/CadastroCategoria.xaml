@@ -1,4 +1,4 @@
-﻿<Page x:Class="IBeauty.Telas.CadastrodeCategoria"
+﻿<Page x:Class="IBeauty.Telas.CadastroCategoria"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -61,12 +61,12 @@
                         </TextBox>
                     </Grid>
 
-                        <TextBlock Grid.Row="0"
+                    <TextBlock Grid.Row="0"
                                 Text="Tipo:" 
                                 FontSize="14" 
                                 FontFamily="Poppins" 
                                 Margin="0,0,0,5" />
-                    
+
                     <StackPanel Orientation="Horizontal" 
                                 Margin="0,0,0,0" 
                                 HorizontalAlignment="Left">
@@ -80,7 +80,7 @@
                                      BorderThickness="1"
                                      Margin="0,0,20,0"/>
 
-                            <RadioButton x:Name="rb_produto" 
+                        <RadioButton x:Name="rb_produto" 
                                      Content="Produto" 
                                      FontFamily="Poppins"
                                      FontSize="14"
@@ -89,7 +89,7 @@
                                      BorderBrush="#FFB6667C" 
                                      BorderThickness="1" 
                                      />
-                        </StackPanel>
+                    </StackPanel>
 
                     <TextBlock Grid.Row="0" 
                                    Text="Profissional responsável:" 
@@ -126,7 +126,6 @@
                             </Button.Resources>
                         </Button>
                     </StackPanel>
-
                 </StackPanel>
             </Border>
         </StackPanel>

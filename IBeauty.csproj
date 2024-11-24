@@ -171,11 +171,11 @@
     <Compile Include="Telas\CadastroAnamneseManicurePedicure.xaml.cs">
       <DependentUpon>CadastroAnamneseManicurePedicure.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\CadastroCategoria.xaml.cs">
+      <DependentUpon>CadastroCategoria.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\CadastroCliente.xaml.cs">
       <DependentUpon>CadastroCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\CadastrodeCategoria.xaml.cs">
-      <DependentUpon>CadastrodeCategoria.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\CadastroComanda.xaml.cs">
       <DependentUpon>CadastroComanda.xaml</DependentUpon>
@@ -277,12 +277,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\CadastroCliente.xaml">
+    <Page Include="Telas\CadastroCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\CadastrodeCategoria.xaml">
-    <SubType>Designer</SubType>
+    <Page Include="Telas\CadastroCliente.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\CadastroComanda.xaml">

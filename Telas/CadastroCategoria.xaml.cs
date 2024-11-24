@@ -19,9 +19,9 @@ namespace IBeauty.Telas
     /// <summary>
     /// Interação lógica para CadastrodeCategoria.xam
     /// </summary>
-    public partial class CadastrodeCategoria : Page
+    public partial class CadastroCategoria : Page
     {
-        public CadastrodeCategoria()
+        public CadastroCategoria()
         {
             InitializeComponent();
         }
@@ -59,14 +59,14 @@ namespace IBeauty.Telas
                     MessageBox.Show("Categoria cadastrado com sucesso!");
                 }
 
-                else 
+                else
                 {
                     MessageBox.Show("Falha ao salvar os dados de categoria");
                 }
-           
+
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
                 throw new Exception("Erro ao salvar as informações: " + ex.Message);
