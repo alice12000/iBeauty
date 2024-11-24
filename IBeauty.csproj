@@ -224,6 +224,9 @@
     <Compile Include="Telas\TelaInicialSistema.xaml.cs">
       <DependentUpon>TelaInicialSistema.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Teste.xaml.cs">
+      <DependentUpon>Teste.xaml</DependentUpon>
+    </Compile>
     <Page Include="CadastroAgenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -340,6 +343,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Telas\Teste.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -372,6 +379,20 @@
     <Folder Include="Recursos\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagens\estoque.png" />
+    <Resource Include="Imagens\pacote.png" />
+    <Resource Include="Imagens\categoria.png" />
+    <Resource Include="Imagens\servico.png" />
+    <Resource Include="Imagens\painel.png" />
+    <Resource Include="Imagens\relatorio.png" />
+    <Resource Include="Imagens\orcamento.png" />
+    <Resource Include="Imagens\caixa.png" />
+    <Resource Include="Imagens\comanda.png" />
+    <Resource Include="Imagens\financeiro.png" />
+    <Resource Include="Imagens\lista.png" />
+    <Resource Include="Imagens\calendario.png" />
+    <Resource Include="Imagens\agenda.png" />
+    <Resource Include="Imagens\agendaBloqueio.png" />
     <Resource Include="Imagens\usuariomenu.png" />
     <Resource Include="Imagens\usuario.png" />
     <Resource Include="Imagens\adicionar-usuario.png" />
@@ -383,7 +404,6 @@
     <Resource Include="Imagens\fornecedor.png" />
     <Resource Include="Imagens\produto.png" />
     <Resource Include="Imagens\expediente.png" />
-    <Resource Include="Imagens\servico.png" />
     <Resource Include="Imagens\anamnese.png" />
     <Resource Include="Imagens\anamnesecapilar.png" />
     <Resource Include="Imagens\casa.png" />
