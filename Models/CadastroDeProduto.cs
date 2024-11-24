@@ -15,9 +15,10 @@ namespace IBeauty.Models
         public double Comissao { get; set; }
         public string Descricao { get; set; }
         public double PrecoFinal { get; private set; }
+        public string Categoria { get; set; }
 
 
-        public CadastroDeProduto(int id, string nome, int unidades, string descricao, double precoUnitario, double comissao, double precoVenda)
+        public CadastroDeProduto(int id, string nome, int unidades, string descricao, double precoUnitario, double comissao, double precoVenda, string categoria)
         {
             Id = id;
             Nome = nome;
@@ -26,6 +27,7 @@ namespace IBeauty.Models
             PrecoUnitario = precoUnitario;
             Comissao = comissao;
             PrecoFinal = precoVenda;
+            Categoria = categoria;
         }
 
     }

@@ -167,6 +167,7 @@ foreign key(id_ancor_fk) references AnamneseCorporal(id_ancor)
 
 
 alter table Servico add servico_ser varchar(300);
+alter table Produto add categoria_pro varchar(300);
 DESCRIBE Endereco;
 select * from Endereco;
 select * from AnamneseCapilar;
@@ -187,11 +188,11 @@ VALUES
 ('Carlos Pereira', '2000-11-10', 'senha789', 'Masculino', 'carlos@gmail.com', '31977777777', 3);
 
 -- Inserindo na tabela Produto
-INSERT INTO Produto (nome_pro, unidades_pro, descricao_pro, preco_unitario_pro, comissao_pro, preco_venda_pro)
+INSERT INTO Produto (nome_pro, unidades_pro, descricao_pro, preco_unitario_pro, comissao_pro, preco_venda_pro, categoria_pro)
 VALUES 
-('Shampoo Profissional', 50, 'Shampoo hidratante de uso diário', 25.00, 5.00, 30.00),
-('Condicionador Nutritivo', 30, 'Condicionador para cabelos secos', 30.00, 6.00, 36.00),
-('Máscara Capilar', 20, 'Máscara de hidratação profunda', 50.00, 10.00, 60.00);
+('Shampoo Profissional', 50, 'Shampoo hidratante de uso diário', 25.00, 5.00, 30.00, 'Cabelo'),
+('Condicionador Nutritivo', 30, 'Condicionador para cabelos secos', 30.00, 6.00, 36.00, 'Cabelo'),
+('Máscara Capilar', 20, 'Máscara de hidratação profunda', 50.00, 10.00, 60.00, 'Cabelo');
 
 -- Inserindo na tabela Fornecedor
 INSERT INTO Fornecedor (nome_for, empresa_for, cpfcnpj_for, telefone_for, website_for, id_end_fk)
@@ -266,3 +267,5 @@ VALUES
 ('Luiza Fernandes', '1993-04-15', 'Feminino', '12345678901', 'luiza@gmail.com', 11987654321, 1, 1, 1),
 ('Rafael Costa', '1988-08-20', 'Masculino', '98765432100', 'rafael@gmail.com', 21987654321, 2, 2, 2),
 ('Mariana Rocha', '2000-12-30', 'Feminino', '56473829100', 'mariana@gmail.com', 31987654321, 3, 3, 3);
+
+select * from Produto;

@@ -40,7 +40,8 @@ namespace IBeauty.Telas
                 Unidades = p.Unidades,
                 PrecoUnitario = p.PrecoUnitario,
                 Comissao = p.Comissao,
-                PrecoFinal = p.PrecoFinal
+                PrecoFinal = p.PrecoFinal,
+                Categoria = p.Categoria
 
             }).ToList();
 

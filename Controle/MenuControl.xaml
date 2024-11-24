@@ -199,7 +199,7 @@
                             <Button Background="#FFDFC5CC" Width="243" Click="BtnFuncionario_Click" BorderThickness="1" Height="50" Foreground="#FFB6667C" HorizontalContentAlignment="Left" Padding="5" FontFamily="Poppins" FontSize="16" BorderBrush="#FFB6667C" >
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
                                     <Image Source="/Imagens/funcionario.png" Width="20" Height="20" Margin="0 0 -440 0"/>
-                                    <TextBlock Text="Funcionarios" VerticalAlignment="Center" />
+                                    <TextBlock Text="Funcionários" VerticalAlignment="Center" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>

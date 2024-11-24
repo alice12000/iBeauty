@@ -28,8 +28,8 @@ namespace IBeauty.Models
 
                 Console.WriteLine("Comando preparado.");
 
-                comando.CommandText = "INSERT INTO Produto (id_pro, nome_pro, unidades_pro, descricao_pro, preco_unitario_pro, comissao_pro, preco_venda_pro) " +
-                "VALUES (@id, @nome, @unidades, @descricao, @precoUnitario, @comissao, @precoVenda);";
+                comando.CommandText = "INSERT INTO Produto (id_pro, nome_pro, unidades_pro, descricao_pro, preco_unitario_pro, comissao_pro, preco_venda_pro, categoria_pro) " +
+                "VALUES (@id, @nome, @unidades, @descricao, @precoUnitario, @comissao, @precoVenda, @categoria);";
                 comando.Parameters.AddWithValue("@id", obj.Id);
                 comando.Parameters.AddWithValue("@nome", obj.Nome);
                 comando.Parameters.AddWithValue("@unidades", obj.Unidades);
@@ -37,6 +37,8 @@ namespace IBeauty.Models
                 comando.Parameters.AddWithValue("@precoUnitario", obj.PrecoUnitario);
                 comando.Parameters.AddWithValue("@comissao", obj.Comissao);
                 comando.Parameters.AddWithValue("@precoVenda", obj.PrecoFinal);
+                comando.Parameters.AddWithValue("@categoria", obj.Categoria);
+
 
                 // Apenas uma chamada ao ExecuteNonQuery()
                 int rowsAffected = comando.ExecuteNonQuery();
@@ -73,7 +75,7 @@ namespace IBeauty.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = @"SELECT id_pro, nome_pro, unidades_pro, descricao_pro, 
-                               preco_unitario_pro, comissao_pro, preco_venda_pro 
+                               preco_unitario_pro, comissao_pro, preco_venda_pro, categoria_pro 
                         FROM Produto";
 
                 MySqlDataReader reader = comando.ExecuteReader();
@@ -87,7 +89,8 @@ namespace IBeauty.Models
                         reader.GetString("descricao_pro"),
                         reader.GetDouble("preco_unitario_pro"),
                         reader.GetDouble("comissao_pro"),
-                        reader.GetDouble("preco_venda_pro")
+                        reader.GetDouble("preco_venda_pro"),
+                        reader.GetString("categoria_pro")
                     );
 
                     list.Add(produto);
@@ -134,14 +137,16 @@ namespace IBeauty.Models
                 comando.Transaction = transaction;
                 object result = comando.ExecuteScalar();
 
-                comando.CommandText = "INSERT INTO Produto (nome_pro, unidades_pro, descricao_pro, preco_unitario_pro, comissao_pro, preco_venda_pro) " +
-                                    "VALUES (@nome, @unidades, @descricao, @precoUnitario, @comissao, @precoVenda);";
+                comando.CommandText = "INSERT INTO Produto (nome_pro, unidades_pro, descricao_pro, preco_unitario_pro, comissao_pro, preco_venda_pro, categoria_pro) " +
+                                    "VALUES (@nome, @unidades, @descricao, @precoUnitario, @comissao, @precoVenda, @categoria);";
                 comando.Parameters.AddWithValue("@nome", obj.Nome);
                 comando.Parameters.AddWithValue("@unidades", obj.Unidades);
                 comando.Parameters.AddWithValue("@descricao", obj.Descricao);
                 comando.Parameters.AddWithValue("@precoUnitario", obj.PrecoUnitario);
                 comando.Parameters.AddWithValue("@comissao", obj.Comissao);
                 comando.Parameters.AddWithValue("@precoVenda", obj.PrecoFinal);
+                comando.Parameters.AddWithValue("@categoria", obj.Categoria);
+
                 comando.ExecuteNonQuery();
 
                 comando.CommandText = "SELECT LAST_INSERT_ID()";

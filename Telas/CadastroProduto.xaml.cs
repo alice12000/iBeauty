@@ -58,7 +58,9 @@ namespace IBeauty.Telas
                 double precovenda = precoUnitario + (precoUnitario * (comissao / 100));
                 precofinal_txt.Text = precovenda.ToString("F2");
 
-                var produto = new CadastroDeProduto(0, nomeProduto, unidades, descricao, precoUnitario, comissao, precovenda);
+                string categoria = categoria_txt.Text;
+
+                var produto = new CadastroDeProduto(0, nomeProduto, unidades, descricao, precoUnitario, comissao, precovenda, categoria);
 
                 // Agora, você pode continuar com a lógica de salvar o produto
                 var produtoDAO = new CadastroDeProdutoDAO();
