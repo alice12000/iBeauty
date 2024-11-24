@@ -58,7 +58,7 @@ namespace IBeauty.Telas
                 double precovenda = precoUnitario + (precoUnitario * (comissao / 100));
                 precofinal_txt.Text = precovenda.ToString("F2");
 
-                string categoria = categoria_txt.Text;
+                string categoria = categoria_cbx.Text;
 
                 var produto = new CadastroDeProduto(0, nomeProduto, unidades, descricao, precoUnitario, comissao, precovenda, categoria);
 
@@ -77,5 +77,21 @@ namespace IBeauty.Telas
             }
         }
 
+        //nova categoria botao
+
+        /*
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (cadAnamneseCapilar.Visibility == Visibility.Collapsed)
+            {
+                cadAnamneseCapilar.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                cadAnamneseCapilar.Visibility = Visibility.Collapsed;
+            }
+        }
+
+       */
     }
 }

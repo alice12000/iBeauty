@@ -1,5 +1,6 @@
 create database Ibeauty_bd;
 use Ibeauty_bd;
+
 #drop database Ibeauty_bd;
 	
 create table Endereco(
@@ -165,6 +166,13 @@ id_ancor_fk int,
 foreign key(id_ancor_fk) references AnamneseCorporal(id_ancor)
 );
 
+create table Categoria(
+id_cat int primary key auto_increment,
+nome_cat varchar(300),
+tipo_cat varchar(100),
+id_func_fk int,
+foreign key(id_func_fk) references Funcionario(id_func)
+);
 
 alter table Servico add servico_ser varchar(300);
 alter table Produto add categoria_pro varchar(300);

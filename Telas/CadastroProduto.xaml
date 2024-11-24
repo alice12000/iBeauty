@@ -80,13 +80,9 @@
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                        <TextBox x:Name="categoria_txt" Height="40" Width="220" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,10,0">
-                            <TextBox.Resources>
-                                <Style TargetType="{x:Type Border}">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </TextBox.Resources>
-                        </TextBox>
+                        <ComboBox x:Name="categoria_cbx" Height="40" Width="250" Padding="10" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="10,0,10,0">
+                            <ComboBoxItem Content="Cabelo"/>
+                        </ComboBox>
                         <Button Content="+ Nova Categoria" Width="200" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C">
                             <Button.Resources>
                                 <Style TargetType="{x:Type Border}">
@@ -97,7 +93,7 @@
                     </StackPanel>
                 </StackPanel>
                 
-                <StackPanel Orientation="Horizontal" Margin="500,198,0,2">
+                <StackPanel Orientation="Horizontal" Margin="500 200 0 0">
                     <Button Content="Cadastrar" Width="150" Height="40" Background="#FFB6667C" Foreground="White" FontFamily="Poppins" FontSize="14" BorderThickness="1" BorderBrush="#FFB6667C" Margin="0,30,10,0" Click="Button_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">

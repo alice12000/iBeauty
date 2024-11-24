@@ -123,6 +123,7 @@
     <Compile Include="Models\CadastroDeAnamneseCapilarDAO.cs" />
     <Compile Include="Models\CadastroDeAnamneseCorporal.cs" />
     <Compile Include="Models\CadastroDeAnamneseCorporalDAO.cs" />
+    <Compile Include="Models\CadastroDeCategoria.cs" />
     <Compile Include="Models\CadastroDeCliente.cs" />
     <Compile Include="Models\CadastroDeClienteDAO.cs" />
     <Compile Include="Models\CadastroDeFuncionario.cs" />
@@ -172,6 +173,9 @@
     </Compile>
     <Compile Include="Telas\CadastroCliente.xaml.cs">
       <DependentUpon>CadastroCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastrodeCategoria.xaml.cs">
+      <DependentUpon>CadastrodeCategoria.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\CadastroExpediente.xaml.cs">
       <DependentUpon>CadastroExpediente.xaml</DependentUpon>
@@ -239,6 +243,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Models\CadastroDeCategoriaDAO.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
     <Page Include="Telas\Agenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -268,6 +275,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\CadastroCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\CadastrodeCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
