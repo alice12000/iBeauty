@@ -42,7 +42,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid x:Name="MenuPanel" Background="#FFDFC5CC" Visibility="Visible"  Width="250" HorizontalAlignment="Left"  VerticalAlignment="Stretch">
+            <Grid x:Name="MenuPanel" Background="#FFDFC5CC" Visibility="Collapsed"  Width="250" HorizontalAlignment="Left"  VerticalAlignment="Stretch">
                 <Border BorderThickness="1" BorderBrush="#FFB6667C">
                     <StackPanel Orientation="Vertical" Margin="1.5 3 0 0">
                         <StackPanel Orientation="Horizontal" >
