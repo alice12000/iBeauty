@@ -9,7 +9,6 @@
       Title="Teste">
 
     <Page.Resources>
-
         <Style TargetType="ComboBox" x:Key="StyledComboBox">
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Background" Value="White"/>
