@@ -7,43 +7,12 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Login">
-    <Page.Resources>
-        <Style x:Key="RoundCheckBox" TargetType="CheckBox">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="CheckBox">
-                        <Grid Width="32" Height="32">
-                            <Grid.Effect>
-                                <DropShadowEffect Color="Black" Opacity="0.3" BlurRadius="5" ShadowDepth="2"/>
-                            </Grid.Effect>
-                            <Border Width="32" Height="32" CornerRadius="30" BorderBrush="#B6667C" BorderThickness="2">
-                                <Ellipse Fill="White"/>
-                            </Border>
-
-                            <Ellipse x:Name="CheckMark" Fill="#FFB6667C" Width="20" Height="20" Visibility="Collapsed"/>
-
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
-
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="7*"/>
-        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/fundologin.png"/>
         </Grid.Background>
-        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="525" Height="420" Background="#8CB6667C" Margin="698,195,698,330" Grid.Row="1">
+        <Border BorderBrush="#FFB6667C" BorderThickness="1" CornerRadius="10" Padding="20" Width="525" Height="420" Background="#8CB6667C" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
 
             <StackPanel>
                 <TextBlock Text="Login" FontFamily="Poppins" FontSize="24" Foreground="White" Margin="0,0,0,5" HorizontalAlignment="Center"/>

@@ -210,8 +210,14 @@
     <Compile Include="Telas\TabelaAnamneseCapilar.xaml.cs">
       <DependentUpon>TabelaAnamneseCapilar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\TabelaCaixa.xaml.cs">
+      <DependentUpon>TabelaCaixa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TabelaCliente.xaml.cs">
       <DependentUpon>TabelaCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TabelaComanda.xaml.cs">
+      <DependentUpon>TabelaComanda.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TabelaExpediente.xaml.cs">
       <DependentUpon>TabelaExpediente.xaml</DependentUpon>
@@ -336,7 +342,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Telas\TabelaCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\TabelaCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TabelaComanda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

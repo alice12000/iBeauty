@@ -27,22 +27,36 @@ namespace IBeauty.Telas
 
         private void btnFechar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (PainelServicoComanda.Visibility == Visibility.Collapsed)
+            {
+                PainelServicoComanda.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                PainelServicoComanda.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Função em desenvolvimento!");
         }
 
         private void btnServicoComanda_Click(object sender, RoutedEventArgs e)
         {
-
+            if (PainelServicoComanda.Visibility == Visibility.Collapsed)
+            {
+                PainelServicoComanda.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                PainelServicoComanda.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("Telas/TabelaComanda.xaml", UriKind.Relative));
         }
     }
 }

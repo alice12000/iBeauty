@@ -164,12 +164,12 @@ namespace IBeauty.Controle
 
         private void BtnComandas_Click(object sender, RoutedEventArgs e)
         {
-            //MainFrame.Navigate(new Telas.Comandas());
+            MainFrame.Navigate(new Telas.TabelaComanda());
         }
 
         private void BtnCaixa_Click(object sender, RoutedEventArgs e)
         {
-            //MainFrame.Navigate(new Telas.Caixa());
+            MainFrame.Navigate(new Telas.TabelaCaixa());
         }
 
         private void BtnListagemClientes_Click(object sender, RoutedEventArgs e)

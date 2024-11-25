@@ -217,7 +217,7 @@
                             </StackPanel>
                         </StackPanel>
 
-                        <Button Content="Serviços da comanda" FontFamily="Poppins" FontSize="16" Height="50" Width="460" Background="#FFB6667C" Foreground="White" Padding="10,5" BorderThickness="0" Margin="0,70,0,0" Click="btnServicoComanda_Click">
+                        <Button x:Name="btnServicoComanda" Content="Serviços da comanda" FontFamily="Poppins" FontSize="16" Height="50" Width="460" Background="#FFB6667C" Foreground="White" Padding="10,5" BorderThickness="0" Margin="0,70,0,0" Click="btnServicoComanda_Click" Cursor="Hand">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -226,14 +226,14 @@
                         </Button>
                         
                         <StackPanel Orientation="Horizontal" Margin="0, 50, 0, 0" VerticalAlignment="Bottom" HorizontalAlignment="Left">
-                            <Button Content="Salvar" FontFamily="Poppins" FontSize="16" Height="50" Width="130" Background="#FFB6667C" Foreground="White" Padding="10,5" BorderThickness="0" Margin="0,0,0,0" Click="btnSalvar_Click">
+                            <Button x:Name="btnSalvarComanda" Content="Salvar" FontFamily="Poppins" FontSize="16" Height="50" Width="130" Background="#FFB6667C" Foreground="White" Padding="10,5" BorderThickness="0" Margin="0,0,0,0" Click="btnSalvar_Click" Cursor="Hand">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button Content="Cancelar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Width="150" Foreground="White" Padding="10,5" HorizontalAlignment="Left" BorderThickness="0" Margin="10,0,0,0" Click="btnCancelar_Click">
+                            <Button x:Name="btnCancelarComanda" Content="Cancelar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Width="150" Foreground="White" Padding="10,5" HorizontalAlignment="Left" BorderThickness="0" Margin="10,0,0,0" Click="btnCancelar_Click" Cursor="Hand">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>
@@ -247,7 +247,7 @@
         </Border>
 
 
-        <Border BorderBrush="#FFB6667C" BorderThickness="2" Width="600" Height="360" Background="White" CornerRadius="10" Visibility="Collapsed">
+        <Border x:Name="PainelServicoComanda" BorderBrush="#FFB6667C" BorderThickness="2" Width="600" Height="360" Background="White" CornerRadius="10" Visibility="Collapsed">
             <StackPanel>
                 <StackPanel>
                     <TextBlock Text="Serviços da comanda" FontFamily="Poppins" FontSize="24" Foreground="#FFB6667C" Margin="0,30,0,0" HorizontalAlignment="Center" Grid.Column="0"/>
@@ -316,7 +316,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <Button Content="Fechar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Height="50" Width="150" Foreground="White" Padding="10,5" HorizontalAlignment="center" BorderThickness="0" Margin="0,20,0,0" Click="btnFechar_Click">
+                <Button x:Name="btnFecharServicoComanda" Content="Fechar" FontFamily="Poppins" FontSize="16" Background="#FFB6667C" Height="50" Width="150" Foreground="White" Padding="10,5" HorizontalAlignment="center" BorderThickness="0" Margin="0,20,0,0" Click="btnFechar_Click" Cursor="Hand">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"/>
